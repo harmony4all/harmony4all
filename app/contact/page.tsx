@@ -1,0 +1,168 @@
+"use client"
+
+import Link from "next/link"
+  import { Button } from "@/components/ui/button"
+  import { Card } from "@/components/ui/card"
+import { Phone, Mail,ChevronDown, ChevronUp, ArrowRight } from "lucide-react"
+import { useState } from "react"
+import ContactSection from "@/components/contact"
+
+
+
+
+export default function ContactPage() {
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+
+
+  return (
+    <div className="min-h-screen bg-white">
+
+      {/* Breadcrumb */}
+      <div className="bg-gray-50 py-4">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center space-x-2 text-sm">
+            <Link href="/" className="text-gray-900 hover:text-gray-700">
+              Home
+            </Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-600">Contact</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <section className="relative py-32 bg-cover bg-center bg-no-repeat" style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+      }}>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Contact Us</h1>
+            <p className="text-xl text-white/90 leading-relaxed drop-shadow-md">
+              We're here to help and answer any questions you may have. Reach out to us and we'll respond as soon as we
+              can.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <ContactSection />
+
+      {/* FAQ Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Quick answers to common questions. Can't find what you're looking for? Contact us directly.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto space-y-4 mb-12">
+            {[
+              {
+                question: "What is Harmony 4 All?",
+                answer: "Harmony 4 All is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. We offer free musical instrument rentals, repairs, and access to musical curriculums.",
+                image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+              },
+              {
+                question: "How can I donate musical instruments?",
+                answer: "We gladly accept instrument donations, especially smaller items due to logistical constraints. If you'd like to donate, please reach out to us at info@harmony4all.org. For larger donations, like pianos, we work to find suitable homes within the community.",
+                image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+              },
+              {
+                question: "How does the musical instrument rental process work?",
+                answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through Harmony 4 All at a competitive rate.",
+                image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+              },
+              {
+                question: "How can I volunteer or get involved?",
+                answer: "There are several ways to support our mission: Partner with us as a school, business, or community leader, make a donation (monetary or instruments), or volunteer in event planning, instrument repair, teaching, or outreach.",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+              },
+            ].map((faq, index) => (
+              <Card key={index} className="shadow-lg border-0 rounded-2xl overflow-hidden">
+                <div 
+                  className="flex items-center p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  {/* Small Image on the Left */}
+                  <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0 mr-4">
+                    <img
+                      src={faq.image}
+                      alt={faq.question}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  {/* Question and Toggle */}
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 text-lg">{faq.question}</h4>
+                  </div>
+                  
+                  {/* Chevron Icon */}
+                  <div className="flex-shrink-0">
+                    {openFaq === index ? (
+                      <ChevronUp className="h-6 w-6 text-gray-600" />
+                    ) : (
+                      <ChevronDown className="h-6 w-6 text-gray-600" />
+                    )}
+                  </div>
+                </div>
+                
+                {/* Collapsible Answer */}
+                {openFaq === index && (
+                  <div className="px-6 pb-6 border-t border-gray-100">
+                    <p className="text-gray-600 pt-4 leading-relaxed">{faq.answer}</p>
+                  </div>
+                )}
+              </Card>
+            ))}
+          </div>
+
+          {/* View All FAQs Button */}
+          <div className="text-center">
+            <Link href="/faqs">
+              <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg rounded-full">
+                View All FAQs
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Still Have Questions?</h2>
+          <p className="text-xl mb-8 opacity-90">
+            We're here to help! Don't hesitate to reach out with any questions or concerns.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              size="lg" 
+              className="bg-white text-gray-900 hover:bg-gray-100 px-8 py-4 text-lg rounded-full"
+              onClick={() => window.open('tel:+13475547712', '_self')}
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Call Us Now
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg rounded-full bg-transparent"
+              onClick={() => window.open('mailto:info@harmony4all.org', '_self')}
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Send Email
+            </Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
