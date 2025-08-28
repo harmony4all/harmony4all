@@ -172,7 +172,7 @@ export const Footer = () => {
                 <img 
                   src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
                   alt="Candid Platinum Transparency 2025"
-                  className="w-24 h-24 object-contain"
+                  className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
                 />
               </Link>
 
