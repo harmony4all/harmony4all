@@ -84,17 +84,31 @@ export const Header = () => {
       role="banner"
     >
         {/* Legal Status Banner */}
-        <div className="bg-black text-white p-2 sm:p-4">
+        <div className="bg-black text-white p-2 sm:p-4 hidden md:block">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs sm:text-sm">
-            <div>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center">
               <span className="font-semibold">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization. 
-              <span className="ml-8 xs:ml-5">EIN: 93-2460195</span>
               </span>
+              <span>EIN: 93-2460195</span>
             </div>
-            <div>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center">
               <span className="font-semibold">NYS Attorney General&apos;s Charities Bureau Registered
-              <span className="ml-8 xs:ml-5">Registration No: 50-22-90</span>
               </span>
+              <span>Registration No: 50-22-90</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-black text-white py-4 px-4 block md:hidden">
+          <div className="flex flex-col p-0 text-center">
+            <div className="flex flex-col">
+              <span className="font-semibold text-[8.5px]">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization.</span>
+              <span className="text-[8.5px]">EIN: 93-2460195 </span>
+            </div>
+            <div className="border-t border-gray-600 my-2"></div>
+            <div className="flex flex-col">
+              <span className="font-semibold text-[8.5px]">New York State Attorney General's Charities Bureau</span>
+              <span className="text-[8.5px]">Registration No: 50-22-90</span>
             </div>
           </div>
         </div>
@@ -149,21 +163,20 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
+          <button
             ref={menuButtonRef}
-            variant="ghost"
-            className="md:hidden focus:outline-none hover:bg-gray-100 p-4 w-16 h-16"
+            className="md:hidden focus:outline-none hover:bg-gray-100 p-2 w-12 h-12"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? (
-              <X className="h-12 w-12 text-gray-900" aria-hidden="true" />
+              <X className="h-8 w-8 text-gray-900" aria-hidden="true" />
             ) : (
-              <Menu className="h-12 w-12 text-gray-900" aria-hidden="true" />
+              <Menu className="h-8 w-8 text-gray-900" aria-hidden="true" />
             )}
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Menu */}

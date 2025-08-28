@@ -33,33 +33,33 @@ const HeroCarousel = () => {
   const [isPaused, setIsPaused] = useState(false)
 
   const slides = [
-              {
-            title: "Building a World of Harmony Through Music",
-            subtitle:
-              "Inspiring the next generation to discover their voices, unite communities, and transform lives through the power of music.",
-            image: "/1.jpeg",
-            
-          },
-              {
-            title: "Did you Know?",
-            subtitle:
-              "Schools with music programs have an estimated 90.2 percent graduation rate compared to 72.9 percent for schools without music education.",
-            image: "/2.jpeg",
-            
-          },
-              {
-            title: "Building Communities Through Music",
-            subtitle: "Together, we are opening doors for the next generation to discover their voices, expand their potential, and strengthen the bonds of community.",
-            image: "/3.jpg",
-          
-          },
-              {
-            title: "Educational Excellence Through Music",
-                          subtitle:
-                          "Cultivating creativity, confidence, and possibility by giving every child access to the transformative power of music.",
-            image: "/4.avif",
-            
-          },
+    {
+      title: "Building a World of Harmony Through Music",
+      subtitle:
+        "Inspiring the next generation to discover their voices, unite communities, and transform lives through the power of music.",
+      image: "/1.jpeg",
+
+    },
+    {
+      title: "Did you Know?",
+      subtitle:
+        "Schools with music programs have an estimated 90.2 percent graduation rate compared to 72.9 percent for schools without music education.",
+      image: "/2.jpeg",
+
+    },
+    {
+      title: "Building Communities Through Music",
+      subtitle: "Together, we are opening doors for the next generation to discover their voices, expand their potential, and strengthen the bonds of community.",
+      image: "/3.jpg",
+
+    },
+    {
+      title: "Educational Excellence Through Music",
+      subtitle:
+        "Cultivating creativity, confidence, and possibility by giving every child access to the transformative power of music.",
+      image: "/4.avif",
+
+    },
   ]
 
   const nextSlide = () => {
@@ -82,8 +82,8 @@ const HeroCarousel = () => {
   }, [isPaused])
 
   return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    <section
+      className="relative min-h-[800px] sm:min-h-screen flex items-center justify-center overflow-hidden"
       role="region"
       aria-label="Hero carousel"
       onMouseEnter={() => setIsPaused(true)}
@@ -93,13 +93,12 @@ const HeroCarousel = () => {
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-105"
-          }`}
+          className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-105"
+            }`}
           aria-hidden={index !== currentSlide}
         >
-          <div 
-            className="absolute inset-0 bg-cover bg-center" 
+          <div
+            className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url('${slide.image}')` }}
             role="img"
             aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
@@ -110,34 +109,30 @@ const HeroCarousel = () => {
           <div className="relative z-10 container mx-auto px-4 text-center h-full flex items-center">
             <div className="max-w-4xl mx-auto text-white">
               <h1
-                className={`text-5xl md:text-7xl font-bold mb-6 leading-tight transition-all duration-1000 delay-300 ${
-                  index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`text-4xl md:text-7xl font-bold mb-6 leading-tight transition-all duration-1000 delay-300 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
                 {slide.title}
               </h1>
               {slide.title === "THE IMPACT" ? (
                 <div
-                  className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 ${
-                    index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
+                  className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
                   dangerouslySetInnerHTML={{ __html: slide.subtitle }}
                 />
               ) : (
                 <p
-                  className={`text-xl md:text-2xl mb-8 leading-relaxed transition-all duration-1000 delay-500 ${
-                    index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
+                  className={`text-xl md:text-2xl mb-8 leading-relaxed transition-all duration-1000 delay-500 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
                 >
                   {slide.subtitle}
                 </p>
               )}
               <div
-                className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${
-                  index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+                className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
               >
-               
+
               </div>
             </div>
           </div>
@@ -166,7 +161,7 @@ const HeroCarousel = () => {
       </Button>
 
       {/* Slide Indicators */}
-      <div 
+      <div
         className="absolute bottom-20 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20"
         role="tablist"
         aria-label="Carousel slide indicators"
@@ -174,9 +169,8 @@ const HeroCarousel = () => {
         {slides.map((slide, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent ${
-              index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent ${index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
+              }`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
             aria-selected={index === currentSlide}
@@ -215,9 +209,8 @@ const WhoWeAreSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div
-            className={`text-center mb-20 transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-8">Who We Are</h2>
             <p className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
@@ -257,15 +250,14 @@ const MissionValuesSection = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             {/* Left Column - Mission and Core Values */}
             <div
-              className={`transition-all duration-1000 delay-300 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-              }`}
+              className={`transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+                }`}
             >
               <h3 className="text-4xl font-bold text-gray-900 mb-8">Our Mission</h3>
               <p className="text-lg text-gray-700 mb-10 leading-relaxed">
                 At Harmony 4 All, our mission is to ensure that music is not a privilege, but a pathway open to every child. As a youth-led nonprofit, we provide underserved K-12 students across New York City with free instruments, educational resources, and community programs. Through music, we spark creativity, strengthen confidence, and weave connections that uplift families and communities. Our vision is a world where every child can discover their voice and shape a brighter future in harmony with others.
               </p>
-              
+
               <h4 className="text-3xl font-bold text-gray-900 mb-8">Our Core Values</h4>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -301,16 +293,15 @@ const MissionValuesSection = () => {
 
             {/* Right Column - Large Image */}
             <div
-              className={`relative transition-all duration-1000 delay-500 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-              }`}
+              className={`relative transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+                }`}
             >
               <div className="relative">
-                                 <img
-                   src="https://static.wixstatic.com/media/8e9eb3_12bc08b163d4457c8ad38ec76bcbb751~mv2.jpg/v1/fill/w_1046,h_1046,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/samuel-sianipar-4TNd3hsW3PM-unsplash.jpg"
-                   alt="Orchestra performing music"
-                   className="w-full h-[850px] object-cover rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
-                 />
+                <img
+                  src="https://static.wixstatic.com/media/8e9eb3_12bc08b163d4457c8ad38ec76bcbb751~mv2.jpg/v1/fill/w_1046,h_1046,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/samuel-sianipar-4TNd3hsW3PM-unsplash.jpg"
+                  alt="Orchestra performing music"
+                  className="w-full h-[850px] object-cover rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
+                />
                 <div className="absolute -bottom-8 -right-8 bg-black text-white p-8 rounded-3xl shadow-xl animate-pulse">
                   <p className="text-4xl font-bold">3+</p>
                   <p className="text-lg">Years of Service</p>
@@ -345,7 +336,7 @@ const ProgramsSection = () => {
   }, [])
 
   const programs = [
-   
+
     {
       icon: Music,
       title: "Instrument Rental",
@@ -364,7 +355,7 @@ const ProgramsSection = () => {
       icon: Mic,
       title: "Musical Curriculum",
       description: "Empowering students with resources and opportunities to learn, grow, and shine through music.",
-      features: ["Engaging digital and print learning resources", "Student-centered educational pathways","Community concerts and workshops", "Performance opportunities"],
+      features: ["Engaging digital and print learning resources", "Student-centered educational pathways", "Community concerts and workshops", "Performance opportunities"],
       image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
@@ -380,14 +371,13 @@ const ProgramsSection = () => {
     <section id="programs-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Our Services</h2>
           <p className="text-xl text-gray-600 max-w-6xl mx-auto">
-          Discover how Harmony 4 All opens doors of opportunity through music. Our programs provide the tools, resources, and support that help underserved students explore their creativity, strengthen their confidence, and grow with their communities.
-          
+            Discover how Harmony 4 All opens doors of opportunity through music. Our programs provide the tools, resources, and support that help underserved students explore their creativity, strengthen their confidence, and grow with their communities.
+
           </p>
         </div>
 
@@ -395,9 +385,8 @@ const ProgramsSection = () => {
           {programs.map((program, index) => (
             <Card
               key={index}
-              className={`bg-white shadow-lg hover:shadow-xl transition-all duration-500 border-0 rounded-2xl overflow-hidden group hover:scale-105 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`bg-white shadow-lg hover:shadow-xl transition-all duration-500 border-0 rounded-2xl overflow-hidden group hover:scale-105 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -438,34 +427,34 @@ const ImpactSection = () => {
   const [counters, setCounters] = useState([0, 0, 0, 0])
 
   const stats = [
-    { 
-      icon: Users, 
-      number: 500, 
+    {
+      icon: Users,
+      number: 500,
       title: "Lives Transformed",
       description: "Students discovering confidence and joy through music.",
-      suffix: "+" 
+      suffix: "+"
     },
-    { 
-      icon: BookOpen, 
-      number: 15, 
+    {
+      icon: BookOpen,
+      number: 15,
       title: "Programs Delivered",
       description: "Instruments, curriculum, and concerts reaching schools and neighborhoods",
-      suffix: "+" 
+      suffix: "+"
     },
-    { 
-      icon: HandHeart, 
-      number: 100, 
+    {
+      icon: HandHeart,
+      number: 100,
       title: "Volunteers Engaged",
       description: "Passionate hands and hearts carrying our mission forward.",
-      suffix: "+" 
+      suffix: "+"
     },
-    { 
-      icon: Award, 
-      prefix: "Since ", 
-      number: 2023, 
+    {
+      icon: Award,
+      prefix: "Since ",
+      number: 2023,
       title: "Years of Excellence",
       description: "A growing movement dedicated to making music education accessible to all.",
-       
+
     },
   ]
 
@@ -506,13 +495,12 @@ const ImpactSection = () => {
     <section id="impact-section" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">The Music of Our Impact</h2>
           <p className="text-xl opacity-90 max-w-3xl mx-auto">
-          Every number tells a story of a child finding their voice, a classroom filled with possibility, and a community strengthened through music.
+            Every number tells a story of a child finding their voice, a classroom filled with possibility, and a community strengthened through music.
           </p>
         </div>
 
@@ -520,9 +508,8 @@ const ImpactSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className={`text-center group transition-all duration-1000 delay-${index * 200} ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`text-center group transition-all duration-1000 delay-${index * 200} ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <div className="mx-auto w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
                 <stat.icon className="h-10 w-10 text-white" />
@@ -592,22 +579,20 @@ const GetInvolvedSection = () => {
     <section id="get-involved-section" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-16 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Get Involved</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Help every child find their voice through music. Your support puts instruments in their hands, opportunities in their path, and harmony in our communities.          </p>
+            Help every child find their voice through music. Your support puts instruments in their hands, opportunities in their path, and harmony in our communities.          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {ways.map((way, index) => (
             <Card
               key={index}
-              className={`bg-white shadow-lg hover:shadow-xl transition-all duration-500 border-0 rounded-2xl overflow-hidden group hover:scale-105 hover:-translate-y-2 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`bg-white shadow-lg hover:shadow-xl transition-all duration-500 border-0 rounded-2xl overflow-hidden group hover:scale-105 hover:-translate-y-2 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
               <div className="aspect-video overflow-hidden">
@@ -683,9 +668,8 @@ const HomeBlogSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div
-            className={`text-center mb-16 transition-all duration-1000 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Latest from Our Blog</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -699,9 +683,8 @@ const HomeBlogSection = () => {
               Array.from({ length: 3 }).map((_, index) => (
                 <Card
                   key={index}
-                  className={`bg-white shadow-xl border-0 rounded-3xl overflow-hidden ${
-                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
+                  className={`bg-white shadow-xl border-0 rounded-3xl overflow-hidden ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="aspect-video bg-gray-200 animate-pulse"></div>
@@ -727,31 +710,30 @@ const HomeBlogSection = () => {
               posts.map((post: any, index) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
                   <Card
-                    className={`bg-white shadow-xl border-0 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 ${
-                      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
+                    className={`bg-white shadow-xl border-0 rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-105 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                      }`}
                     style={{ transitionDelay: `${index * 200}ms` }}
                   >
                     <div className="relative">
                       <div className="aspect-video overflow-hidden">
                         {post.url ? (
-                          <a 
-                            href={post.url} 
-                            target="_blank" 
+                          <a
+                            href={post.url}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full h-full"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <img 
-                              src={post.image || '/placeholder.jpg'} 
-                              alt={post.title} 
+                            <img
+                              src={post.image || '/placeholder.jpg'}
+                              alt={post.title}
                               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer"
                             />
                           </a>
                         ) : (
-                          <img 
-                            src={post.image || '/placeholder.jpg'} 
-                            alt={post.title} 
+                          <img
+                            src={post.image || '/placeholder.jpg'}
+                            alt={post.title}
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                         )}
@@ -762,7 +744,7 @@ const HomeBlogSection = () => {
                         </Badge>
                       </div>
                     </div>
-                    
+
                     <CardContent className="p-8">
                       <div className="mb-4">
                         <p className="text-sm text-gray-500 font-medium">
@@ -773,17 +755,17 @@ const HomeBlogSection = () => {
                           })}
                         </p>
                       </div>
-                      
+
                       <h3 className="text-xl font-bold text-gray-900 mb-4 line-clamp-2 group-hover:text-black transition-colors duration-300">
                         {post.title}
                       </h3>
-                      
+
                       {post.description && (
                         <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
                           {post.description}
                         </p>
                       )}
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-2">
                           <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
@@ -791,7 +773,7 @@ const HomeBlogSection = () => {
                           </div>
                           <span className="text-sm text-gray-500">Harmony 4 All</span>
                         </div>
-                        
+
                         <div className="flex items-center text-black transition-colors duration-300">
                           <span className="text-sm font-medium mr-2">Read More</span>
                           <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -823,9 +805,8 @@ const HomeBlogSection = () => {
 
           {!isLoading && posts.length > 0 && (
             <div
-              className={`text-center mt-12 transition-all duration-1000 delay-500 ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`text-center mt-12 transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <Link href="/blog">
                 <Button className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 shadow-lg">
