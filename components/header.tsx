@@ -115,68 +115,98 @@ export const Header = () => {
       <nav className="container mx-auto p-1" role="navigation" aria-label="Main navigation">
         
         <div className="flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="flex items-center focus:outline-none rounded-lg p-1 transition-transform hover:scale-105"
-            aria-label="Harmony 4 All - Home"
-          >
-            <img 
-              src="/logo.png"
-              alt="Harmony 4 All Logo"
-              className="w-[80px] h-[80px] rounded-full object-contain"
-            />
-          </Link>
+          {/* Desktop Layout */}
+          <div className="hidden md:flex items-center justify-between w-full">
+            <Link 
+              href="/" 
+              className="flex items-center focus:outline-none rounded-lg p-1 transition-transform hover:scale-105"
+              aria-label="Harmony 4 All - Home"
+            >
+              <img 
+                src="/logo.png"
+                alt="Harmony 4 All Logo"
+                className="w-[80px] h-[80px] rounded-full object-contain"
+              />
+            </Link>
 
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8" role="menubar">
-            {navLinks.map((link, index) => {
-              const isActive = isActiveLink(link.href)
-              return (
-                <Link
-                  key={index}
-                  href={link.href}
-                  className={`font-medium transition-all duration-300 focus:outline-none rounded-lg px-3 py-2 relative ${
-                    isActive
-                      ? "text-black font-semibold"
-                      : "text-gray-700 hover:text-black hover:bg-gray-50"
-                  }`}
-                  role="menuitem"
-                  aria-current={isActive ? "page" : undefined}
+            {/* Desktop Menu */}
+            <div className="flex items-center space-x-8" role="menubar">
+              {navLinks.map((link, index) => {
+                const isActive = isActiveLink(link.href)
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className={`font-medium transition-all duration-300 focus:outline-none rounded-lg px-3 py-2 relative ${
+                      isActive
+                        ? "text-black font-semibold"
+                        : "text-gray-700 hover:text-black hover:bg-gray-50"
+                    }`}
+                    role="menuitem"
+                    aria-current={isActive ? "page" : undefined}
+                  >
+                    {link.text}
+                    {isActive && (
+                      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-black rounded-full"></div>
+                    )}
+                  </Link>
+                )
+              })}
+              <Link href="/donate">
+                <Button 
+                  className="relative overflow-hidden bg-gradient-to-r from-black-600 to-black-700 hover:from-black-700 hover:to-blak-800 text-white rounded-full px-8 py-4 transition-all duration-500 hover:scale-110 focus:outline-none shadow-xl hover:shadow-2xl font-bold text-lg group transform hover:-translate-y-1"
+                  aria-label="Donate to Harmony 4 All"
                 >
-                  {link.text}
-                  {isActive && (
-                    <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-black rounded-full"></div>
-                  )}
-                </Link>
-              )
-            })}
+                  <Heart className="mr-3 h-5 w-5 animate-pulse" />
+                  <span>Donate Now</span>
+                  <div className="absolute inset-0 bg-white/20 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </Button>
+              </Link>
+            </div>
+          </div>
+
+          {/* Mobile Layout */}
+          <div className="flex md:hidden items-center justify-between w-full">
+            {/* Mobile Menu Button - Left */}
+            <button
+              ref={menuButtonRef}
+              className="focus:outline-none hover:bg-gray-100 p-2 w-12 h-12 rounded-lg"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-8 w-8 text-gray-900" aria-hidden="true" />
+              ) : (
+                <Menu className="h-8 w-8 text-gray-900" aria-hidden="true" />
+              )}
+            </button>
+
+            {/* Mobile Logo - Center */}
+            <Link 
+              href="/" 
+              className="flex items-center focus:outline-none rounded-lg p-1 transition-transform hover:scale-105"
+              aria-label="Harmony 4 All - Home"
+            >
+              <img 
+                src="/logo.png"
+                alt="Harmony 4 All Logo"
+                className="w-[60px] h-[60px] rounded-full object-contain"
+              />
+            </Link>
+
+            {/* Mobile Donate Button - Right */}
             <Link href="/donate">
               <Button 
-                className="relative overflow-hidden bg-gradient-to-r from-black-600 to-black-700 hover:from-black-700 hover:to-blak-800 text-white rounded-full px-8 py-4 transition-all duration-500 hover:scale-110 focus:outline-none shadow-xl hover:shadow-2xl font-bold text-lg group transform hover:-translate-y-1"
+                className="relative overflow-hidden bg-black text-white rounded-full px-4 py-2 transition-all duration-300 focus:outline-none shadow-lg hover:shadow-xl font-bold text-sm group transform hover:scale-105"
                 aria-label="Donate to Harmony 4 All"
               >
-                <Heart className="mr-3 h-5 w-5 animate-pulse" />
-                <span>Donate Now</span>
-                <div className="absolute inset-0 bg-white/20 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                <Heart className="mr-1 h-4 w-4 animate-pulse" />
+                <span>Donate</span>
               </Button>
             </Link>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            ref={menuButtonRef}
-            className="md:hidden focus:outline-none hover:bg-gray-100 p-2 w-12 h-12"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-8 w-8 text-gray-900" aria-hidden="true" />
-            ) : (
-              <Menu className="h-8 w-8 text-gray-900" aria-hidden="true" />
-            )}
-          </button>
         </div>
 
         {/* Mobile Menu */}

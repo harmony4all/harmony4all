@@ -302,9 +302,9 @@ const MissionValuesSection = () => {
                   alt="Orchestra performing music"
                   className="w-full h-[850px] object-cover rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute -bottom-8 -right-8 bg-black text-white p-8 rounded-3xl shadow-xl animate-pulse">
-                  <p className="text-4xl font-bold">3+</p>
-                  <p className="text-lg">Years of Service</p>
+                <div className="absolute -bottom-8 right-0 bg-black text-white p-4 rounded-3xl shadow-xl animate-pulse">
+                  <p className="text-2xl font-bold">3+</p>
+                  <p className="text-sm">Years of Service</p>
                 </div>
               </div>
             </div>
