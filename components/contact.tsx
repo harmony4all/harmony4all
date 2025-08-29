@@ -217,13 +217,8 @@ export default function ContactSection() {
 
                     <div className="space-y-8">
                         {[
-                            {
-                                icon: MapPin,
-                                title: "Visit Us",
-                                content: "New York City, NY\nUnited States",
-                            },
-                            { icon: Phone, title: "Call Us", content: "Contact us for inquiries\n(347) 554-7712" },
-                            { icon: Mail, title: "Email Us", content: "info@harmony4all.org\nGet in touch with our team" },
+                            { icon: Mail, title: "Email Us", content: "info@harmony4all.org" },
+                            { icon: Phone, title: "Call Us", content: "(347) 554-7712" },
                         ].map((item, index) => (
                             <Card
                                 key={index}
