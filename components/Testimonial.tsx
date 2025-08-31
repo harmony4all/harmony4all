@@ -16,13 +16,13 @@ export const TestimonialsSection = () => {
       name: "Joseph P. Addabbo, Jr.",
       role: "New York State Senator, District 15",
       content:
-        `"I am pleased to express my strong support for <strong>Harmony 4 All, Inc.</strong> and its mission to provide free, high-quality music education to underserved K-12 students across New York City.<br><br>
+        `"I am pleased to express my strong support for <strong>Harmony 4 All, Inc.</strong> and its mission to provide free, high-quality music education to underserved K-12 students across New York City.<br>
 
-Your dedication to breaking barriers in arts education through instrument rentals, repair services, digital curriculums, and community concerts is truly commendable.<br><br>
+Your dedication to breaking barriers in arts education through instrument rentals, repair services, digital curriculums, and community concerts is truly commendable.<br>
 
-By ensuring that children in marginalized communities have access to the transformative power of music, you are not only fostering creativity but also strengthening our communities. The work you do aligns with my commitment to expanding opportunities for young people and supporting arts education in our city.<br><br>
+By ensuring that children in marginalized communities have access to the transformative power of music, you are not only fostering creativity but also strengthening our communities. The work you do aligns with my commitment to expanding opportunities for young people and supporting arts education in our city.<br>
 
-It has been a pleasure sponsoring <strong>Harmony 4 All</strong> musical events in my district to entertain and inform my constituents of its mission. I look forward to seeing <strong>Harmony 4 All</strong> continue to grow and positively impact even more students.<br><br>
+It has been a pleasure sponsoring <strong>Harmony 4 All</strong> musical events in my district to entertain and inform my constituents of its mission. I look forward to seeing <strong>Harmony 4 All</strong> continue to grow and positively impact even more students.<br>
 
 Please do not hesitate to reach out if my office can be of further assistance."`,
       rating: 5,
@@ -32,13 +32,13 @@ Please do not hesitate to reach out if my office can be of further assistance."`
       name: "Nick LaFleur",
       role: "Director of Partnership Programs, Education Through Music",
       content:
-        `"<strong>Education Through Music (ETM)</strong> is happy to partner with <strong>Harmony 4 All</strong>, a youth-led nonprofit dedicated to advancing educational equity through access to quality music education for underserved New York City students.<br><br>
+        `"<strong>Education Through Music (ETM)</strong> is happy to partner with <strong>Harmony 4 All</strong>, a youth-led nonprofit dedicated to advancing educational equity through access to quality music education for underserved New York City students.<br>
 
-Earlier this year, <strong>Harmony 4 All</strong> provided critical funding that enabled ETM to repair twelve school-owned band instruments at PS 154 in Queens—an ETM partner school serving a predominantly low-income, Title I student population.<br><br>
+Earlier this year, <strong>Harmony 4 All</strong> provided critical funding that enabled ETM to repair twelve school-owned band instruments at PS 154 in Queens—an ETM partner school serving a predominantly low-income, Title I student population.<br>
 
-These repairs supported our joint goal of expanding the school's band program from 35 to 50 students, creating more opportunities for children to engage with music.<br><br>
+These repairs supported our joint goal of expanding the school's band program from 35 to 50 students, creating more opportunities for children to engage with music.<br>
 
-We share in <strong>Harmony 4 All</strong>'s mission to ensure no child is excluded from the joy and growth of music because of financial hardship, which aligns with ETM's own commitment to educational equity.<br><br>
+We share in <strong>Harmony 4 All</strong>'s mission to ensure no child is excluded from the joy and growth of music because of financial hardship, which aligns with ETM's own commitment to educational equity.<br>
 
 ETM looks forward to continuing our partnership with <strong>Harmony 4 All</strong> and working together again in the future to ensure that every child has access to the power of music."`,
       rating: 5,
@@ -48,7 +48,7 @@ ETM looks forward to continuing our partnership with <strong>Harmony 4 All</stro
       name: "Maple Grove Cemetery",
       role: "Community Partner",
       content:
-        `"This program is made possible jointly by:<br><br>
+        `"This program is made possible jointly by:<br>
 
 • <strong>New York State Senator Joseph P. Addabbo, Jr.</strong><br>
 • <strong>The Office Of Queens Borough President, Donovan Richards, Jr.</strong><br>
@@ -64,15 +64,15 @@ ETM looks forward to continuing our partnership with <strong>Harmony 4 All</stro
       name: "Shahriar Hossain",
       role: "President of the Friends of Maple Grove",
       content:
-        `"On behalf of the Friends of Maple Grove Cemetery, it is with great enthusiasm that I offer this letter of support for <strong>Harmony 4 All</strong>, a remarkable nonprofit dedicated to making music education accessible to underserved students in New York City.<br><br>
+        `"On behalf of the Friends of Maple Grove Cemetery, it is with great enthusiasm that I offer this letter of support for <strong>Harmony 4 All</strong>, a remarkable nonprofit dedicated to making music education accessible to underserved students in New York City.<br>
 
-Their mission to bridge the gap in musical education resonates deeply with our values of education, preservation, and community engagement.<br><br>
+Their mission to bridge the gap in musical education resonates deeply with our values of education, preservation, and community engagement.<br>
 
-<strong>Harmony 4 All</strong> has already left a profound impact on our own community, having brought their extraordinary talents to Maple Grove Cemetery in a concert that not only showcased their musicianship but also uplifted and inspired all who attended.<br><br>
+<strong>Harmony 4 All</strong> has already left a profound impact on our own community, having brought their extraordinary talents to Maple Grove Cemetery in a concert that not only showcased their musicianship but also uplifted and inspired all who attended.<br>
 
-Through free instrument rentals, curriculum support for teachers, and partnerships with underfunded schools, <strong>Harmony 4 All</strong> fosters an environment where young musicians can flourish.<br><br>
+Through free instrument rentals, curriculum support for teachers, and partnerships with underfunded schools, <strong>Harmony 4 All</strong> fosters an environment where young musicians can flourish.<br>
 
-We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any institution or funding body to invest in their invaluable work.<br><br>
+We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any institution or funding body to invest in their invaluable work.<br>
 
 Their impact is not only measurable. It is transformative."`,
       rating: 5,
@@ -82,21 +82,20 @@ Their impact is not only measurable. It is transformative."`,
       name: "Pamela Gathers-Bullard",
       role: "P.S. 154 Queens Principal",
       content:
-        `"As the music teacher at PS 153 in Maspeth, Queens, New York, my dream is to have a band program that inspires students to become life-long learners of music.<br><br>
+            `"As the music teacher at PS 153 in Maspeth, Queens, New York, my dream is to have a band program that inspires students to become life-long learners of music.<br>
+We have over 110 instruments that have been in a state of disrepair for over ten years. I have inventoried and set aside specific instruments for the program: 10 flutes, 12 clarinets, 8 saxophones, 10 trumpets, 10 trombones, and 5 euphoniums.<br>
 
-We have over 110 instruments that have been in a state of disrepair for over ten years. I have inventoried and set aside specific instruments for the program: 10 flutes, 12 clarinets, 8 saxophones, 10 trumpets, 10 trombones, and 5 euphoniums.<br><br>
+Our current band has 30 students who are eager to play. However, their instruments frequently fall apart or make it difficult to produce a good sound, hindering their progress.<br>
 
-Our current band has 30 students who are eager to play. However, their instruments frequently fall apart or make it difficult to produce a good sound, hindering their progress.<br><br>
+I often spend 10 or more minutes per class diagnosing and fixing instrument issues, which reduces valuable playing time. Students currently get only 20 minutes of playing time per week, but with working instruments, they could get 30-40 minutes.<br>
 
-I often spend 10 or more minutes per class diagnosing and fixing instrument issues, which reduces valuable playing time. Students currently get only 20 minutes of playing time per week, but with working instruments, they could get 30-40 minutes.<br><br>
+As a Title 1 school, we have limited funds for instrument replacement or repair within the music budget.<br>
 
-As a Title 1 school, we have limited funds for instrument replacement or repair within the music budget.<br><br>
+We are asking <strong>Harmony 4 All</strong> to help us find someone to properly repair these instruments. The instruments are of good quality and, if repaired and maintained, could last for 2 or 3 years, benefiting both current and future students.<br>
 
-We are asking <strong>Harmony 4 All</strong> to help us find someone to properly repair these instruments. The instruments are of good quality and, if repaired and maintained, could last for 2 or 3 years, benefiting both current and future students.<br><br>
+This would save the school money, engage students, reduce obstacles to success, and foster student accomplishment and joy with functional instruments.<br>
 
-This would save the school money, engage students, reduce obstacles to success, and foster student accomplishment and joy with functional instruments.<br><br>
-
-The many instruments are in a sorry state, and <strong>Harmony 4 All</strong> fixing them would have a significant, long-term impact on students at our Title 1 school.<br><br>
+The many instruments are in a sorry state, and <strong>Harmony 4 All</strong> fixing them would have a significant, long-term impact on students at our Title 1 school.<br>
 
 As the sole source of music education in the area, quality instruments would enable students to achieve success. We want to plant the seeds for future musicians that can grow into life-long learners of music."`,
       rating: 5,
@@ -106,11 +105,11 @@ As the sole source of music education in the area, quality instruments would ena
       name: "Harvey Epstein",
       role: "New York State Assembly Member, District 74",
       content:
-        `"I am pleased to write this letter in support of <strong>Harmony 4 All</strong>, a remarkable nonprofit organization dedicated to providing free access to high-quality music education and resources for underserved K-12 students across New York City.<br><br>
+        `"I am pleased to write this letter in support of <strong>Harmony 4 All</strong>, a remarkable nonprofit organization dedicated to providing free access to high-quality music education and resources for underserved K-12 students across New York City.<br>
 
-<strong>Harmony 4 All</strong> is a 501(c)(3) nonprofit that has been instrumental in creating meaningful musical opportunities for students who would otherwise lack access to music education, instrument rentals, and essential repairs.<br><br>
+    <strong>Harmony 4 All</strong> is a 501(c)(3) nonprofit that has been instrumental in creating meaningful musical opportunities for students who would otherwise lack access to music education, instrument rentals, and essential repairs.<br>
 
-In 2024, my office had the privilege of partnering with <strong>Harmony 4 All</strong> to bring music to our community through engaging performances and initiatives that uplifted constituents of all ages.<br><br>
+    In 2024, my office had the privilege of partnering with <strong>Harmony 4 All</strong> to bring music to our community through engaging performances and initiatives that uplifted constituents of all ages.<br>
 
 I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programming and impact, as they not only provide free access to music education but also strengthen communities by fostering creativity, cultural engagement, and youth empowerment."`,
       rating: 5,
