@@ -231,7 +231,7 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
               <div className={`order-2 ${isImageOnLeft ? 'lg:order-2' : 'lg:order-1'} flex items-center bg-white`}>
                 <CardContent className="px-6 lg:px-8 w-full relative">
 
-                  <div className="text-center lg:text-left">
+                  <div className="text-left lg:text-left">
 
 
                     {/* Quote */}
