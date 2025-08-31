@@ -102,7 +102,7 @@ export default function JoshuaPage() {
             <div className="relative">
               <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 md:border-6 lg:border-8 border-white ring-2 md:ring-4 ring-gray-100">
                 <img
-                  src="https://static.wixstatic.com/media/8e9eb3_e381c538f1a340da9e19e44a919d000f~mv2.jpg/v1/crop/x_0,y_0,w_176,h_176/fill/w_246,h_246,al_c,lg_1,q_80,enc_avif,quality_auto/8e9eb3_e381c538f1a340da9e19e44a919d000f~mv2.jpg"
+                  src="/joshua.png"
                   alt="Joshua Quddus"
                   className="w-full h-full object-cover"
                 />
