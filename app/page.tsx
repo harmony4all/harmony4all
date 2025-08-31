@@ -205,14 +205,14 @@ const WhoWeAreSection = () => {
   }, [])
 
   return (
-    <section id="who-we-are-section" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="who-we-are-section" className="py-4 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          <div
-            className={`text-center mb-12 sm:mb-16 md:mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">Who We Are</h2>
+                      <div
+              className={`text-center mb-4 sm:mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
+            >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 sm:mb-6 md:mb-8">Who We Are</h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
               <span className="font-bold  px-1 rounded">Harmony 4 All</span> is a youth-led nonprofit founded on the belief that every child deserves the opportunity to explore their fullest potential. We provide underserved K-12 students across New York City with free access to instruments, music education resources, and community concerts—nurturing creativity, confidence, and connection. Through the power of music, we strengthen schools, uplift families, and inspire generations.
             </p>
@@ -244,7 +244,7 @@ const MissionValuesSection = () => {
   }, [])
 
   return (
-    <section id="mission-values-section" className="py-12 sm:py-16 md:py-20 lg:py-[80px] bg-white">
+    <section id="mission-values-section" className="py-4 sm:py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-start">
@@ -368,13 +368,13 @@ const ProgramsSection = () => {
   ]
 
   return (
-    <section id="programs-section" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section id="programs-section" className="py-4 sm:py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`text-center mb-4 sm:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Our Services</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-6">Our Services</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-6xl mx-auto px-2">
             Discover how Harmony 4 All opens doors of opportunity through music. Our programs provide the tools, resources, and support that help underserved students explore their creativity, strengthen their confidence, and grow with their communities.
 
@@ -468,13 +468,13 @@ const GetInvolvedSection = () => {
   ]
 
   return (
-    <section id="get-involved-section" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section id="get-involved-section" className="py-4 sm:py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`text-center mb-4 sm:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Get Involved</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-6">Get Involved</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
             Help every child find their voice through music. Your support puts instruments in their hands, opportunities in their path, and harmony in our communities.          </p>
         </div>
@@ -558,14 +558,14 @@ const HomeBlogSection = () => {
   }, [])
 
   return (
-    <section id="blog-section" className="py-12 sm:py-16 md:py-20 bg-white">
+    <section id="blog-section" className="py-4 sm:py-12 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div
-            className={`text-center mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            className={`text-center mb-4 sm:mb-12 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Latest from Our Blog</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-6">Latest from Our Blog</h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-2">
               Discover inspiring stories, educational insights, and updates from our music education community.
             </p>
