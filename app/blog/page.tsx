@@ -40,7 +40,9 @@ export default function BlogPage() {
     try {
       setLoading(true);
       const response = await api.get('/blogs');
-      setBlogs(response.data);
+      // Handle the response structure: { blogs: [...], pagination: {...} }
+      const blogsData = response.data?.blogs || response.data || []
+      setBlogs(Array.isArray(blogsData) ? blogsData : []);
     } catch (err) {
       setError('Failed to load blogs');
       console.error('Error fetching blogs:', err);
