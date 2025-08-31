@@ -56,7 +56,7 @@ However, the cost of purchasing new band instruments at this time is not possibl
 
 I sincerely hope you can partner with ETM to make this possible."`,
       rating: 5,
-      image: "/ps154-letter.png",
+      image: "/emt153.png",
     },
     {
       name: "Shahriar Hossain",
