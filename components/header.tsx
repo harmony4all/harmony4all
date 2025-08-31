@@ -59,14 +59,11 @@ export const Header = () => {
 
   const navLinks = [
     { text: "About", href: "/about" },
-    // { text: "Programs", href: "/programs" },
     { text: "Services", href: "/services" },
-    // { text: "Resources", href: "/resources" },
     { text: "Blog", href: "/blog" },
     { text: "Media", href: "/media" },
     { text: "Get Involved", href: "/get-involved" },
     { text: "Contact", href: "/contact" },
-    { text: "Instrument Donations", href: "/instrument-donations" },
   ]
 
   const isActiveLink = (href: string) => {
@@ -112,7 +109,8 @@ export const Header = () => {
             </div>
           </div>
         </div>
-      <nav className="container mx-auto p-1" role="navigation" aria-label="Main navigation">
+
+      <nav className="container mx-auto p-1.5 h-12 sm:h-28" role="navigation" aria-label="Main navigation">
         
         <div className="flex items-center justify-between">
           {/* Desktop Layout */}
@@ -125,22 +123,21 @@ export const Header = () => {
               <img 
                 src="/logo.png"
                 alt="Harmony 4 All Logo"
-                className="w-[80px] h-[80px] rounded-full object-contain"
+                className="w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] rounded-full object-contain"
               />
             </Link>
 
             {/* Desktop Menu */}
-            <div className="flex items-center space-x-8" role="menubar">
               {navLinks.map((link, index) => {
                 const isActive = isActiveLink(link.href)
                 return (
                   <Link
                     key={index}
                     href={link.href}
-                    className={`font-medium transition-all duration-300 focus:outline-none rounded-lg px-3 py-2 relative ${
+                    className={`font-bold transition-all duration-300 focus:outline-none rounded-lg px-0 py-2 relative ${
                       isActive
                         ? "text-black font-semibold"
-                        : "text-gray-700 hover:text-black hover:bg-gray-50"
+                        : "text-black hover:text-black hover:bg-gray-50"
                     }`}
                     role="menuitem"
                     aria-current={isActive ? "page" : undefined}
@@ -163,7 +160,6 @@ export const Header = () => {
                 </Button>
               </Link>
             </div>
-          </div>
 
           {/* Mobile Layout */}
           <div className="flex md:hidden items-center justify-between w-full">
@@ -192,7 +188,7 @@ export const Header = () => {
               <img 
                 src="/logo.png"
                 alt="Harmony 4 All Logo"
-                className="w-[60px] h-[60px] rounded-full object-contain"
+                className="w-[100px] h-[100px] rounded-full object-contain"
               />
             </Link>
 
@@ -202,7 +198,6 @@ export const Header = () => {
                 className="relative overflow-hidden bg-black text-white rounded-full px-4 py-2 transition-all duration-300 focus:outline-none shadow-lg hover:shadow-xl font-bold text-sm group transform hover:scale-105"
                 aria-label="Donate to Harmony 4 All"
               >
-                <Heart className="mr-1 h-4 w-4 animate-pulse" />
                 <span>Donate</span>
               </Button>
             </Link>

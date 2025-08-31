@@ -2,27 +2,44 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
 
 // Testimonials Section Component
 export const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(true)
 
   const testimonials = [
     {
-      name: "Senator Joseph Addabbo Jr.",
-      role: "NY State Senator",
+      name: "Joseph P. Addabbo, Jr.",
+      role: "New York State Senator, District 15",
       content:
-        `“I am proud to support Harmony4All and their incredible efforts to bring communities together through the power of music and the arts. By fostering creativity and inclusivity, this organization provides opportunities for individuals of all ages and backgrounds to connect and share in the joy of music. Investing in groups like Harmony4All is what helps add to the cultural and social fabric of our community, and I am committed to helping their mission thrive.”`,
+        `"I am pleased to express my strong support for <strong>Harmony 4 All, Inc.</strong> and its mission to provide free, high-quality music education to underserved K-12 students across New York City.<br><br>
+
+Your dedication to breaking barriers in arts education through instrument rentals, repair services, digital curriculums, and community concerts is truly commendable.<br><br>
+
+By ensuring that children in marginalized communities have access to the transformative power of music, you are not only fostering creativity but also strengthening our communities. The work you do aligns with my commitment to expanding opportunities for young people and supporting arts education in our city.<br><br>
+
+It has been a pleasure sponsoring <strong>Harmony 4 All</strong> musical events in my district to entertain and inform my constituents of its mission. I look forward to seeing <strong>Harmony 4 All</strong> continue to grow and positively impact even more students.<br><br>
+
+Please do not hesitate to reach out if my office can be of further assistance."`,
       rating: 5,
-      image: "https://static.wixstatic.com/media/30dc3d_bd367139bbb64b3b8d1729423a6b99f7~mv2.jpeg?dn=With Senator Joseph Addabbo.JPEG",
+      image: "/joseph p.jpg",
     },
     {
-      name: "Education Through Music",
-      role: "Major Funder & Partner",
+      name: "Nick LaFleur",
+      role: "Director of Partnership Programs, Education Through Music",
       content:
-        `“Education Through Music (ETM) has been a valued partner to P.S. 154 for over a decade, providing quality music education, instruments, and helping us launch a 4th & 5th grade band program. Repairing our 12 school-owned instruments would allow even more students to participate in band for years to come, enriching their music education. We are grateful for ETM’s support and hope to continue this partnership.”`,
+        `"<strong>Education Through Music (ETM)</strong> is happy to partner with <strong>Harmony 4 All</strong>, a youth-led nonprofit dedicated to advancing educational equity through access to quality music education for underserved New York City students.<br><br>
+
+Earlier this year, <strong>Harmony 4 All</strong> provided critical funding that enabled ETM to repair twelve school-owned band instruments at PS 154 in Queens—an ETM partner school serving a predominantly low-income, Title I student population.<br><br>
+
+These repairs supported our joint goal of expanding the school's band program from 35 to 50 students, creating more opportunities for children to engage with music.<br><br>
+
+We share in <strong>Harmony 4 All</strong>'s mission to ensure no child is excluded from the joy and growth of music because of financial hardship, which aligns with ETM's own commitment to educational equity.<br><br>
+
+ETM looks forward to continuing our partnership with <strong>Harmony 4 All</strong> and working together again in the future to ensure that every child has access to the power of music."`,
       rating: 5,
       image: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
     },
@@ -30,33 +47,73 @@ export const TestimonialsSection = () => {
       name: "Maple Grove Cemetery",
       role: "Community Partner",
       content:
-        `“Friends of Maple Grove Cemetery is proud to support Harmony 4 All, a nonprofit making music education accessible to underserved students in NYC. Their instrument rentals, teacher support, and school partnerships help young musicians thrive, and we’ve seen their impact firsthand through a concert that uplifted our community. We wholeheartedly endorse Harmony 4 All and their transformative mission.”`,
+        `"This program is made possible jointly by:<br><br>
+
+• <strong>New York State Senator Joseph P. Addabbo, Jr.</strong><br>
+• <strong>The Office Of Queens Borough President, Donovan Richards, Jr.</strong><br>
+• <strong>New York State Council on the Arts</strong><br>
+• <strong>New York State Office of the Governor</strong><br>
+• <strong>New York State Legislature</strong><br>
+• <strong>Members and Patrons of The Maple Grove Cemetery</strong><br>
+• <strong>The Maple Grove Cemetery Association</strong>"`,
+      rating: 5,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZvPV9K2At4vzJvM5Uq9Mf51XWGHEEhobH3A&s",
+    },
+    {
+      name: "Shahriar Hossain",
+      role: "President of the Friends of Maple Grove",
+      content:
+        `"On behalf of the Friends of Maple Grove Cemetery, it is with great enthusiasm that I offer this letter of support for <strong>Harmony 4 All</strong>, a remarkable nonprofit dedicated to making music education accessible to underserved students in New York City.<br><br>
+
+Their mission to bridge the gap in musical education resonates deeply with our values of education, preservation, and community engagement.<br><br>
+
+<strong>Harmony 4 All</strong> has already left a profound impact on our own community, having brought their extraordinary talents to Maple Grove Cemetery in a concert that not only showcased their musicianship but also uplifted and inspired all who attended.<br><br>
+
+Through free instrument rentals, curriculum support for teachers, and partnerships with underfunded schools, <strong>Harmony 4 All</strong> fosters an environment where young musicians can flourish.<br><br>
+
+We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any institution or funding body to invest in their invaluable work.<br><br>
+
+Their impact is not only measurable. It is transformative."`,
       rating: 5,
       image: "/image.png",
     },
     {
-      name: "The New York Injury Law Firm",
-      role: "Corporate Supporter",
+      name: "Pamela Gathers-Bullard",
+      role: "P.S. 154 Queens Principal",
       content:
-        `“The New York Injury Law Firm proudly supports Harmony 4 All and their mission to promote inclusion, healing, and opportunity through arts, education, and outreach. Their work embodies compassion, creativity, and advocacy, and we look forward to seeing them continue to grow and inspire the community.”`,
-      rating: 5,
-      image: "https://thenewyorkinjurylawfirm.com/wp-content/uploads/2024/11/New-York-Injury-Firm.png.webp",
-    },
-    {
-      name: "Maspeth Elementary School",
-      role: "Educational Partner",
-      content:
-        `“As the music teacher at PS 153 in Queens, my dream is to build a band program that inspires lifelong musicians. While we have over 100 instruments, most are in disrepair, limiting my 30 eager students each week. With proper repairs, these instruments could serve students for years, giving them the chance to succeed and truly experience the joy of music. Harmony 4 All’s support would make a lasting impact at our Title 1 school.”`,
+        `"As the music teacher at PS 153 in Maspeth, Queens, New York, my dream is to have a band program that inspires students to become life-long learners of music.<br><br>
+
+We have over 110 instruments that have been in a state of disrepair for over ten years. I have inventoried and set aside specific instruments for the program: 10 flutes, 12 clarinets, 8 saxophones, 10 trumpets, 10 trombones, and 5 euphoniums.<br><br>
+
+Our current band has 30 students who are eager to play. However, their instruments frequently fall apart or make it difficult to produce a good sound, hindering their progress.<br><br>
+
+I often spend 10 or more minutes per class diagnosing and fixing instrument issues, which reduces valuable playing time. Students currently get only 20 minutes of playing time per week, but with working instruments, they could get 30-40 minutes.<br><br>
+
+As a Title 1 school, we have limited funds for instrument replacement or repair within the music budget.<br><br>
+
+We are asking <strong>Harmony 4 All</strong> to help us find someone to properly repair these instruments. The instruments are of good quality and, if repaired and maintained, could last for 2 or 3 years, benefiting both current and future students.<br><br>
+
+This would save the school money, engage students, reduce obstacles to success, and foster student accomplishment and joy with functional instruments.<br><br>
+
+The many instruments are in a sorry state, and <strong>Harmony 4 All</strong> fixing them would have a significant, long-term impact on students at our Title 1 school.<br><br>
+
+As the sole source of music education in the area, quality instruments would enable students to achieve success. We want to plant the seeds for future musicians that can grow into life-long learners of music."`,
       rating: 5,
       image: "/emt153.png",
     },
     {
-      name: "New York State Assembly",
-      role: "Government Partner",
+      name: "Harvey Epstein",
+      role: "New York State Assembly Member, District 74",
       content:
-        `“Harmony 4 All is a remarkable nonprofit providing free, high-quality music education and resources to underserved K-12 students in NYC. I had the privilege of partnering with them in 2024 and witnessed their positive impact through performances and community initiatives. Their work fosters creativity, cultural engagement, and youth empowerment, ensuring every child has access to enriching music opportunities. I fully support their mission and look forward to their continued impact across the city.”`,
+        `"I am pleased to write this letter in support of <strong>Harmony 4 All</strong>, a remarkable nonprofit organization dedicated to providing free access to high-quality music education and resources for underserved K-12 students across New York City.<br><br>
+
+<strong>Harmony 4 All</strong> is a 501(c)(3) nonprofit that has been instrumental in creating meaningful musical opportunities for students who would otherwise lack access to music education, instrument rentals, and essential repairs.<br><br>
+
+In 2024, my office had the privilege of partnering with <strong>Harmony 4 All</strong> to bring music to our community through engaging performances and initiatives that uplifted constituents of all ages.<br><br>
+
+I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programming and impact, as they not only provide free access to music education but also strengthen communities by fostering creativity, cultural engagement, and youth empowerment."`,
       rating: 5,
-      image: "https://static.wixstatic.com/media/d717d4_05b13ab329714f6bb79c12184de08986~mv2.png",
+      image: "/harvey.jpg",
     }
   ]
 
@@ -68,10 +125,21 @@ export const TestimonialsSection = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
 
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying)
+  }
+
   useEffect(() => {
-    const timer = setInterval(nextTestimonial, 10000)
-    return () => clearInterval(timer)
-  }, [])
+    let timer: NodeJS.Timeout | null = null
+
+    if (isPlaying) {
+      timer = setInterval(nextTestimonial, 10000)
+    }
+
+    return () => {
+      if (timer) clearInterval(timer)
+    }
+  }, [isPlaying])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -96,33 +164,31 @@ export const TestimonialsSection = () => {
     <section id="testimonials-section" className="py-24 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Success Stories</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Hear from the families, therapists, and volunteers who make our community special.
+            Voices of support. What our community says.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto relative">
           <Card
-            className={`bg-white border-0 shadow-2xl rounded-3xl overflow-hidden transition-all duration-1000 delay-300 ${
-              isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
-            }`}
+            className={`bg-white border-0 shadow-2xl rounded-3xl overflow-hidden transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
           >
-0            <div className="grid lg:grid-cols-2 gap-0">
+            0            <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className={`order-1 ${isImageOnLeft ? 'lg:order-1' : 'lg:order-2'} relative`}>
                 <div className="aspect-[3/4] overflow-hidden relative bg-gray-50 flex items-center justify-center">
                   {/* Check if it's a logo (contains 'logo' in URL or is from specific domains) */}
-                  {testimonials[currentTestimonial].image.includes('logo') || 
-                   testimonials[currentTestimonial].image.includes('etmonline.org') ||
-                   testimonials[currentTestimonial].image.includes('thenewyorkinjurylawfirm.com') ||
-                   testimonials[currentTestimonial].image.includes('friendsofmaplegrove.org') ||
-                   testimonials[currentTestimonial].image === '/image.png' ||
-                   testimonials[currentTestimonial].image === '/emt153.png' ? (
+                  {testimonials[currentTestimonial].image.includes('logo') ||
+                    testimonials[currentTestimonial].image.includes('etmonline.org') ||
+                    testimonials[currentTestimonial].image.includes('thenewyorkinjurylawfirm.com') ||
+                    testimonials[currentTestimonial].image.includes('friendsofmaplegrove.org') ||
+                    testimonials[currentTestimonial].image === '/image.png' ||
+                    testimonials[currentTestimonial].image === '/emt153.png' ? (
                     // Logo styling - centered with actual size
                     <div className="p-8 flex items-center justify-center h-full">
                       <img
@@ -149,18 +215,19 @@ export const TestimonialsSection = () => {
 
               {/* Content Section */}
               <div className={`order-2 ${isImageOnLeft ? 'lg:order-2' : 'lg:order-1'} flex items-center bg-white`}>
-                                <CardContent className="p-6 lg:p-8 w-full relative">
-                
+                <CardContent className="p-6 lg:p-8 w-full relative">
+
                   <div className="text-center lg:text-left">
-                  
+
 
                     {/* Quote */}
                     <blockquote className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 leading-relaxed font-light relative">
-                      <div className="pl-4 pr-4">
-                        {testimonials[currentTestimonial].content}
-                      </div>
+                      <div 
+                        className="pl-4 pr-4"
+                        dangerouslySetInnerHTML={{ __html: testimonials[currentTestimonial].content }}
+                      />
                     </blockquote>
-                     {/* Decorative element */}
+                    {/* Decorative element */}
 
                     {/* Author Info */}
                     <div className="border-t border-gray-100 pt-8">
@@ -177,21 +244,37 @@ export const TestimonialsSection = () => {
             </div>
           </Card>
 
-         
 
-          {/* Progress Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial 
-                    ? "bg-black scale-125" 
+
+          {/* Controls and Progress Indicator */}
+          <div className="flex flex-col items-center mt-8 space-y-4">
+            {/* Play/Pause Button */}
+            <Button
+              onClick={togglePlayPause}
+              variant="outline"
+              size="sm"
+              className="rounded-full w-12 h-12 p-0 border-2 border-gray-300 hover:border-black hover:bg-gray-50 transition-all duration-300"
+            >
+              {isPlaying ? (
+                <Pause className="h-5 w-5 text-gray-700" />
+              ) : (
+                <Play className="h-5 w-5 text-gray-700" />
+              )}
+            </Button>
+
+            {/* Progress Indicator */}
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial
+                    ? "bg-black scale-125"
                     : "bg-gray-300 hover:bg-gray-400"
-                }`}
-                onClick={() => setCurrentTestimonial(index)}
-              />
-            ))}
+                    }`}
+                  onClick={() => setCurrentTestimonial(index)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

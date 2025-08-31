@@ -92,13 +92,12 @@ export const Footer = () => {
              
             </div>
             <p className="text-white/70 mb-6 leading-relaxed text-base max-w-2xl">
-              Empowering individuals with disabilities through comprehensive therapy, education, and community support.
-              Building a more inclusive world, one life at a time.
+              Shaping future generations through the power of music. Where every child's voice find its song.
             </p>
             
             {/* Legal Status - Prominently Displayed */}
-            <div className="bg-white/10 border border-white/20 rounded-lg p-4 mb-6">
-              <div className="grid md:grid-cols-2 gap-4 text-sm">
+            <div className="bg-white/10 border border-white/20 w-full sm:w-1/2 rounded-lg p-4 mb-6">
+              <div className="grid md:grid-cols-1 gap-4 text-sm">
                 <div>
                   <p className="text-white font-semibold mb-1">
                     IRS 501(c)(3) Nonprofit Organization

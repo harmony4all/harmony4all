@@ -134,7 +134,7 @@ export default function ContactSection() {
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid grid-cols-2 gap-4">
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
                                         <Input
                                             placeholder="Your first name"
                                             name="firstName"
@@ -144,7 +144,7 @@ export default function ContactSection() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">Last Name <span className="text-red-500">*</span></label>
                                         <Input
                                             placeholder="Your last name"
                                             name="lastName"
@@ -155,7 +155,7 @@ export default function ContactSection() {
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Email <span className="text-red-500">*</span></label>
                                     <Input
                                         type="email"
                                         placeholder="your.email@example.com"
@@ -167,7 +167,7 @@ export default function ContactSection() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone <span className="text-red-500">*</span></label>
                                     <Input
                                         type="tel"
                                         placeholder="(555) 123-4567"
@@ -178,7 +178,7 @@ export default function ContactSection() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Subject <span className="text-red-500">*</span></label>
                                     <Input
                                         placeholder="What's this about?"
                                         name="subject"
@@ -188,7 +188,7 @@ export default function ContactSection() {
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-2">Message <span className="text-red-500">*</span></label>
                                     <Textarea
                                         placeholder="Tell us how we can help you or how you'd like to get involved..."
                                         name="message"

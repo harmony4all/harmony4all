@@ -9,21 +9,6 @@ import { Heart, Users, Clock, MapPin, Phone, CheckCircle, Calendar, ArrowRight, 
 export default function ServicesPage() {
   const services = [
     {
-      title: "Instrument Donation",
-      description: "Donate musical instruments to help make music education accessible to all students.",
-      features: [
-        "Accept all instruments",
-        "Tax deductible",
-        "Pickup service",
-        "Quality inspection",
-      ],
-      ageGroups: ["All Ages"],
-      duration: "Flexible",
-      frequency: "Ongoing",
-      image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      icon: Gift,
-    },
-    {
       title: "Instrument Rental",
       description: "Affordable instrument rental program for students who want to try different instruments.",
       features: [
@@ -80,6 +65,21 @@ export default function ServicesPage() {
       image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       icon: BookOpen,
     },
+    {
+      title: "Instrument Donation",
+      description: "Donate musical instruments to help make music education accessible to all students.",
+      features: [
+        "Accept all instruments",
+        "Tax deductible",
+        "Pickup service",
+        "Quality inspection",
+      ],
+      ageGroups: ["All Ages"],
+      duration: "Flexible",
+      frequency: "Ongoing",
+      image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      icon: Gift,
+    },
   ]
 
   const processSteps = [
@@ -113,9 +113,9 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-white">
 
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-3 md:py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 text-xs md:text-sm">
             <Link href="/" className="text-teal-600 hover:text-teal-700">
               Home
             </Link>
@@ -126,7 +126,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-32 bg-cover bg-center bg-no-repeat" style={{
+      <section className="relative py-16 md:py-24 lg:py-32 bg-cover bg-center bg-no-repeat" style={{
         backgroundImage: `url('https://static.wixstatic.com/media/e65032_8406f3bedd7f4b9e84649ea38ed69b7b~mv2.jpeg/v1/fill/w_880,h_485,al_c,q_85,enc_avif,quality_auto/e65032_8406f3bedd7f4b9e84649ea38ed69b7b~mv2.jpeg')`
       }}>
         {/* Overlay for better text readability */}
@@ -134,69 +134,69 @@ export default function ServicesPage() {
         
         <div className="container mx-auto px-4 relative z-10">
          <div className="flex flex-col items-center justify-center h-full">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">Our Services</h1>
-          <p className="text-xl md:text-2xl text-white/90 text-center max-w-3xl drop-shadow-lg">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-lg">Our Services</h1>
+          <p className="text-sm md:text-lg lg:text-xl xl:text-2xl text-white/90 text-center max-w-3xl drop-shadow-lg">
           We make music possible for every child-through free rentals, reliable repairs, school curriculum support, and the gift of instrument donations.          </p>
          </div>
         </div>
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-5xl font-bold text-gray-900 mb-6">Our Music Services</h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <div className="text-center mb-12 md:mb-16 lg:mb-20">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Our Music Services</h2>
+              <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               From free rentals that open doors, to repairs that keep instruments alive, and curriculum that strengthens classrooms-every service helps students grow through music. And with the gift of instrument donations, we carry that harmony even further.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
               {services.map((service, index) => (
                 <Card
                   key={index}
                   className="group bg-white shadow-2xl border-0 rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[102%]"
                 >
                   <div className="relative">
-                    <div className="w-full h-80 overflow-hidden">
+                    <div className="w-full h-60 md:h-80 overflow-hidden">
                       <img
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
-                    <div className="absolute top-6 right-6 w-16 h-16 bg-black rounded-full flex items-center justify-center shadow-lg">
-                      <service.icon className="h-8 w-8 text-white" />
+                    <div className="absolute top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center shadow-lg">
+                      <service.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                     </div>
                   </div>
                   
-                  <div className="p-8">
-                    <div className="text-center mb-8">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                      <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                  <div className="p-6 md:p-8">
+                    <div className="text-center mb-6 md:mb-8">
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                      <p className="text-gray-600 leading-relaxed text-sm md:text-lg mb-4 md:mb-6">
                         {service.description}
                       </p>
                     </div>
 
-                    <div className="space-y-8">
+                    <div className="space-y-6 md:space-y-8">
                       {/* Key Features */}
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <CheckCircle className="h-5 w-5 mr-2 text-black" />
+                        <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4 flex items-center">
+                          <CheckCircle className="h-4 w-4 md:h-5 md:w-5 mr-2 text-black" />
                           Key Features
                         </h4>
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
                           {service.features.map((feature, i) => (
                             <div key={i} className="flex items-start space-x-2">
-                              <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0"></div>
-                              <span className="text-gray-700 text-sm">
+                              <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
+                              <span className="text-gray-700 text-xs md:text-sm">
                                 {typeof feature === 'string' ? feature : feature.name}
                               </span>
                               {typeof feature === 'object' && feature.tooltip && (
                                 <div className="relative group/tooltip">
-                                  <HelpCircle className="h-4 w-4 text-gray-400 cursor-help hover:text-gray-600 transition-colors" />
-                                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none z-10 w-64">
+                                  <HelpCircle className="h-3 w-3 md:h-4 md:w-4 text-gray-400 cursor-help hover:text-gray-600 transition-colors" />
+                                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none z-10 w-48 md:w-64">
                                     {feature.tooltip}
                                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
                                   </div>
@@ -208,11 +208,11 @@ export default function ServicesPage() {
                       </div>
 
                       {/* Service Details */}
-                      <div className="grid grid-cols-2 gap-6">
-                        <div className="bg-gray-50 p-4 rounded-xl">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div className="bg-gray-50 p-3 md:p-4 rounded-xl">
                           <div className="flex items-center text-gray-700 mb-2">
-                            <Users className="h-4 w-4 mr-2" />
-                            <span className="font-medium text-sm">Age Groups</span>
+                            <Users className="h-3 w-3 md:h-4 md:w-4 mr-2" />
+                            <span className="font-medium text-xs md:text-sm">Age Groups</span>
                           </div>
                           <div className="space-y-1">
                             {service.ageGroups.map((age, i) => (
@@ -222,13 +222,13 @@ export default function ServicesPage() {
                             ))}
                           </div>
                         </div>
-                        <div className="bg-gray-50 p-4 rounded-xl">
+                        <div className="bg-gray-50 p-3 md:p-4 rounded-xl">
                           <div className="flex items-center text-gray-700 mb-2">
-                            <Clock className="h-4 w-4 mr-2" />
-                            <span className="font-medium text-sm">Schedule</span>
+                            <Clock className="h-3 w-3 md:h-4 md:w-4 mr-2" />
+                            <span className="font-medium text-xs md:text-sm">Schedule</span>
                           </div>
-                          <p className="text-sm text-gray-600 font-medium">{service.duration}</p>
-                          <p className="text-sm text-gray-600">{service.frequency}</p>
+                          <p className="text-xs md:text-sm text-gray-600 font-medium">{service.duration}</p>
+                          <p className="text-xs md:text-sm text-gray-600">{service.frequency}</p>
                         </div>
                       </div>
                     </div>
@@ -243,42 +243,42 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Additional Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Additional Services</h2>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Beyond our core music services, we offer specialized programs and events that bring music education to life in our community.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Community Concerts */}
             <Card className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
+              <div className="h-36 md:h-48 overflow-hidden">
                 <img
                   src="https://static.wixstatic.com/media/30dc3d_37cdc33f2bda4b66b3ab7334339417a0~mv2.jpeg?dn=H4A Community Concert.JPEG"
                   alt="Community Concert"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                    <Music className="h-6 w-6 text-purple-600" />
+              <CardContent className="p-4 md:p-6">
+                <div className="flex items-center mb-3 md:mb-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-3 md:mr-4">
+                    <Music className="h-5 w-5 md:h-6 md:w-6 text-purple-600" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Community Concerts</h3>
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900">Community Concerts</h3>
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
                   Regular community concerts featuring local musicians, students, and professional performers to showcase musical talent and bring communities together.
                 </p>
                 <div className="space-y-2">
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Calendar className="h-4 w-4 mr-2" />
+                  <div className="flex items-center text-xs md:text-sm text-gray-500">
+                    <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-2" />
                     <span>Monthly Events</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-500">
-                    <Users className="h-4 w-4 mr-2" />
+                  <div className="flex items-center text-xs md:text-sm text-gray-500">
+                    <Users className="h-3 w-3 md:h-4 md:w-4 mr-2" />
                     <span>All Ages Welcome</span>
                   </div>
                 </div>
@@ -384,17 +384,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-200">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-200">
         <div className="container mx-auto px-4">
           <div className="max-w-8xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">How We Work</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="text-center mb-8 md:mb-12 lg:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">How We Work</h2>
+              <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
                 Our streamlined process ensures you receive the right services quickly and efficiently.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-4 gap-6 md:gap-8">
               {processSteps.map((step, index) => (
                 <Card key={index} className="text-center shadow-lg border-0 rounded-2xl overflow-hidden">
                   <div className="aspect-video overflow-hidden">
@@ -404,12 +404,12 @@ export default function ServicesPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <CardContent className="p-6">
-                    <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-2xl font-bold text-white">{step.step}</span>
+                  <CardContent className="p-4 md:p-6">
+                    <div className="w-12 h-12 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+                      <span className="text-xl md:text-2xl font-bold text-white">{step.step}</span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{step.title}</h3>
-                    <p className="text-gray-600 text-sm">{step.description}</p>
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2 md:mb-3">{step.title}</h3>
+                    <p className="text-gray-600 text-xs md:text-sm">{step.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -418,127 +418,26 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Service Locations</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                We provide music services at multiple convenient locations throughout New York City and surrounding areas.
-              </p>
-            </div>
-
-            {/* New York Map */}
-            <div className="mb-12">
-              <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <div className="p-6 border-b border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Our Service Coverage Area</h3>
-                  <p className="text-gray-600">Interactive map showing our service locations across New York City</p>
-                </div>
-                <div className="h-96 w-full relative">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25436351647!2d-74.11976404999999!3d40.6976634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1703123456789!5m2!1sen!2s"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Harmony 4 All Service Locations in New York City"
-                    aria-label="Interactive map showing Harmony 4 All service locations across New York City"
-                  ></iframe>
-                  <div className="absolute top-4 right-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="bg-white/90 backdrop-blur-sm border-gray-300 text-gray-700 hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                      onClick={() => window.open('https://maps.google.com/?q=New+York+City', '_blank')}
-                      aria-label="Open map in new window"
-                    >
-                      <MapPin className="h-4 w-4 mr-1" aria-hidden="true" />
-                      Open Map
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="text-center shadow-lg border-0 rounded-2xl">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-teal-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="h-8 w-8 text-teal-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Manhattan Location</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    123 Harmony Street
-                    <br />
-                    Music Center, Suite 200
-                    <br />
-                    New York, NY 10001
-                  </p>
-                  <Badge className="bg-teal-100 text-teal-700">All Services Available</Badge>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center shadow-lg border-0 rounded-2xl">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Brooklyn Location</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    456 Community Ave
-                    <br />
-                    Arts Plaza, Floor 3<br />
-                    Brooklyn, NY 11201
-                  </p>
-                  <Badge className="bg-blue-100 text-blue-700">Rental & Repair Services</Badge>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center shadow-lg border-0 rounded-2xl">
-                <CardContent className="p-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="h-8 w-8 text-green-600" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3">Mobile Services</h3>
-                  <p className="text-gray-600 text-sm mb-4">
-                    Services provided in
-                    <br />
-                    homes, schools, and
-                    <br />
-                    community settings
-                  </p>
-                  <Badge className="bg-green-100 text-green-700">Donation Pickup & Lessons</Badge>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
-          <p className="text-xl mb-8 opacity-90">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Get Started?</h2>
+          <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
             Contact us today to learn more about our music services and how we can help you.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100 px-8 py-4 text-lg rounded-full">
-                <Phone className="mr-2 h-5 w-5" />
+              <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
+                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us
               </Button>
             </Link>
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg rounded-full"
+                className="bg-black hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full"
               >
-                <Gift className="mr-2 h-5 w-5" />
+                <Gift className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Donate Instruments
               </Button>
             </Link>

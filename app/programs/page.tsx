@@ -103,9 +103,9 @@ export default function ProgramsPage() {
     <div className="min-h-screen bg-white">
 
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-3 md:py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 text-xs md:text-sm">
             <Link href="/" className="text-black hover:text-gray-800">
               Home
             </Link>
@@ -116,15 +116,15 @@ export default function ProgramsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div
             className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Our Music Programs</h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 md:mb-6">Our Music Programs</h1>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-600 leading-relaxed">
               Comprehensive music programs designed to support individuals at every stage of their musical journey.
               Each program is tailored to meet unique needs and promote musical growth, self-expression, and community
               participation through the universal language of music.
@@ -134,9 +134,9 @@ export default function ProgramsPage() {
       </section>
 
       {/* Programs Overview */}
-      <section className="py-20">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             {programs.map((program, index) => (
               <div
                 key={program.id}
@@ -165,24 +165,24 @@ export default function ProgramsPage() {
                 </div>
 
                 <div className="lg:w-1/2 mt-8 lg:mt-0">
-                  <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 bg-black rounded-xl flex items-center justify-center mr-4`}>
-                      <program.icon className="h-6 w-6 text-white" />
+                  <div className="flex items-center mb-3 md:mb-4">
+                    <div className={`w-10 h-10 md:w-12 md:h-12 bg-black rounded-xl flex items-center justify-center mr-3 md:mr-4`}>
+                      <program.icon className="h-5 w-5 md:h-6 md:w-6 text-white" />
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900">{program.title}</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{program.title}</h2>
                   </div>
 
-                  <p className="text-lg text-gray-600 mb-6 leading-relaxed">{program.fullDescription}</p>
+                  <p className="text-sm md:text-lg text-gray-600 mb-4 md:mb-6 leading-relaxed">{program.fullDescription}</p>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                  <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                        <Users className="h-4 w-4 mr-2 text-black" />
+                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center text-sm md:text-base">
+                        <Users className="h-3 w-3 md:h-4 md:w-4 mr-2 text-black" />
                         Age Groups
                       </h4>
                       <div className="space-y-1">
                         {program.ageGroups.map((age, i) => (
-                          <Badge key={i} variant="secondary" className="mr-2 mb-1">
+                          <Badge key={i} variant="secondary" className="mr-2 mb-1 text-xs md:text-sm">
                             {age}
                           </Badge>
                         ))}
@@ -190,21 +190,21 @@ export default function ProgramsPage() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center">
-                        <Clock className="h-4 w-4 mr-2 text-black" />
+                      <h4 className="font-semibold text-gray-900 mb-2 flex items-center text-sm md:text-base">
+                        <Clock className="h-3 w-3 md:h-4 md:w-4 mr-2 text-black" />
                         Schedule
                       </h4>
-                      <p className="text-sm text-gray-600">{program.duration}</p>
-                      <p className="text-sm text-gray-600">{program.frequency}</p>
+                      <p className="text-xs md:text-sm text-gray-600">{program.duration}</p>
+                      <p className="text-xs md:text-sm text-gray-600">{program.frequency}</p>
                     </div>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 mb-3">Program Features:</h4>
+                  <div className="mb-4 md:mb-6">
+                    <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 text-sm md:text-base">Program Features:</h4>
                     <div className="grid md:grid-cols-2 gap-2">
                       {program.features.map((feature, i) => (
-                        <div key={i} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="h-4 w-4 text-black mr-2 flex-shrink-0" />
+                        <div key={i} className="flex items-center text-xs md:text-sm text-gray-600">
+                          <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-black mr-2 flex-shrink-0" />
                           {feature}
                         </div>
                       ))}
@@ -213,7 +213,7 @@ export default function ProgramsPage() {
 
                   <Link href="/contact">
                     <Button
-                      className={`bg-black text-white hover:shadow-lg transition-all duration-300 rounded-full px-6 py-2 hover:scale-105`}
+                      className={`bg-black text-white hover:shadow-lg transition-all duration-300 rounded-full px-4 md:px-6 py-2 text-sm md:text-base hover:scale-105`}
                     >
                       Learn More & Enroll
                     </Button>
@@ -226,20 +226,20 @@ export default function ProgramsPage() {
       </section>
 
       {/* Program Benefits */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div
-            className={`text-center mb-16 transition-all duration-1000 ${
+            className={`text-center mb-8 md:mb-12 lg:mb-16 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Our Music Programs?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Why Choose Our Music Programs?</h2>
+            <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Our evidence-based approach and personalized music instruction ensure the best outcomes for every individual.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { icon: Star, title: "Evidence-Based", description: "All music programs use proven, research-backed methods" },
               {
@@ -262,13 +262,13 @@ export default function ProgramsPage() {
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <CardHeader>
-                  <div className="mx-auto w-16 h-16 bg-black rounded-2xl flex items-center justify-center mb-4">
-                    <benefit.icon className="h-8 w-8 text-white" />
+                  <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-black rounded-2xl flex items-center justify-center mb-3 md:mb-4">
+                    <benefit.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl font-bold text-gray-900">{benefit.title}</CardTitle>
+                  <CardTitle className="text-lg md:text-xl font-bold text-gray-900">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className="text-gray-600 text-sm md:text-base">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -277,33 +277,33 @@ export default function ProgramsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-black text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2
-            className={`text-4xl font-bold mb-6 transition-all duration-1000 ${
+            className={`text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             Ready to Get Started?
           </h2>
           <p
-            className={`text-xl mb-8 opacity-90 transition-all duration-1000 delay-300 ${
+            className={`text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90 transition-all duration-1000 delay-300 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             Contact us today to learn more about our programs and how we can support you or your loved one.
           </p>
           <div
-            className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-500 ${
+            className={`flex flex-col sm:flex-row gap-3 md:gap-4 justify-center transition-all duration-1000 delay-500 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
             <Link href="/contact">
               <Button
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+                className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full transition-all duration-300 hover:scale-105"
               >
-                <Phone className="mr-2 h-5 w-5" />
+                <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us Today
               </Button>
             </Link>
@@ -311,7 +311,7 @@ export default function ProgramsPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
               >
                 View Services
               </Button>

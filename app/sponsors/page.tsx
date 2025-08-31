@@ -1,0 +1,691 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import {
+    Heart,
+    Users,
+    Music,
+    Award,
+    Star,
+    Gift,
+    Target,
+    ArrowRight,
+    CheckCircle,
+    Phone,
+    Mail,
+    ExternalLink,
+    Lightbulb,
+    Trophy,
+    Crown,
+    DollarSign,
+    Calendar,
+    Megaphone,
+} from "lucide-react"
+
+export default function SponsorsPage() {
+    const [isVisible, setIsVisible] = useState(false)
+    const [selectedTier, setSelectedTier] = useState<string | null>(null)
+    const [hoveredCard, setHoveredCard] = useState<number | null>(null)
+
+    useEffect(() => {
+        setIsVisible(true)
+    }, [])
+
+    const sponsorshipTiers = [
+        {
+            name: "Platinum Sponsor",
+            amount: "$10,000+",
+            color: "from-purple-600 to-purple-800",
+            icon: Crown,
+            benefits: [
+                "Logo prominently displayed at all events",
+                "Naming rights for one major program",
+                "VIP access to all concerts and events",
+                "Featured in all marketing materials",
+                "Direct partnership with program development",
+                "Annual impact report with detailed metrics",
+                "Exclusive sponsor appreciation event",
+                "Social media campaign featuring your brand",
+                "Press release and media coverage",
+                "Custom sponsorship package"
+            ],
+            impact: "Funds an entire music program for 50+ students for one year",
+            description: "Our highest level of partnership, offering maximum visibility and impact"
+        },
+        {
+            name: "Gold Sponsor",
+            amount: "$5,000 - $9,999",
+            color: "from-yellow-500 to-yellow-600",
+            icon: Trophy,
+            benefits: [
+                "Logo displayed at major events",
+                "Recognition in program materials",
+                "VIP access to concerts",
+                "Featured in quarterly newsletters",
+                "Social media recognition",
+                "Annual impact report",
+                "Sponsor appreciation event",
+                "Press release announcement",
+                "Custom sponsorship opportunities"
+            ],
+            impact: "Provides instruments and lessons for 25 students for one year",
+            description: "Significant partnership with substantial recognition and impact"
+        },
+        {
+            name: "Silver Sponsor",
+            amount: "$2,500 - $4,999",
+            color: "from-gray-400 to-gray-600",
+            icon: Award,
+            benefits: [
+                "Logo displayed at events",
+                "Recognition in materials",
+                "Event invitations",
+                "Quarterly updates",
+                "Social media mentions",
+                "Annual impact report",
+                "Sponsor appreciation event"
+            ],
+            impact: "Supports 10 students with instruments and education",
+            description: "Meaningful partnership with good visibility and community impact"
+        },
+        {
+            name: "Bronze Sponsor",
+            amount: "$1,000 - $2,499",
+            color: "from-orange-600 to-orange-700",
+            icon: Star,
+            benefits: [
+                "Logo displayed at events",
+                "Recognition in materials",
+                "Event invitations",
+                "Quarterly updates",
+                "Social media recognition",
+                "Annual impact report"
+            ],
+            impact: "Provides instruments for 5 students",
+            description: "Supportive partnership with recognition and community impact"
+        },
+        {
+            name: "Community Partner",
+            amount: "$500 - $999",
+            color: "from-green-500 to-green-600",
+            icon: Heart,
+            benefits: [
+                "Recognition in materials",
+                "Event invitations",
+                "Quarterly updates",
+                "Social media mentions",
+                "Annual impact report"
+            ],
+            impact: "Supports 2 students with music education",
+            description: "Community-focused partnership supporting local students"
+        }
+    ]
+
+    const currentSponsors = [
+        {
+            name: "Education Through Music",
+            logo: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
+            website: "https://etmonline.org/",
+            tier: "Platinum",
+            category: "Education Partner",
+            impact: "Core Program Support",
+            description: "Empowering music education across NYC schools through strategic partnership and program development."
+        },
+        {
+            name: "THE NEWYORK INJURY LAW FIRM",
+            logo: "https://thenewyorkinjurylawfirm.com/wp-content/uploads/2024/11/New-York-Injury-Firm.png.webp",
+            website: "https://thenewyorkinjurylawfirm.com/",
+            tier: "Gold",
+            category: "Legal Partner",
+            impact: "Pro Bono Services & Sponsorship",
+            description: "Supporting our mission through legal expertise and financial sponsorship."
+        },
+        {
+            name: "Maple Grove Cemetery",
+            logo: "https://static.wixstatic.com/media/3e1dd4_d14e438abb2a4f91ae021d74a2f190d2~mv2_d_4500_1669_s_2.png/v1/fill/w_536,h_198,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FMG%20Logo.png",
+            website: "https://www.friendsofmaplegrove.org/",
+            tier: "Silver",
+            category: "Community Partner",
+            impact: "Venue & Event Support",
+            description: "Providing beautiful spaces for our community events and concerts."
+        }
+    ]
+
+    const sponsorshipOpportunities = [
+        {
+            title: "Event Sponsorship",
+            description: "Sponsor our community concerts, workshops, and special events",
+            icon: Calendar,
+            opportunities: [
+                "Annual Gala & Concert",
+                "Community Music Festivals",
+                "Student Showcase Events",
+                "Workshop Series",
+                "Holiday Concerts"
+            ]
+        },
+        {
+            title: "Program Sponsorship",
+            description: "Directly support specific music education programs",
+            icon: Music,
+            opportunities: [
+                "Instrument Rental Program",
+                "Music Theory Classes",
+                "Performance Training",
+                "Digital Music Production",
+                "Ensemble Programs"
+            ]
+        },
+        {
+            title: "Marketing & Branding",
+            description: "Partner with us on marketing initiatives and brand visibility",
+            icon: Megaphone,
+            opportunities: [
+                "Social Media Campaigns",
+                "Print Materials",
+                "Website Recognition",
+                "Press Releases",
+                "Video Content"
+            ]
+        },
+        {
+            title: "In-Kind Sponsorship",
+            description: "Support through goods, services, or expertise",
+            icon: Gift,
+            opportunities: [
+                "Professional Services",
+                "Equipment & Supplies",
+                "Venue Space",
+                "Marketing Support",
+                "Technical Expertise"
+            ]
+        }
+    ]
+
+    const impactMetrics = [
+        {
+            number: "500+",
+            label: "Students Served",
+            description: "Children receiving music education through our programs"
+        },
+        {
+            number: "25+",
+            label: "Schools Partnered",
+            description: "Educational institutions across NYC"
+        },
+        {
+            number: "1000+",
+            label: "Instruments Provided",
+            description: "Musical instruments donated and maintained"
+        },
+        {
+            number: "50+",
+            label: "Events Hosted",
+            description: "Community concerts and educational events"
+        }
+    ]
+
+    return (
+        <div className="min-h-screen bg-white">
+
+            {/* Breadcrumb */}
+            <div className="bg-gray-50 py-3 md:py-4">
+                <div className="container mx-auto px-4">
+                    <div className="flex items-center space-x-2 text-xs md:text-sm">
+                        <Link href="/" className="text-black hover:text-gray-800">
+                            Home
+                        </Link>
+                        <span className="text-gray-400">/</span>
+                        <span className="text-gray-600">Sponsors</span>
+                    </div>
+                </div>
+            </div>
+
+            {/* Hero Section */}
+            <section className="relative py-12 md:py-16 lg:py-32 bg-cover bg-center bg-no-repeat" style={{
+                backgroundImage: `url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')`
+            }}>
+                {/* Overlay for better text readability */}
+                <div className="absolute inset-0 bg-black/60"></div>
+
+                <div className="container mx-auto px-4 relative z-10">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <div
+                            className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                        >
+                            <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-sm px-3 md:px-6 py-2 md:py-3 rounded-full mb-4 md:mb-6 lg:mb-8">
+                                <Crown className="h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5 text-purple-600" />
+                                <span className="font-semibold text-gray-700 text-xs md:text-sm lg:text-base">Partnership Opportunities</span>
+                            </div>
+                            <h1 className="text-2xl md:text-4xl lg:text-5xl xl:text-7xl font-bold text-white mb-3 md:mb-4 lg:mb-6 drop-shadow-lg">
+                                Become a Sponsor
+                            </h1>
+                            <p className="text-sm md:text-base lg:text-xl xl:text-2xl text-white/90 mb-4 md:mb-6 lg:mb-8 leading-relaxed drop-shadow-md">
+                                Partner with <span className="font-bold bg-yellow-100 px-1 rounded">Harmony 4 All</span> to create lasting impact in music education and build stronger communities together.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                                <Link href="#sponsorship-tiers">
+                                    <Button className="bg-purple-600 hover:bg-purple-700 text-white px-3 md:px-4 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-lg rounded-full">
+                                        <DollarSign className="mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                                        View Sponsorship Tiers
+                                    </Button>
+                                </Link>
+                                <Link href="/contact">
+                                    <Button
+                                        variant="outline"
+                                        className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-3 md:px-4 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-lg rounded-full bg-transparent"
+                                    >
+                                        <Mail className="mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                                        Contact Us
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Impact Metrics */}
+            <section className="py-12 md:py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-8 md:mb-16">
+                            <h2 className="text-xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-6">Our Impact</h2>
+                            <p className="text-sm md:text-xl text-gray-600 max-w-3xl mx-auto">
+                                See how our sponsors help us create meaningful change in music education
+                            </p>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+                            {impactMetrics.map((metric, index) => (
+                                <div
+                                    key={index}
+                                    className="text-center p-3 md:p-6 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                                    style={{ transitionDelay: `${index * 100}ms` }}
+                                >
+                                    <div className="text-lg md:text-4xl font-bold text-purple-600 mb-1 md:mb-2">
+                                        {metric.number}
+                                    </div>
+                                    <div className="text-xs md:text-lg font-semibold text-gray-900 mb-1 md:mb-2">
+                                        {metric.label}
+                                    </div>
+                                    <div className="text-xs text-gray-600 hidden md:block">
+                                        {metric.description}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sponsorship Tiers */}
+            <section id="sponsorship-tiers" className="py-12 md:py-32 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-7xl mx-auto">
+                        <div className="text-center mb-8 md:mb-24">
+                            <div className="hidden md:inline-flex items-center space-x-2 md:space-x-3 bg-gradient-to-r from-purple-600 to-purple-800 text-white px-4 md:px-8 py-2 md:py-4 rounded-full mb-4 md:mb-8 shadow-lg">
+                                <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                    <Crown className="h-3 w-3 md:h-4 md:w-4" />
+                                </div>
+                                <span className="font-bold text-sm md:text-lg">Sponsorship Levels</span>
+                            </div>
+                            <h2 className="text-2xl md:text-6xl font-bold text-gray-900 mb-3 md:mb-8">
+                                Choose Your Impact Level
+                            </h2>
+                            <p className="text-sm md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 md:mb-12">
+                                From community partnerships to major sponsorships, find the perfect level to support our mission and achieve your business goals.
+                            </p>
+                            <div className="hidden md:block w-16 md:w-32 h-1 bg-gradient-to-r from-purple-600 to-purple-800 mx-auto rounded-full"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                            {sponsorshipTiers.map((tier, index) => (
+                                <Card
+                                    key={index}
+                                    className={`relative overflow-hidden border-0 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer ${
+                                        selectedTier === tier.name ? 'ring-4 ring-purple-500' : ''
+                                    }`}
+                                    onClick={() => setSelectedTier(selectedTier === tier.name ? null : tier.name)}
+                                    onMouseEnter={() => setHoveredCard(index)}
+                                    onMouseLeave={() => setHoveredCard(null)}
+                                >
+                                    {/* Gradient Background - Hidden on mobile */}
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${tier.color} opacity-10 hidden md:block`}></div>
+                                    
+                                    <CardHeader className="relative z-10 text-center pb-3 md:pb-4">
+                                        <div className={`w-12 h-12 md:w-20 md:h-20 bg-gradient-to-br ${tier.color} rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-lg`}>
+                                            <tier.icon className="h-6 w-6 md:h-10 md:w-10 text-white" />
+                                        </div>
+                                        <CardTitle className="text-lg md:text-2xl font-bold text-gray-900 mb-1 md:mb-2">
+                                            {tier.name}
+                                        </CardTitle>
+                                        <div className="text-xl md:text-3xl font-bold text-purple-600 mb-1 md:mb-2">
+                                            {tier.amount}
+                                        </div>
+                                        <p className="text-xs md:text-base text-gray-600">
+                                            {tier.description}
+                                        </p>
+                                    </CardHeader>
+
+                                    <CardContent className="relative z-10">
+                                        <div className="mb-3 md:mb-4">
+                                            <h4 className="font-semibold text-gray-900 mb-1 md:mb-2 text-xs md:text-base">Impact:</h4>
+                                            <p className="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">{tier.impact}</p>
+                                        </div>
+
+                                        <div className="space-y-1 md:space-y-2">
+                                            <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 text-xs md:text-base">Benefits Include:</h4>
+                                            <ul className="space-y-1 md:space-y-2">
+                                                {tier.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                                                    <li key={benefitIndex} className="flex items-start space-x-2">
+                                                        <CheckCircle className="h-3 w-3 md:h-4 md:w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                                                        <span className="text-xs md:text-sm text-gray-600">{benefit}</span>
+                                                    </li>
+                                                ))}
+                                                {tier.benefits.length > 3 && (
+                                                    <li className="text-xs md:text-sm text-purple-600 font-medium">
+                                                        +{tier.benefits.length - 3} more benefits
+                                                    </li>
+                                                )}
+                                            </ul>
+                                        </div>
+
+                                        <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t border-gray-200">
+                                            <Link href="/contact">
+                                                <Button 
+                                                    className={`w-full bg-gradient-to-r ${tier.color} hover:opacity-90 text-white transition-all duration-300 text-xs md:text-sm py-2 md:py-3`}
+                                                >
+                                                    Become a {tier.name}
+                                                    <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                                                </Button>
+                                            </Link>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Current Sponsors */}
+            <section className="py-12 md:py-32 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-8 md:mb-24">
+                            <div className="hidden md:inline-flex items-center space-x-2 md:space-x-3 bg-black text-white px-4 md:px-8 py-2 md:py-4 rounded-full mb-4 md:mb-8 shadow-lg">
+                                <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                    <Star className="h-3 w-3 md:h-4 md:w-4" />
+                                </div>
+                                <span className="font-bold text-sm md:text-lg">Current Sponsors</span>
+                            </div>
+                            <h2 className="text-2xl md:text-6xl font-bold text-black mb-3 md:mb-8">
+                                Our Valued Partners
+                            </h2>
+                            <p className="text-sm md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 md:mb-12">
+                                Meet the organizations that are making a difference in music education through their generous sponsorship.
+                            </p>
+                            <div className="hidden md:block w-16 md:w-32 h-1 bg-black mx-auto rounded-full"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                            {currentSponsors.map((sponsor, index) => (
+                                <Card
+                                    key={index}
+                                    className="bg-white shadow-xl border-0 rounded-xl md:rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                >
+                                    <div className="p-4 md:p-8">
+                                        <div className="flex items-center justify-between mb-3 md:mb-4">
+                                            <Badge className={`px-2 md:px-3 py-1 text-xs font-semibold ${
+                                                sponsor.tier === 'Platinum' ? 'bg-purple-100 text-purple-700' :
+                                                sponsor.tier === 'Gold' ? 'bg-yellow-100 text-yellow-700' :
+                                                sponsor.tier === 'Silver' ? 'bg-gray-100 text-gray-700' :
+                                                'bg-orange-100 text-orange-700'
+                                            }`}>
+                                                {sponsor.tier} Sponsor
+                                            </Badge>
+                                            <Badge className="bg-green-100 text-green-700 px-2 md:px-3 py-1 text-xs font-semibold">
+                                                {sponsor.category}
+                                            </Badge>
+                                        </div>
+
+                                        <div className="w-full h-16 md:h-24 flex items-center justify-center mb-3 md:mb-4 bg-gray-50 rounded-lg md:rounded-xl">
+                                            <img
+                                                src={sponsor.logo}
+                                                alt={`${sponsor.name} logo`}
+                                                className="max-w-full max-h-full object-contain p-1 md:p-2"
+                                            />
+                                        </div>
+
+                                        <h3 className="text-base md:text-xl font-bold text-gray-900 mb-1 md:mb-2">
+                                            {sponsor.name}
+                                        </h3>
+
+                                        <p className="text-xs md:text-base text-gray-600 mb-3 md:mb-4 leading-relaxed">
+                                            {sponsor.description}
+                                        </p>
+
+                                        <div className="mb-3 md:mb-4">
+                                            <h4 className="font-semibold text-gray-900 mb-1 text-xs">Impact:</h4>
+                                            <p className="text-xs md:text-sm text-purple-600 font-medium">{sponsor.impact}</p>
+                                        </div>
+
+                                        <Link href={sponsor.website} target="_blank" rel="noopener noreferrer">
+                                            <Button 
+                                                variant="outline" 
+                                                className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 transition-all duration-300 text-xs md:text-sm py-2 md:py-3"
+                                            >
+                                                Visit Website
+                                                <ExternalLink className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                                            </Button>
+                                        </Link>
+                                    </div>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sponsorship Opportunities */}
+            <section className="py-12 md:py-32 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="text-center mb-8 md:mb-24">
+                            <div className="hidden md:inline-flex items-center space-x-2 md:space-x-3 bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 md:px-8 py-2 md:py-4 rounded-full mb-4 md:mb-8 shadow-lg">
+                                <div className="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                    <Lightbulb className="h-3 w-3 md:h-4 md:w-4" />
+                                </div>
+                                <span className="font-bold text-sm md:text-lg">Opportunities</span>
+                            </div>
+                            <h2 className="text-2xl md:text-6xl font-bold text-gray-900 mb-3 md:mb-8">
+                                Sponsorship Opportunities
+                            </h2>
+                            <p className="text-sm md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 md:mb-12">
+                                Discover the various ways your organization can partner with us to create meaningful impact.
+                            </p>
+                            <div className="hidden md:block w-16 md:w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-800 mx-auto rounded-full"></div>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+                            {sponsorshipOpportunities.map((opportunity, index) => (
+                                <Card
+                                    key={index}
+                                    className="bg-white shadow-xl border-0 rounded-xl md:rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                                >
+                                    <CardHeader className="pb-3 md:pb-4">
+                                        <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl md:rounded-2xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                                            <opportunity.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                                        </div>
+                                        <CardTitle className="text-lg md:text-2xl font-bold text-gray-900 mb-1 md:mb-2">
+                                            {opportunity.title}
+                                        </CardTitle>
+                                        <CardDescription className="text-xs md:text-base text-gray-600">
+                                            {opportunity.description}
+                                        </CardDescription>
+                                    </CardHeader>
+
+                                    <CardContent>
+                                        <div className="space-y-2 md:space-y-3">
+                                            <h4 className="font-semibold text-gray-900 text-xs md:text-base">Available Opportunities:</h4>
+                                            <ul className="space-y-1 md:space-y-2">
+                                                {opportunity.opportunities.map((item, itemIndex) => (
+                                                    <li key={itemIndex} className="flex items-center space-x-2">
+                                                        <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-blue-500 rounded-full"></div>
+                                                        <span className="text-xs md:text-base text-gray-600">{item}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
+
+                                        <div className="mt-4 md:mt-6 pt-3 md:pt-4 border-t border-gray-200">
+                                            <Link href="/contact">
+                                                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 text-xs md:text-sm py-2 md:py-3">
+                                                    Learn More
+                                                    <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4" />
+                                                </Button>
+                                            </Link>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Why Sponsor Section */}
+            <section className="py-12 md:py-32 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-6xl mx-auto">
+                        <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
+                            <div>
+                                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8">Why Sponsor <span className="font-bold bg-yellow-100 px-1 rounded">Harmony 4 All</span>?</h2>
+                                
+                                <div className="space-y-4 md:space-y-8">
+                                    <div className="flex items-start space-x-3 md:space-x-4">
+                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Target className="h-4 w-4 md:h-6 md:w-6 text-purple-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Proven Impact</h3>
+                                            <p className="text-xs md:text-base text-gray-600">
+                                                Our programs have directly impacted over 500 students across 25+ schools, with measurable improvements in academic performance and social development.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3 md:space-x-4">
+                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Users className="h-4 w-4 md:h-6 md:w-6 text-blue-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Community Engagement</h3>
+                                            <p className="text-xs md:text-base text-gray-600">
+                                                Connect with families, educators, and community leaders through our extensive network and events.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3 md:space-x-4">
+                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Megaphone className="h-4 w-4 md:h-6 md:w-6 text-green-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Brand Visibility</h3>
+                                            <p className="text-xs md:text-base text-gray-600">
+                                                Gain exposure through our events, marketing materials, and media coverage reaching thousands of community members.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-start space-x-3 md:space-x-4">
+                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                            <Heart className="h-4 w-4 md:h-6 md:w-6 text-orange-600" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Social Responsibility</h3>
+                                            <p className="text-xs md:text-base text-gray-600">
+                                                Demonstrate your commitment to education, arts, and community development while making a real difference.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="relative">
+                                <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl">
+                                    <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Ready to Get Started?</h3>
+                                    <p className="text-sm md:text-lg text-gray-600 mb-4 md:mb-6">
+                                        Contact us to discuss sponsorship opportunities and find the perfect partnership for your organization.
+                                    </p>
+                                    
+                                    <div className="space-y-3 md:space-y-4">
+                                        <Link href="/contact">
+                                            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 md:py-4 text-sm md:text-lg rounded-xl">
+                                                <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                                                Contact Our Team
+                                            </Button>
+                                        </Link>
+                                        
+                                        <Link href="/donate">
+                                            <Button variant="outline" className="w-full border-purple-200 text-purple-600 hover:bg-purple-50 py-2 md:py-4 text-sm md:text-lg rounded-xl">
+                                                <DollarSign className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                                                Make a Donation
+                                            </Button>
+                                        </Link>
+                                    </div>
+
+                                    <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-200">
+                                        <div className="flex items-center space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600">
+                                            <Phone className="h-3 w-3 md:h-4 md:w-4" />
+                                            <span>(555) 123-4567</span>
+                                        </div>
+                                        <div className="flex items-center space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
+                                            <Mail className="h-3 w-3 md:h-4 md:w-4" />
+                                            <span>sponsors@harmony4all.org</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-12 md:py-32 bg-gradient-to-r from-purple-600 to-purple-800 text-white">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto text-center">
+                        <h2 className="text-2xl md:text-5xl font-bold mb-4 md:mb-8">Join Us in Making Music Accessible to All</h2>
+                        <p className="text-sm md:text-xl mb-6 md:mb-12 opacity-90 max-w-3xl mx-auto">
+                            Your sponsorship will help us continue our mission of providing music education to underserved students and building stronger communities through the power of music.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
+                            <Link href="/contact">
+                                <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold">
+                                    <Crown className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                                    Become a Sponsor
+                                </Button>
+                            </Link>
+                            <Link href="/about">
+                                <Button
+                                    size="lg"
+                                    variant="outline"
+                                    className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+                                >
+                                    Learn More About Us
+                                </Button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    )
+}

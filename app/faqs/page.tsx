@@ -46,19 +46,19 @@ export default function FAQsPage() {
       id: 1,
       category: "story",
       question: "What is Harmony 4 All?",
-      answer: "Harmony 4 All is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential. We offer free musical instrument rentals, repairs, and access to musical curriculums."
+      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential. We offer free musical instrument rentals, repairs, and access to musical curriculums."
     },
     {
       id: 2,
       category: "story",
       question: "When was Harmony 4 All founded?",
-      answer: "Harmony 4 All was officially approved as a nonprofit organization by the IRS in September 2023. Since then, we've been working tirelessly to bring the joy of music to communities that need it most."
+      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> was officially approved as a nonprofit organization by the IRS in September 2023. Since then, we've been working tirelessly to bring the joy of music to communities that need it most."
     },
     {
       id: 3,
       category: "story",
       question: "What impact has Harmony 4 All made so far?",
-      answer: "In 2024, Harmony 4 All expanded its reach by serving two different districts: Senate District 15 and Assembly District 74, providing free musical instruments, repairs, and educational resources to students and schools in need, including multiple free musical performances for the community."
+      answer: "In 2024, <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> expanded its reach by serving two different districts: Senate District 15 and Assembly District 74, providing free musical instruments, repairs, and educational resources to students and schools in need, including multiple free musical performances for the community."
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ export default function FAQsPage() {
       id: 5,
       category: "story",
       question: "What is Harmony 4 All's long-term vision?",
-      answer: "By 2030, we envision Harmony 4 All becoming a household name in New York City, recognized as a pillar of support for students from marginalized backgrounds who seek opportunities in music. We want every K-12 student, no matter their circumstances, to have access to the instruments, education, and resources they need to pursue their musical dreams."
+      answer: "By 2030, we envision <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> becoming a household name in New York City, recognized as a pillar of support for students from marginalized backgrounds who seek opportunities in music. We want every K-12 student, no matter their circumstances, to have access to the instruments, education, and resources they need to pursue their musical dreams."
     },
 
     // Our Programs and Services
@@ -78,7 +78,7 @@ export default function FAQsPage() {
       id: 6,
       category: "programs",
       question: "What types of programs does Harmony 4 All offer?",
-      answer: "Harmony 4 All provides: • Free musical instrument rentals and repairs for eligible students. • Music education resources, including a digital curriculum. • Concerts, workshops, and community events to promote music education and engagement. • Collaborations with schools and local leaders to integrate music into underserved communities."
+      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> provides: • Free musical instrument rentals and repairs for eligible students. • Music education resources, including a digital curriculum. • Concerts, workshops, and community events to promote music education and engagement. • Collaborations with schools and local leaders to integrate music into underserved communities."
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ export default function FAQsPage() {
       id: 8,
       category: "programs",
       question: "How does the musical instrument rental process work?",
-      answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through Harmony 4 All at a competitive rate."
+      answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> at a competitive rate."
     },
     {
       id: 9,
@@ -242,9 +242,9 @@ export default function FAQsPage() {
     <div className="min-h-screen bg-white">
 
       {/* Breadcrumb */}
-      <div className="bg-gray-50 py-4">
+      <div className="bg-gray-50 py-3 md:py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center space-x-2 text-sm">
+          <div className="flex items-center space-x-2 text-xs md:text-sm">
             <Link href="/" className="text-black hover:text-gray-800">
               Home
             </Link>
@@ -255,27 +255,27 @@ export default function FAQsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="relative py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full mb-8">
-              <BookOpen className="h-5 w-5 text-blue-600" />
-              <span className="font-semibold text-gray-700">FAQ</span>
+            <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-full mb-6 md:mb-8">
+              <BookOpen className="h-4 w-4 md:h-5 md:w-5 text-blue-600" />
+              <span className="font-semibold text-gray-700 text-sm md:text-base">FAQ</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-4 md:mb-6">Frequently Asked Questions</h1>
+            <p className="text-sm md:text-lg lg:text-xl xl:text-2xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
               Everything you need to know about Harmony 4 All. Can't find what you're looking for? Contact us directly.
             </p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-4 w-4 md:h-5 md:w-5 text-gray-400" />
               <Input
                 type="text"
                 placeholder="Search questions..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-4 text-lg border-2 border-gray-200 focus:border-blue-500 rounded-full"
+                className="pl-10 md:pl-12 pr-4 py-3 md:py-4 text-sm md:text-lg border-2 border-gray-200 focus:border-blue-500 rounded-full"
               />
             </div>
           </div>
@@ -283,22 +283,22 @@ export default function FAQsPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 bg-white border-b border-gray-100">
+      <section className="py-8 md:py-12 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full transition-all duration-300 ${
+                className={`flex items-center space-x-1 md:space-x-2 px-4 md:px-6 py-2 md:py-3 rounded-full transition-all duration-300 text-sm md:text-base ${
                   activeCategory === category.id
                     ? "bg-black text-white shadow-lg"
                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
               >
-                <category.icon className="h-4 w-4" />
+                <category.icon className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="font-medium">{category.name}</span>
-                <span className="text-sm opacity-75">({category.count})</span>
+                <span className="text-xs md:text-sm opacity-75">({category.count})</span>
               </button>
             ))}
           </div>
@@ -306,58 +306,58 @@ export default function FAQsPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {filteredFaqs.length === 0 ? (
-              <div className="text-center py-12">
-                <Search className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">No questions found</h3>
-                <p className="text-gray-600">Try adjusting your search terms or category filter.</p>
+              <div className="text-center py-8 md:py-12">
+                <Search className="h-12 w-12 md:h-16 md:w-16 text-gray-300 mx-auto mb-3 md:mb-4" />
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-2">No questions found</h3>
+                <p className="text-gray-600 text-sm md:text-base">Try adjusting your search terms or category filter.</p>
               </div>
             ) : (
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
                 {filteredFaqs.map((faq, index) => (
                   <Card key={faq.id} className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
                     <div 
-                      className="flex items-center p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
+                      className="flex items-center p-4 md:p-6 cursor-pointer hover:bg-gray-50 transition-colors duration-200"
                       onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
                     >
                       {/* Category Icon */}
-                      <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 mr-4">
+                      <div className="w-10 h-10 md:w-12 md:h-12 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 mr-3 md:mr-4">
                         {(() => {
                           const IconComponent = getCategoryIcon(faq.category)
-                          return <IconComponent className="h-6 w-6 text-blue-600" />
+                          return <IconComponent className="h-5 w-5 md:h-6 md:w-6 text-blue-600" />
                         })()}
                       </div>
                       
                       {/* Question and Toggle */}
                       <div className="flex-1">
-                        <div className="flex items-center space-x-3 mb-1">
-                          <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                        <div className="flex items-center space-x-2 md:space-x-3 mb-1">
+                          <span className="text-xs md:text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                             #{faq.id}
                           </span>
-                          <span className="text-sm text-gray-500">
+                          <span className="text-xs md:text-sm text-gray-500">
                             {categories.find(cat => cat.id === faq.category)?.name}
                           </span>
                         </div>
-                        <h4 className="font-semibold text-gray-900 text-lg">{faq.question}</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm md:text-lg">{faq.question}</h4>
                       </div>
                       
                       {/* Chevron Icon */}
                       <div className="flex-shrink-0">
                         {openFaq === faq.id ? (
-                          <ChevronUp className="h-6 w-6 text-gray-600" />
+                          <ChevronUp className="h-5 w-5 md:h-6 md:w-6 text-gray-600" />
                         ) : (
-                          <ChevronDown className="h-6 w-6 text-gray-600" />
+                          <ChevronDown className="h-5 w-5 md:h-6 md:w-6 text-gray-600" />
                         )}
                       </div>
                     </div>
                     
                     {/* Collapsible Answer */}
                     {openFaq === faq.id && (
-                      <div className="px-6 pb-6 border-t border-gray-100">
-                        <p className="text-gray-600 pt-4 leading-relaxed text-base">{faq.answer}</p>
+                      <div className="px-4 md:px-6 pb-4 md:pb-6 border-t border-gray-100">
+                        <p className="text-gray-600 pt-3 md:pt-4 leading-relaxed text-sm md:text-base">{faq.answer}</p>
                       </div>
                     )}
                   </Card>
@@ -369,27 +369,27 @@ export default function FAQsPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Still Have Questions?</h2>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 lg:p-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Still Have Questions?</h2>
+              <p className="text-sm md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
                 We're here to help! Don't hesitate to reach out with any questions or concerns.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-8 py-4 text-lg rounded-full">
-                    <Mail className="mr-2 h-5 w-5" />
+                  <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+                    <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Contact Us
                   </Button>
                 </Link>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 text-lg rounded-full"
+                  className="border-2 border-black text-black hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
                 >
-                  <Phone className="mr-2 h-5 w-5" />
+                  <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Call (347) 554-7712
                 </Button>
               </div>

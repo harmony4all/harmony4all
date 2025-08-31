@@ -232,40 +232,40 @@ export default function BlogPostPage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6 lg:py-8">
         {/* Blog Header */}
-        <header className="mb-8">
+        <header className="mb-6 md:mb-8">
           {/* Author */}
-          <div className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center space-x-3 md:space-x-4 p-3 md:p-4 bg-gray-50 rounded-lg">
             {blog.writer?.image ? (
               <Image
                 src={blog.writer.image}
                 alt={blog.writer.name}
-                width={48}
-                height={48}
-                className="rounded-full"
+                width={40}
+                height={40}
+                className="rounded-full md:w-12 md:h-12"
               />
             ) : (
-              <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
-                <span className="text-lg text-gray-600">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                <span className="text-sm md:text-lg text-gray-600">
                   {blog.writer?.name?.charAt(0) || 'U'}
                 </span>
               </div>
             )}
-            <div className='flex gap-2 items-top'>
-              <p className="font-semibold text-gray-900">{blog.writer?.name || 'Anonymous'}</p>
-              <p className="text-sm text-gray-500">{formatDate(blog.createdAt)}</p>
-              <p className="text-sm text-gray-500">{blog.estimatedReadTime} min read</p> 
+            <div className='flex flex-col md:flex-row md:gap-2 md:items-top'>
+              <p className="font-semibold text-sm md:text-base text-gray-900">{blog.writer?.name || 'Anonymous'}</p>
+              <p className="text-xs md:text-sm text-gray-500">{formatDate(blog.createdAt)}</p>
+              <p className="text-xs md:text-sm text-gray-500">{blog.estimatedReadTime} min read</p> 
             </div>
           </div>
 
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">{blog.title}</h1>
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">{blog.title}</h1>
 
         </header>
 
         {/* Blog Image */}
         {blog.image && (
-          <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden mb-8">
+          <div className="relative h-48 md:h-64 lg:h-96 bg-gray-200 rounded-lg overflow-hidden mb-6 md:mb-8">
             {blog.url ? (
               <a 
                 href={blog.url} 
@@ -293,17 +293,17 @@ export default function BlogPostPage() {
         )}
 
         {/* Blog Content */}
-        <article className="prose prose-lg max-w-none mb-12">
+        <article className="prose prose-sm md:prose-base lg:prose-lg max-w-none mb-8 md:mb-12">
           <div dangerouslySetInnerHTML={{ __html: blog.content }} />
         </article>
 
         {/* Tags */}
         {blog.tags && blog.tags.length > 0 && (
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">Tags</h3>
-            <div className="flex flex-wrap gap-2">
+          <div className="mb-6 md:mb-8">
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 md:mb-3">Tags</h3>
+            <div className="flex flex-wrap gap-1 md:gap-2">
               {blog.tags.map((tag, index) => (
-                <span key={index} className="text-sm text-gray-600 bg-gray-100 px-3 py-1 rounded-full">
+                <span key={index} className="text-xs md:text-sm text-gray-600 bg-gray-100 px-2 md:px-3 py-1 rounded-full">
                   #{tag}
                 </span>
               ))}
@@ -312,16 +312,16 @@ export default function BlogPostPage() {
         )}
 
         {/* Interaction Buttons */}
-        <div className="flex items-center space-x-4 mb-8 p-4 bg-white rounded-lg shadow-sm">
+        <div className="flex items-center space-x-3 md:space-x-4 mb-6 md:mb-8 p-3 md:p-4 bg-white rounded-lg shadow-sm">
           <button
             onClick={handleLike}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+            className={`flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 rounded-lg transition-colors text-sm md:text-base ${
               hasLiked 
                 ? 'bg-red-100 text-red-600' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
-            <svg className="w-5 h-5" fill={hasLiked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill={hasLiked ? 'currentColor' : 'none'} stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
             <span>{blog.likes} Likes</span>
@@ -329,13 +329,13 @@ export default function BlogPostPage() {
 
           <button
             onClick={handleShare}
-            className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+            className={`flex items-center space-x-1 md:space-x-2 px-3 md:px-4 py-2 rounded-lg transition-colors text-sm md:text-base ${
               hasShared 
                 ? 'bg-green-100 text-green-600' 
                 : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
             }`}
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
             </svg>
             <span>{blog.shares} Shares</span>
@@ -343,27 +343,28 @@ export default function BlogPostPage() {
         </div>
 
         {/* Comments Section */}
-        <section className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">
+        <section className="mb-8 md:mb-12">
+          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
             Comments ({blog.comments?.length || 0})
           </h3>
 
           {/* Comment Form */}
-          <form onSubmit={handleComment} className="mb-8">
-            <div className="bg-white rounded-lg shadow-sm p-4">
+          <form onSubmit={handleComment} className="mb-6 md:mb-8">
+            <div className="bg-white rounded-lg shadow-sm p-3 md:p-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">Comment <span className="text-red-500">*</span></label>
               <textarea
                 value={commentContent}
                 onChange={(e) => setCommentContent(e.target.value)}
                 placeholder="Write a comment..."
-                className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                className="w-full p-2 md:p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none text-sm md:text-base"
                 rows={3}
                 required
               />
-              <div className="mt-3 flex justify-end">
+              <div className="mt-2 md:mt-3 flex justify-end">
                 <button
                   type="submit"
                   disabled={submittingComment || !commentContent.trim()}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-3 md:px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
                 >
                   {submittingComment ? 'Posting...' : 'Post Comment'}
                 </button>
@@ -372,28 +373,28 @@ export default function BlogPostPage() {
           </form>
 
           {/* Comments List */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
                          {blog.comments && blog.comments.length > 0 ? (
                blog.comments.map((comment) => (
-                 <div key={comment._id} className="bg-white rounded-lg shadow-sm p-4">
-                   <div className="flex items-start space-x-3">
-                     <div className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
-                       <span className="text-sm text-gray-600">U</span>
+                 <div key={comment._id} className="bg-white rounded-lg shadow-sm p-3 md:p-4">
+                   <div className="flex items-start space-x-2 md:space-x-3">
+                     <div className="w-8 h-8 md:w-10 md:h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                       <span className="text-xs md:text-sm text-gray-600">U</span>
                      </div>
                      <div className="flex-1">
-                       <div className="flex items-center space-x-2 mb-2">
-                         <span className="font-semibold text-gray-900">Anonymous User</span>
-                         <span className="text-sm text-gray-500">
+                       <div className="flex items-center space-x-2 mb-1 md:mb-2">
+                         <span className="font-semibold text-sm md:text-base text-gray-900">Anonymous User</span>
+                         <span className="text-xs md:text-sm text-gray-500">
                            {formatTimeAgo(comment.createdAt)}
                          </span>
                        </div>
-                       <p className="text-gray-700">{comment.content}</p>
+                       <p className="text-sm md:text-base text-gray-700">{comment.content}</p>
                      </div>
                    </div>
                  </div>
                ))
              ) : (
-              <div className="text-center py-8 text-gray-500">
+              <div className="text-center py-6 md:py-8 text-gray-500 text-sm md:text-base">
                 No comments yet. Be the first to comment!
               </div>
             )}
@@ -403,11 +404,11 @@ export default function BlogPostPage() {
         {/* Related Blogs */}
         {relatedBlogs.length > 0 && (
           <section>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Blogs</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">Related Blogs</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {relatedBlogs.map((relatedBlog) => (
                 <article key={relatedBlog._id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="relative h-48 bg-gray-200">
+                  <div className="relative h-32 md:h-40 lg:h-48 bg-gray-200">
                     {relatedBlog.image ? (
                       relatedBlog.url ? (
                         <a 
@@ -447,19 +448,19 @@ export default function BlogPostPage() {
                       </div>
                     )}
                   </div>
-                  <div className="p-4">
+                  <div className="p-3 md:p-4">
                     <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mb-2">
                       {relatedBlog.category}
                     </span>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+                    <h4 className="text-base md:text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
                       <Link href={`/blog/${relatedBlog.slug}`} className="hover:text-blue-600 transition-colors">
                         {relatedBlog.title}
                       </Link>
                     </h4>
-                    <p className="text-gray-600 text-sm mb-3 line-clamp-2">
+                    <p className="text-gray-600 text-xs md:text-sm mb-2 md:mb-3 line-clamp-2">
                       {relatedBlog.description}
                     </p>
-                    <div className="flex items-center justify-between text-sm text-gray-500">
+                    <div className="flex items-center justify-between text-xs md:text-sm text-gray-500">
                       <span>{relatedBlog.views} views</span>
                       <span>{relatedBlog.likes} likes</span>
                       <span>{relatedBlog.comments?.length || 0} comments</span>
