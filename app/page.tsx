@@ -529,14 +529,11 @@ const HomeBlogSection = () => {
       try {
         setIsLoading(true)
         const response = await api.get('/blogs')
-        console.log('Blog API response:', response.data) // Debug log
         // Handle the response structure: { blogs: [...], pagination: {...} }
         const blogsData = response.data?.blogs || response.data || []
-        console.log('Processed blogs data:', blogsData) // Debug log
         setPosts(Array.isArray(blogsData) ? blogsData.slice(0, 3) : [])
       } catch (error) {
         console.error('Failed to load blog posts:', error)
-        setPosts([]) // Set empty array on error
       } finally {
         setIsLoading(false)
       }
