@@ -45,6 +45,20 @@ ETM looks forward to continuing our partnership with <strong>Harmony 4 All</stro
       image: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
     },
     {
+      name: "Pamela Gathers-Bullard",
+      role: "Principal, P.S. 154 Queens",
+      content:
+        `"I write this letter in support of <strong>Education Through Music (ETM)</strong>, a valued partner which has been supporting the P.S. 154 students and community for over 10 years by providing high quality music education with music instruction and musical instruments.<br>
+
+ETM has also helped us launch and sustain our 4th & 5th grade band program. This has been a wonderful opportunity for many of our students and we would like to continue to provide this opportunity to even more students moving forward.<br>
+
+However, the cost of purchasing new band instruments at this time is not possible. So, by providing the funds to repair these 12 school-owned instruments at P.S. 154 Queens, you will allow many more students to participate in the school band program for many years to come, further enriching their music education.<br>
+
+I sincerely hope you can partner with ETM to make this possible."`,
+      rating: 5,
+      image: "/ps154-letter.png",
+    },
+    {
       name: "Shahriar Hossain",
       role: "President of the Friends of Maple Grove",
       content:
@@ -61,29 +75,6 @@ We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any insti
 Their impact is not only measurable. It is transformative."`,
       rating: 5,
       image: "/image.png",
-    },
-    {
-      name: "Pamela Gathers-Bullard",
-      role: "P.S. 154 Queens Principal",
-      content:
-            `"As the music teacher at PS 153 in Maspeth, Queens, New York, my dream is to have a band program that inspires students to become life-long learners of music.<br>
-We have over 110 instruments that have been in a state of disrepair for over ten years. I have inventoried and set aside specific instruments for the program: 10 flutes, 12 clarinets, 8 saxophones, 10 trumpets, 10 trombones, and 5 euphoniums.<br>
-
-Our current band has 30 students who are eager to play. However, their instruments frequently fall apart or make it difficult to produce a good sound, hindering their progress.<br>
-
-I often spend 10 or more minutes per class diagnosing and fixing instrument issues, which reduces valuable playing time. Students currently get only 20 minutes of playing time per week, but with working instruments, they could get 30-40 minutes.<br>
-
-As a Title 1 school, we have limited funds for instrument replacement or repair within the music budget.<br>
-
-We are asking <strong>Harmony 4 All</strong> to help us find someone to properly repair these instruments. The instruments are of good quality and, if repaired and maintained, could last for 2 or 3 years, benefiting both current and future students.<br>
-
-This would save the school money, engage students, reduce obstacles to success, and foster student accomplishment and joy with functional instruments.<br>
-
-The many instruments are in a sorry state, and <strong>Harmony 4 All</strong> fixing them would have a significant, long-term impact on students at our Title 1 school.<br>
-
-As the sole source of music education in the area, quality instruments would enable students to achieve success. We want to plant the seeds for future musicians that can grow into life-long learners of music."`,
-      rating: 5,
-      image: "/emt153.png",
     },
     {
       name: "Harvey Epstein",
