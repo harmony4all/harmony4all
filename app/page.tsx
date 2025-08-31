@@ -504,7 +504,7 @@ const GetInvolvedSection = () => {
                 <CardDescription className="text-gray-600 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
                   {way.description}
                 </CardDescription>
-                <Link href={way.title === "Donate" ? "/donate" : way.title === "Volunteer" ? "/volunteer" : "/sponsor"}>
+                <Link href={way.title === "Donate" ? "/donate" : way.title === "Volunteer" ? "/volunteer" : "/sponsors"}>
                   <Button className="bg-black text-white hover:bg-gray-800 hover:shadow-lg transition-all duration-300 rounded-full px-4 sm:px-6 py-2 text-sm sm:text-base hover:scale-105">
                     {way.cta}
                   </Button>

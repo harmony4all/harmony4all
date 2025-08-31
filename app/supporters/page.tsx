@@ -222,7 +222,7 @@ export default function SupportersPage() {
                                                             </Button>
                                                         </div>
                                                         <div className="flex justify-center">
-                                                            <div className="w-32 h-32 md:w-48 md:h-48 bg-gray-100 rounded-2xl flex items-center justify-center p-3 md:p-4">
+                                                            <div className="w-32 h-32 md:w-48 md:h-48 bg-black/40 rounded-2xl flex items-center justify-center p-3 md:p-4">
                                                                 <img 
                                                                     src={story.logo} 
                                                                     alt={story.name}
@@ -273,7 +273,7 @@ export default function SupportersPage() {
                                 >
                                     <CardContent className="p-4 md:p-6">
                                         <div className="text-center">
-                                            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-3 md:mb-4 bg-gray-100 rounded-xl flex items-center justify-center p-3 md:p-4 group-hover:bg-gray-200 transition-colors duration-300">
+                                            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-3 md:mb-4 bg-black/40 rounded-xl flex items-center justify-center p-3 md:p-4 group-hover:bg-black/40 transition-colors duration-300">
                                                 <img 
                                                     src={supporter.logo} 
                                                     alt={supporter.name}
@@ -316,7 +316,7 @@ export default function SupportersPage() {
                                 >
                                     <CardContent className="p-4 md:p-6">
                                         <div className="flex items-center space-x-3 md:space-x-4">
-                                            <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-100 rounded-xl flex items-center justify-center p-2 md:p-3 group-hover:bg-gray-200 transition-colors duration-300">
+                                            <div className="w-16 h-16 md:w-20 md:h-20 bg-black/40 rounded-xl flex items-center justify-center p-2 md:p-3 group-hover:bg-black/40 transition-colors duration-300">
                                                 <img 
                                                     src={supporter.logo} 
                                                     alt={supporter.name}
