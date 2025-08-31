@@ -30,7 +30,7 @@ export default function AboutPage() {
       achievements: ["Global Youth Ambassador", "Hunter College High School", "Juilliard Preparatory Division"]
     }
   ]
-
+ 
   const storyMilestones = [
     {
       year: "Elementary School",
