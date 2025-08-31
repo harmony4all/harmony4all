@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Send to backend API
-    const backendUrl = process.env.BACKEND_URL || 'http://localhost:5000';
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
     const response = await fetch(`${backendUrl}/api/instrument-donations`, {
       method: 'POST',
       headers: {
@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
     if (sortBy) queryParams.append('sortBy', sortBy);
     if (sortOrder) queryParams.append('sortOrder', sortOrder);
 
-    const backendUrl = process.env.BACKEND_URL || 'http://localhost:5000';
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
     const response = await fetch(`${backendUrl}/api/instrument-donations?${queryParams}`, {
       method: 'GET',
       headers: {

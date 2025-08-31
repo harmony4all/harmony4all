@@ -9,6 +9,7 @@ export const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [isPlaying, setIsPlaying] = useState(true)
+  const [expandedTestimonials, setExpandedTestimonials] = useState<{ [key: number]: boolean }>({})
 
   const testimonials = [
     {
@@ -129,6 +130,30 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
     setIsPlaying(!isPlaying)
   }
 
+  const toggleExpanded = (index: number) => {
+    setExpandedTestimonials(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }))
+  }
+
+  const truncateContent = (content: string, maxLength: number = 500) => {
+    // Remove HTML tags for length calculation
+    const textContent = content.replace(/<[^>]*>/g, '')
+    if (textContent.length <= maxLength) return content
+    
+    // Find a good breaking point (end of sentence or word)
+    const truncated = textContent.substring(0, maxLength)
+    const lastPeriod = truncated.lastIndexOf('.')
+    const lastSpace = truncated.lastIndexOf(' ')
+    
+    const breakPoint = lastPeriod > maxLength * 0.7 ? lastPeriod : lastSpace
+    const finalText = textContent.substring(0, breakPoint) + '... <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read More</span>'
+    
+    // Reconstruct with basic HTML formatting
+    return finalText.replace(/\n/g, '<br>')
+  }
+
   useEffect(() => {
     let timer: NodeJS.Timeout | null = null
 
@@ -159,6 +184,15 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
 
   // Determine if current slide should have image on left or right
   const isImageOnLeft = currentTestimonial % 2 === 0
+  
+  // Check if current testimonial content is long enough to need truncation
+  const currentContent = testimonials[currentTestimonial].content
+  const textContent = currentContent.replace(/<[^>]*>/g, '')
+  const isLongContent = textContent.length > 300
+  const isExpanded = expandedTestimonials[currentTestimonial] || false
+  const displayContent = isExpanded ? 
+    currentContent + ' <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read Less</span>' : 
+    truncateContent(currentContent)
 
   return (
     <section id="testimonials-section" className="py-24 bg-gradient-to-br from-gray-50 to-white">
@@ -178,10 +212,10 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
             className={`bg-white border-0 shadow-2xl rounded-3xl overflow-hidden transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
           >
-            0            <div className="grid lg:grid-cols-2 gap-0">
+            <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className={`order-1 ${isImageOnLeft ? 'lg:order-1' : 'lg:order-2'} relative`}>
-                <div className="aspect-[3/4] overflow-hidden relative bg-gray-50 flex items-center justify-center">
+                <div className="aspect-[3/4] overflow-hidden relative flex items-center justify-center">
                   {/* Check if it's a logo (contains 'logo' in URL or is from specific domains) */}
                   {testimonials[currentTestimonial].image.includes('logo') ||
                     testimonials[currentTestimonial].image.includes('etmonline.org') ||
@@ -195,7 +229,6 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
                         className="max-w-[80%] max-h-[80%] object-contain transition-transform duration-700 hover:scale-110"
-                        style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))' }}
                       />
                     </div>
                   ) : (
@@ -206,8 +239,6 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
                         alt={testimonials[currentTestimonial].name}
                         className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                       />
-                      {/* Gradient overlay for better text contrast */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </>
                   )}
                 </div>
@@ -215,16 +246,19 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
 
               {/* Content Section */}
               <div className={`order-2 ${isImageOnLeft ? 'lg:order-2' : 'lg:order-1'} flex items-center bg-white`}>
-                <CardContent className="p-6 lg:p-8 w-full relative">
+                <CardContent className="px-6 lg:px-8 w-full relative">
 
                   <div className="text-center lg:text-left">
 
 
                     {/* Quote */}
-                    <blockquote className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 leading-relaxed font-light relative">
+                    <blockquote 
+                      className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 leading-relaxed font-light relative"
+                      onClick={() => isLongContent && toggleExpanded(currentTestimonial)}
+                    >
                       <div 
-                        className="pl-4 pr-4"
-                        dangerouslySetInnerHTML={{ __html: testimonials[currentTestimonial].content }}
+                        className="text-[16px]"
+                        dangerouslySetInnerHTML={{ __html: displayContent }}
                       />
                     </blockquote>
                     {/* Decorative element */}
