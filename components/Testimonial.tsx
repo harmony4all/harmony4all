@@ -45,22 +45,6 @@ ETM looks forward to continuing our partnership with <strong>Harmony 4 All</stro
       image: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
     },
     {
-      name: "Maple Grove Cemetery",
-      role: "Community Partner",
-      content:
-        `"This program is made possible jointly by:<br>
-
-• <strong>New York State Senator Joseph P. Addabbo, Jr.</strong><br>
-• <strong>The Office Of Queens Borough President, Donovan Richards, Jr.</strong><br>
-• <strong>New York State Council on the Arts</strong><br>
-• <strong>New York State Office of the Governor</strong><br>
-• <strong>New York State Legislature</strong><br>
-• <strong>Members and Patrons of The Maple Grove Cemetery</strong><br>
-• <strong>The Maple Grove Cemetery Association</strong>"`,
-      rating: 5,
-      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZvPV9K2At4vzJvM5Uq9Mf51XWGHEEhobH3A&s",
-    },
-    {
       name: "Shahriar Hossain",
       role: "President of the Friends of Maple Grove",
       content:
@@ -214,7 +198,7 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
             <div className="grid lg:grid-cols-2 gap-0">
               {/* Image Section */}
               <div className={`order-1 ${isImageOnLeft ? 'lg:order-1' : 'lg:order-2'} relative`}>
-                <div className="aspect-[3/4] overflow-hidden relative flex items-center justify-center">
+                <div className="h-auto min-h-[200px] sm:min-h-[300px] md:aspect-[3/4] overflow-hidden relative flex items-center justify-center">
                   {/* Check if it's a logo (contains 'logo' in URL or is from specific domains) */}
                   {testimonials[currentTestimonial].image.includes('logo') ||
                     testimonials[currentTestimonial].image.includes('etmonline.org') ||
@@ -223,20 +207,20 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
                     testimonials[currentTestimonial].image === '/image.png' ||
                     testimonials[currentTestimonial].image === '/emt153.png' ? (
                     // Logo styling - centered with actual size
-                    <div className="p-8 flex items-center justify-center h-full">
+                    <div className="p-4 sm:p-6 md:p-8 flex items-center justify-center h-full w-full">
                       <img
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
-                        className="max-w-[80%] max-h-[80%] object-contain transition-transform duration-700 hover:scale-110"
+                        className="max-w-[90%] max-h-[90%] object-contain transition-transform duration-700 hover:scale-110"
                       />
                     </div>
                   ) : (
-                    // Media image styling - full cover
+                    // Media image styling - contain instead of cover
                     <>
                       <img
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
-                        className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                        className="w-full h-full object-contain object-center transition-transform duration-700 hover:scale-105"
                       />
                     </>
                   )}
