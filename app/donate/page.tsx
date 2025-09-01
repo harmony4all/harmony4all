@@ -94,12 +94,32 @@ export default function DonatePage() {
     }
   }
 
-  // Check for cancelled payment on page load
+  // Check for cancelled payment and amount parameter on page load
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('cancelled') === 'true') {
       setSubmitStatus('error');
       setErrorMessage('Payment was cancelled. Please try again.');
+    }
+    
+    // Check for amount parameter from other pages
+    const amountParam = urlParams.get('amount');
+    if (amountParam) {
+      const amount = parseInt(amountParam);
+      if (amount && donationLevels.some(level => level.amount === amount)) {
+        setSelectedAmount(amount);
+        setCustomAmount("");
+        
+        // Smooth scroll to donation form after a short delay
+        setTimeout(() => {
+          if (donationFormRef.current) {
+            donationFormRef.current.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }, 500);
+      }
     }
   }, []);
 
@@ -749,7 +769,7 @@ export default function DonatePage() {
             Your gift turns possibility into music, sparking a lifetime of harmony-and together, we create futures that sing.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <Button size="lg" className="bg-black w-full hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <Heart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               <span>Donate Today</span>
             </Button>
@@ -757,7 +777,7 @@ export default function DonatePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+                className="border-2 w-full border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
               >
                 Other Ways to Help
               </Button>

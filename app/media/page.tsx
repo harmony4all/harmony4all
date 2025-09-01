@@ -247,10 +247,10 @@ export default function MediaPage() {
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">Have a success story or memorable moment to share? We'd love to feature your experience in our media gallery.</p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">Share Your Story</Button>
+              <Button size="lg" className="bg-white w-full text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">Share Your Story</Button>
             </Link>
             <Link href="/blog">
-              <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-transparent">Read Our Blog</Button>
+              <Button size="lg" variant="outline" className="border-2 w-full border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-transparent">Read Our Blog</Button>
             </Link>
           </div>
         </div>

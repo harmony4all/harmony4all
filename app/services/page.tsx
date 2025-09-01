@@ -427,7 +427,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-teal-600 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
+              <Button size="lg" className="bg-white text-teal-600 w-full hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                 <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us
               </Button>
@@ -435,7 +435,7 @@ export default function ServicesPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full"
+                className="bg-black hover:bg-gray-800 text-white w-full px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full"
               >
                 <Gift className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Donate Instruments

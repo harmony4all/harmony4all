@@ -304,13 +304,13 @@ export default function JoshuaPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/donate">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+              <Button size="lg" className="bg-white w-full text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                 <Heart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Donate Now
               </Button>
             </Link>
             <Link href="/volunteer">
-              <Button size="lg" variant="outline" className="border-2 border-white text-black hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+              <Button size="lg" variant="outline" className="border-2 w-full border-white text-black hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                 Volunteer With Us
               </Button>
             </Link>

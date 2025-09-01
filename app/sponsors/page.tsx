@@ -435,7 +435,7 @@ export default function SponsorsPage() {
                                     
                                     <div className="space-y-3 md:space-y-4">
                                         <Link href="/contact">
-                                            <Button className="w-full bg-black hover:bg-gray-800 text-white py-2 md:py-4 text-sm md:text-lg rounded-xl">
+                                            <Button className="w-full bg-black w-full hover:bg-gray-800 text-white py-2 md:py-4 text-sm md:text-lg rounded-xl">
                                                 <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                                                 Contact Our Team
                                             </Button>
@@ -476,7 +476,7 @@ export default function SponsorsPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                             <Link href="/contact">
-                                <Button size="lg" className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold">
+                                <Button size="lg" className="bg-white text-black w-full hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold">
                                     <Crown className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                                     Become a Sponsor
                                 </Button>
@@ -485,7 +485,7 @@ export default function SponsorsPage() {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="border-2 border-white text-white hover:bg-white hover:text-purple-600 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+                                    className="border-2 border-white text-white w-full hover:bg-white hover:text-purple-600 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
                                 >
                                     Learn More About Us
                                 </Button>

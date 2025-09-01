@@ -704,7 +704,7 @@ export default function FundersPage() {
                             Your donation directly supports students in need, providing them with instruments, education, and opportunities to discover their musical potential.
                         </p>
                         <Link href="/donate">
-                            <Button size="lg" className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+                            <Button size="lg" className="bg-white w-full text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                                 Donate
                                 <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5" />
                             </Button>

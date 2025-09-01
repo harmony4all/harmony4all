@@ -198,27 +198,30 @@ export default function GetInvolvedPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-6xl mx-auto">
             {donationLevels.map((level, index) => (
-              <Card
-                key={index}
-                className="text-center shadow-lg border-0 rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden"
+              <Link 
+                key={index} 
+                href={`/donate?amount=${level.amount.replace('$', '')}`}
+                className="block"
               >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={level.image}
-                    alt={`Donation level ${level.amount}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-black rounded-2xl flex items-center justify-center mb-3 md:mb-4">
-                    <level.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                <Card className="text-center shadow-lg border-0 rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group hover:scale-105">
+                  <div className="aspect-video overflow-hidden">
+                    <img
+                      src={level.image}
+                      alt={`Donation level ${level.amount}`}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <CardTitle className="text-2xl md:text-3xl font-bold text-black">{level.amount}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 text-xs md:text-sm">{level.impact}</p>
-                </CardContent>
-              </Card>
+                  <CardHeader>
+                    <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-black rounded-2xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <level.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                    </div>
+                    <CardTitle className="text-2xl md:text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">{level.amount}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 text-xs md:text-sm">{level.impact}</p>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
@@ -300,7 +303,7 @@ export default function GetInvolvedPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
+              <Button size="lg" className="bg-white w-full text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                 <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us
               </Button>
@@ -308,7 +311,7 @@ export default function GetInvolvedPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-black w-full hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Heart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 <span>Donate Today</span>

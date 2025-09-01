@@ -145,7 +145,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
+              className="bg-white w-full text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
               onClick={() => window.open('tel:+13475547712', '_self')}
             >
               <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
@@ -154,7 +154,7 @@ export default function ContactPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+              className="border-2 w-full border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
               onClick={() => window.open('mailto:info@harmony4all.org', '_self')}
             >
               <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />

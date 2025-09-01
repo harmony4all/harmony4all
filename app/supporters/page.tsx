@@ -358,13 +358,13 @@ export default function SupportersPage() {
                             and help bring music education to underserved communities.
                         </p>
                         <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                            <Button asChild size="lg" className="bg-white text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                            <Button asChild size="lg" className="bg-white text-black w-full hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
                                 <Link href="/donate">
                                     <Gift className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                                     Make a Donation
                                 </Link>
                             </Button>
-                            <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
+                            <Button asChild size="lg" variant="outline" className="border-white text-white w-full hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-base">
                                 <Link href="/contact">
                                     <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                                     Partner With Us

@@ -102,13 +102,11 @@ By providing the funds to repair these 12 school-owned instruments at P.S. 154 Q
       category: "Sponsor • Strategic Partner",
       website: "https://thenewyorkinjurylawfirm.com",
       content:
-        `"<strong>The New York Injury Law Firm</strong> is proud to support <strong>Harmony 4 All</strong> in their mission to provide free, high-quality music education to underserved students across New York City.<br>
+        `"On behalf of <strong>The New York Injury Law Firm</strong>, I want to extend our admiration for the meaningful work your organization continues to do in our community. Your mission to promote inclusion, healing, and opportunity through arts, education, and outreach deeply resonates with our values.<br>
 
-We believe that every child deserves access to the transformative power of music education, regardless of their economic circumstances. <strong>Harmony 4 All</strong>'s innovative approach to breaking down barriers through instrument rentals, repair services, and community programs aligns perfectly with our commitment to supporting our local community.<br>
+We are proud to make a charitable contribution in support of your ongoing efforts. It is organizations like yours that remind us of the power of compassion, creativity, and advocacy.<br>
 
-Through our partnership, we've seen firsthand the positive impact that music education has on students' academic performance, social development, and overall well-being. The dedication of <strong>Harmony 4 All</strong>'s team to ensuring no child is left behind is truly inspiring.<br>
-
-We are honored to be part of this important work and look forward to continuing our support as <strong>Harmony 4 All</strong> expands their reach and impact across New York City."`,
+Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</strong> continue to grow and inspire."`,
       rating: 5,
       image: "https://thenewyorkinjurylawfirm.com/wp-content/uploads/2024/11/New-York-Injury-Firm.png.webp",
     }

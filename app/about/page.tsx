@@ -30,7 +30,7 @@ export default function AboutPage() {
       achievements: ["Global Youth Ambassador", "Hunter College High School", "Juilliard Preparatory Division"]
     }
   ]
- 
+
   const storyMilestones = [
     {
       year: "Elementary School",
@@ -291,14 +291,9 @@ export default function AboutPage() {
             <div className="mt-8 md:mt-16 bg-black rounded-3xl p-6 md:p-12 text-white text-center shadow-2xl">
               <div className="max-w-4xl mx-auto">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Building a Harmonious Future</h3>
-                                 <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 px-4">
-                   At <span className="font-bold  px-1 rounded">Harmony 4 All</span>, we believe music has the power to change lives. By placing instruments in the hands of children and opening doors to music education, we spark creativity, confidence, and connection that ripple far beyond the classroom. Together, we are creating a future where music knows no boundaries-and every child's voice can rise, be heard, and inspire the work.
-                 </p>
-                <div className="mt-6 md:mt-8 flex justify-center">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-white/20 rounded-full flex items-center justify-center">
-                    <Music className="h-8 w-8 md:h-10 md:w-10 text-white" />
-                  </div>
-                </div>
+                <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 ">
+                  At <span className="font-bold  px-1 rounded">Harmony 4 All</span>, we believe music has the power to change lives. By placing instruments in the hands of children and opening doors to music education, we spark creativity, confidence, and connection that ripple far beyond the classroom. Together, we are creating a future where music knows no boundaries-and every child's voice can rise, be heard, and inspire the work.
+                </p>
               </div>
             </div>
           </div>
@@ -325,9 +320,9 @@ export default function AboutPage() {
                 <span className="font-semibold text-sm md:text-base">OUR VALUES</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">The Foundation of Our Mission</h2>
-                             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                 Our values are the heartbeat of <span className="font-bold  px-1 rounded">Harmony 4 All</span>. They shape how we bring music to students, guide our programs, and define the legacy we hope to leave in the lives of young musicians and their communities.
-               </p>
+              <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                Our values are the heartbeat of <span className="font-bold  px-1 rounded">Harmony 4 All</span>. They shape how we bring music to students, guide our programs, and define the legacy we hope to leave in the lives of young musicians and their communities.
+              </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-16">
@@ -424,9 +419,9 @@ export default function AboutPage() {
             <div className="bg-black rounded-3xl p-6 md:p-12 text-white text-center shadow-2xl">
               <div className="max-w-6xl mx-auto">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">The Power of Music to Inspire, Connect, and Transform</h3>
-                                 <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 mb-6 md:mb-8 px-4">
-                   We believe in the transformative power of music to open doors, nurture creativity, and bring communities together. Our values are not just words-they are the guiding principles that shape every decision we make and every program we create at <span className="font-bold  px-1 rounded">Harmony 4 All</span>.
-                 </p>
+                <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 mb-6 md:mb-8">
+                  We believe in the transformative power of music to open doors, nurture creativity, and bring communities together. Our values are not just words-they are the guiding principles that shape every decision we make and every program we create at <span className="font-bold  px-1 rounded">Harmony 4 All</span>.
+                </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {[
                     { icon: Users, label: "Excellence in Access" },
@@ -480,7 +475,7 @@ export default function AboutPage() {
                   <Users className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
                   Free Music Workshops                </h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                  Hands-on learning and mentorship to help students unlock their musical potential.                </p>
+                  Hands-on learning and mentorship to help students unlock their musical potential.</p>
               </div>
 
               <div
@@ -493,7 +488,7 @@ export default function AboutPage() {
                   School Partnerships
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                  Bringing free music programs to underfunded NYC public schools for consistent education.                </p>
+                  Bringing free music programs to underfunded NYC public schools for consistent education.</p>
               </div>
               <div
                 className={`bg-white rounded-2xl p-4 md:p-8 shadow-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -514,7 +509,7 @@ export default function AboutPage() {
               >
                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4 flex items-center">
                   <Award className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
-                  Collaborative Performances                </h3>
+                  Collaborative Performances</h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   Partnering with local artists and ensembles to give students confidence-building stage experience.
                 </p>
@@ -542,12 +537,12 @@ export default function AboutPage() {
               >
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Our Story</h3>
                 <div className="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
-                                     <p>
-                     <span className="font-bold  px-1 rounded">Harmony 4 All</span> was founded by Bianca and Joshua Quddus, who began their musical journey at PS100Q,
-                     a public elementary school in South Ozone Park, Queens, New York. Their inspiring music teacher,
-                     April Rachmuth, introduced them to the joy of music through the recorder, igniting a passion for
-                     music that shaped their future.
-                   </p>
+                  <p>
+                    <span className="font-bold  px-1 rounded">Harmony 4 All</span> was founded by Bianca and Joshua Quddus, who began their musical journey at PS100Q,
+                    a public elementary school in South Ozone Park, Queens, New York. Their inspiring music teacher,
+                    April Rachmuth, introduced them to the joy of music through the recorder, igniting a passion for
+                    music that shaped their future.
+                  </p>
                   <p>
                     Their dedication and love for music earned them a unique opportunity to perform on-stage in Carnegie
                     Hall's prestigious Link-Up program, where they played alongside a professional orchestra. This
@@ -629,18 +624,18 @@ export default function AboutPage() {
                 </div>
 
                 <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
-                                     <p className="text-gray-700 text-sm md:text-base">
-                     Driven by their passion and belief in the transformative power of education, they founded
-                     <span className="font-bold  px-1 rounded">Harmony 4 All</span>. Their mission is to break down the barriers
-                     hindering access to music education for aspiring young musicians from all backgrounds.
-                   </p>
+                  <p className="text-gray-700 text-sm md:text-base">
+                    Driven by their passion and belief in the transformative power of education, they founded
+                    <span className="font-bold  px-1 rounded">Harmony 4 All</span>. Their mission is to break down the barriers
+                    hindering access to music education for aspiring young musicians from all backgrounds.
+                  </p>
 
-                   <p className="text-gray-700 text-sm md:text-base">
-                     Through fundraising and resource distribution, <span className="font-bold  px-1 rounded">Harmony 4 All</span> provides essential support to underserved communities,
-                     ensuring every child has the opportunity to discover and develop their musical talents.
-                     <span className="font-semibold">Bianca and Joshua</span> are committed to enriching lives,
-                     instilling discipline, and fostering creativity through the power of music.
-                   </p>
+                  <p className="text-gray-700 text-sm md:text-base">
+                    Through fundraising and resource distribution, <span className="font-bold  px-1 rounded">Harmony 4 All</span> provides essential support to underserved communities,
+                    ensuring every child has the opportunity to discover and develop their musical talents.
+                    <span className="font-semibold">Bianca and Joshua</span> are committed to enriching lives,
+                    instilling discipline, and fostering creativity through the power of music.
+                  </p>
                 </div>
 
                 <div className="mt-8 md:mt-10">
@@ -666,9 +661,9 @@ export default function AboutPage() {
               }`}
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">Our Team</h2>
-                         <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-               <span className="font-bold  px-1 rounded">Harmony 4 All</span> is driven by a passionate youth-led team of musicians and advocates working to ensure every child has the chance to discover their voice, grow in confidence, and inspire their community through music.
-             </p>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
+              <span className="font-bold  px-1 rounded">Harmony 4 All</span> is driven by a passionate youth-led team of musicians and advocates working to ensure every child has the chance to discover their voice, grow in confidence, and inspire their community through music.
+            </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 md:gap-16 max-w-7xl mx-auto">
@@ -952,7 +947,7 @@ export default function AboutPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
+                className="bg-black w-full hover:bg-gray-800 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
               >
                 <Heart className="mr-2 h-5 w-5" />
                 <span>Donate Now</span>
@@ -962,7 +957,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
+                className="border-2 w-full border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
               >
                 Get in Touch
               </Button>

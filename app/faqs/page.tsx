@@ -379,7 +379,7 @@ export default function FAQsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-black text-white hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+                  <Button size="lg" className="bg-black w-full text-white hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                     <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Contact Us
                   </Button>
@@ -387,7 +387,7 @@ export default function FAQsPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-black text-black hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
+                  className="border-2 w-full border-black text-black hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
                 >
                   <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Call (347) 554-7712

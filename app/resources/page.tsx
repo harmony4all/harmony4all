@@ -19,7 +19,6 @@ import {
   Menu,
   X,
 } from "lucide-react"
-import { Footer } from "@/components/footer"
 import NewsletterSection from "@/components/news-letter"
 
 
@@ -294,7 +293,7 @@ export default function ResourcesPage() {
               <Link href="/contact">
                 <Button
                   size="lg"
-                  className="bg-black text-white hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full transition-all duration-300 hover:scale-105"
+                  className="bg-black text-white w-full hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full transition-all duration-300 hover:scale-105"
                 >
                   <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Contact Support Team
@@ -304,7 +303,7 @@ export default function ResourcesPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 border-black text-black hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
+                  className="border-2 border-black text-black w-full hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full bg-transparent transition-all duration-300 hover:scale-105"
                 >
                   <BookOpen className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   View Programs
