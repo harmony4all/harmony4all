@@ -136,7 +136,7 @@ export default function GetInvolvedPage() {
                 </CardDescription>
                 <Link href="/donate">
                   <Button className="bg-black text-white hover:shadow-lg transition-all duration-300 rounded-full px-4 md:px-6 py-2 w-full text-sm md:text-base">
-                    Make a Donation
+                    Become a Donor
                   </Button>
                 </Link>
               </CardContent>

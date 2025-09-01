@@ -83,7 +83,7 @@ const HeroCarousel = () => {
 
   return (
     <section
-      className="relative min-h-[800px] sm:min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[500px] sm:min-h-screen flex flex-col sm:flex-row items-center justify-center overflow-hidden"
       role="region"
       aria-label="Hero carousel"
       onMouseEnter={() => setIsPaused(true)}
@@ -97,16 +97,62 @@ const HeroCarousel = () => {
             }`}
           aria-hidden={index !== currentSlide}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('${slide.image}')` }}
-            role="img"
-            aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
-          >
-            <div className="absolute inset-0 bg-black/40"></div>
+          {/* Mobile: Fixed height image container */}
+          <div className="sm:hidden w-full h-[180px] relative mt-10">
+            <div
+              className="w-full h-full bg-contain bg-center bg-no-repeat"
+              style={{ backgroundImage: `url('${slide.image}')` }}
+              role="img"
+              aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
+            />
           </div>
 
-          <div className="relative z-10 container mx-auto px-4 text-center h-full flex items-center">
+          {/* Desktop: Full background image */}
+          <div className="hidden sm:block absolute inset-0 bg-cover bg-center">
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url('${slide.image}')` }}
+              role="img"
+              aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
+            >
+              <div className="absolute inset-0 bg-black/40"></div>
+            </div>
+          </div>
+
+          {/* Mobile: Content below image */}
+          <div className="sm:hidden relative z-10 container mx-auto px-4 text-center py-8">
+            <div className="max-w-4xl mx-auto text-gray-900">
+              <h1
+                className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight transition-all duration-1000 delay-300 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+              >
+                {slide.title}
+              </h1>
+              {slide.title === "THE IMPACT" ? (
+                <div
+                  className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                  dangerouslySetInnerHTML={{ __html: slide.subtitle }}
+                />
+              ) : (
+                <p
+                  className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 leading-relaxed transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                >
+                  {slide.subtitle}
+                </p>
+              )}
+              <div
+                className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+              >
+
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Content overlaid on image */}
+          <div className="hidden sm:flex relative z-10 container mx-auto px-4 text-center h-full items-center">
             <div className="max-w-4xl mx-auto text-white">
               <h1
                 className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight transition-all duration-1000 delay-300 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -143,7 +189,7 @@ const HeroCarousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent"
+        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent sm:bg-white/20 sm:text-white text-black"
         onClick={prevSlide}
         aria-label="Previous slide"
       >
@@ -153,7 +199,7 @@ const HeroCarousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent"
+        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent sm:bg-white/20 sm:text-white text-black"
         onClick={nextSlide}
         aria-label="Next slide"
       >
@@ -169,7 +215,7 @@ const HeroCarousel = () => {
         {slides.map((slide, index) => (
           <button
             key={index}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent ${index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent ${index === currentSlide ? "bg-black scale-125 sm:bg-white" : "bg-black/50 hover:bg-black/75 sm:bg-white/50 sm:hover:bg-white/75"
               }`}
             onClick={() => goToSlide(index)}
             aria-label={`Go to slide ${index + 1}: ${slide.title}`}
@@ -246,7 +292,7 @@ const MissionValuesSection = () => {
   return (
     <section id="mission-values-section" className="py-4 sm:py-12 md:py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto text-center">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-start">
             {/* Left Column - Mission and Core Values */}
             <div
@@ -259,32 +305,32 @@ const MissionValuesSection = () => {
               </p>
 
               <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">Our Core Values</h4>
-              <div className="space-y-4 sm:space-y-6">
+              <div className="space-y-4 sm:space-y-6 text-left">
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg">Excellence in Access</strong>
+                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg text-left">Excellence in Access</strong>
                     <p className="text-gray-600 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">We believe every child deserves the highest quality opportunities to learn, grow, and shine through music.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg">Harmony in Community</strong>
+                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg text-left">Harmony in Community</strong>
                     <p className="text-gray-600 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">We use music as a bridge to bring students, families, and neighborhoods together.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg">Creativity with Purpose</strong>
+                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg text-left">Creativity with Purpose</strong>
                     <p className="text-gray-600 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">We nurture imagination and artistry while fostering resilience, confidence, and leadership.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 sm:space-x-4">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 bg-black rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
                   <div>
-                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg">Generations in Resonance</strong>
+                    <strong className="text-gray-900 text-sm sm:text-base md:text-lg text-left">Generations in Resonance</strong>
                     <p className="text-gray-600 mt-1 sm:mt-2 text-xs sm:text-sm md:text-base">We honor the voices of the past, uplift the students of today, and inspire the leaders of tomorrow through the timeless power of music.</p>
                   </div>
                 </div>
@@ -450,20 +496,20 @@ const GetInvolvedSection = () => {
       image: "https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
-      icon: HandHeart,
-      title: "Volunteer",
-      description:
-        "Share your time and talents to uplift students and communities.",
-      cta: "Lift a Voice",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-    },
-    {
       icon: Gift,
       title: "Sponsor",
       description:
         "Stand with us to expand music access and strengthen communities.",
       cta: "Fuel the Future",
       image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+      icon: HandHeart,
+      title: "Volunteer",
+      description:
+        "Share your time and talents to uplift students and communities.",
+      cta: "Lift a Voice",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
     },
   ]
 

@@ -80,8 +80,8 @@ export const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-8 mb-10">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-1">
+          <div className="lg:col-span-2 text-center lg:text-left">
+            <div className="flex items-center justify-center lg:justify-start mb-1">
               <div className="relative">
                 <img 
                   src="https://static.wixstatic.com/media/d717d4_3cc4d0b71fe04619ab30bb4bcfbe4224~mv2.png"
@@ -91,12 +91,12 @@ export const Footer = () => {
               </div>
              
             </div>
-            <p className="text-white/70 mb-6 leading-relaxed text-base max-w-2xl">
+            <p className="text-white/70 mb-6 leading-relaxed text-base max-w-2xl mx-auto lg:mx-0">
               Shaping future generations through the power of music. Where every child's voice find its song.
             </p>
             
             {/* Legal Status - Prominently Displayed */}
-            <div className="bg-white/10 border border-white/20 w-full sm:w-1/2 rounded-lg p-4 mb-6">
+            <div className="bg-white/10 border border-white/20 w-full sm:w-1/2 mx-auto lg:mx-0 rounded-lg p-4 mb-6">
               <div className="grid md:grid-cols-1 gap-4 text-sm">
                 <div>
                   <p className="text-white font-semibold mb-1">
@@ -120,7 +120,7 @@ export const Footer = () => {
             {/* Contact Info */}
             <div className="mb-6 space-y-3">
               {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center text-white/70 hover:text-white transition-colors duration-200">
+                <div key={index} className="flex items-center justify-center lg:justify-start text-white/70 hover:text-white transition-colors duration-200">
                   <div className="p-1.5 bg-white/10 rounded-lg mr-3">
                     <contact.icon className="h-4 w-4 text-white/80" />
                   </div>
@@ -139,7 +139,7 @@ export const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <nav aria-labelledby="quick-links-heading" className="lg:col-span-1">
+          <nav aria-labelledby="quick-links-heading" className="lg:col-span-1 text-center lg:text-left">
             <h4 id="quick-links-heading" className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
             <ul className="space-y-2 text-white/70" role="list">
               {quickLinks.map((link, index) => {
@@ -160,7 +160,7 @@ export const Footer = () => {
             </ul>
           </nav>
                       {/* Candid Platinum Transparency Badge */}
-            <div className="flex flex-col items-left mt-8">
+            <div className="flex flex-col items-center lg:items-start mt-8">
               <Link 
                 href="https://www.guidestar.org/profile/shared/612fc49e-8913-45bf-b8f8-cc6d46762abb" 
                 target="_blank" 
@@ -176,9 +176,9 @@ export const Footer = () => {
               </Link>
 
               {/* Social Media */}
-              <div>
+              <div className="text-center lg:text-left">
                 <h4 className="text-lg font-semibold mb-4 text-white">Follow Us</h4>
-                <div className="flex space-x-3" role="list" aria-label="Social media links">
+                <div className="flex space-x-3 justify-center lg:justify-start" role="list" aria-label="Social media links">
                   {socialLinks.map((social, index) => (
                     <Link
                       key={index}

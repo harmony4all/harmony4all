@@ -529,18 +529,18 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 ">
           <div className="max-w-6xl mx-auto">
             <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8 md:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              className={`text-3xl md:text-4xl font-bold text-gray-900 text-center mb-1 md:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
             >
               Get to Know Us
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-8 md:mb-16">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-8 md:mb-16 text-center sm:text-left">
               <div
                 className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Our Story</h3>
+                <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Our Story</h3>
                 <div className="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
                                      <p>
                      <span className="font-bold  px-1 rounded">Harmony 4 All</span> was founded by Bianca and Joshua Quddus, who began their musical journey at PS100Q,
@@ -665,7 +665,7 @@ export default function AboutPage() {
             className={`text-center mb-12 md:mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8 font-serif">Our Team</h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">Our Team</h2>
                          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
                <span className="font-bold  px-1 rounded">Harmony 4 All</span> is driven by a passionate youth-led team of musicians and advocates working to ensure every child has the chance to discover their voice, grow in confidence, and inspire their community through music.
              </p>
@@ -826,19 +826,19 @@ export default function AboutPage() {
 
               {/* Details Section */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div className="p-8 border-b border-gray-100">
+                <div className="p-4 border-b border-gray-100">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Organization Details</h3>
                   <p className="text-gray-600">Complete transparency in our operations and governance</p>
                 </div>
 
-                <div className="p-8 space-y-8">
+                <div className="p-4 space-y-8">
                   {/* Legal Status */}
-                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                  <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Award className="h-5 w-5 text-gray-600 mr-2" />
                       Legal Status
                     </h4>
-                    <div className="space-y-3 text-gray-700">
+                    <div className="space-y-3 text-gray-700 text-sm md:text-base">
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Nonprofit Classification:</span>
                         <Badge className="bg-gray-100 text-gray-800 border-gray-300">501(c)(3) Tax-Exempt</Badge>
@@ -855,12 +855,12 @@ export default function AboutPage() {
                   </div>
 
                   {/* Contact Information */}
-                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                  <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Mail className="h-5 w-5 text-gray-600 mr-2" />
                       Contact Information
                     </h4>
-                    <div className="space-y-3 text-gray-700">
+                    <div className="space-y-3 text-gray-700 text-sm md:text-base">
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Address:</span>
                         <span>New York City, NY, United States</span>
@@ -881,12 +881,12 @@ export default function AboutPage() {
                   </div>
 
                   {/* Financial Transparency */}
-                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                  <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Eye className="h-5 w-5 text-gray-600 mr-2" />
                       Financial Transparency
                     </h4>
-                    <div className="space-y-3 text-gray-700">
+                    <div className="space-y-3 text-gray-700 text-sm md:text-base">
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Tax Returns:</span>
                         <Badge className="bg-gray-100 text-gray-800 border-gray-300">Available upon request</Badge>
@@ -903,12 +903,12 @@ export default function AboutPage() {
                   </div>
 
                   {/* Governance */}
-                  <div className="bg-gray-50 p-6 rounded-xl border border-gray-200">
+                  <div>
                     <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                       <Users className="h-5 w-5 text-gray-600 mr-2" />
                       Governance
                     </h4>
-                    <div className="space-y-3 text-gray-700">
+                    <div className="space-y-3 text-gray-700 text-sm md:text-base">
                       <div className="flex justify-between items-start">
                         <span className="font-medium">Board of Directors:</span>
                         <span className="text-right">Dedicated volunteers</span>

@@ -60,6 +60,13 @@ export default function DonatePage() {
       image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     },
     {
+      amount: 750,
+      title: "School Band Support",
+      description: "Funds instrument repairs and resources",
+      impact: "Your generosity funds instrument repairs and resources for an entire school band, restoring the sound of music for dozens of students.",
+      image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    },
+    {
       amount: 1000,
       title: "Community Impact",
       description: "Sustains community programs",
@@ -67,45 +74,6 @@ export default function DonatePage() {
       image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
     }
   ]
-
-  const impactExamples = [
-    {
-      amount: 50,
-      impact: "Your gift provides a month of music supplies so a student can keep learning without barriers.",
-      icon: Gift,
-      color: "from-gray-900 to-gray-700",
-      image: "https://static.wixstatic.com/media/e65032_cd33c8b9dc8d4a4b986f7fa5ac06df3e~mv2.jpg/v1/crop/x_337,y_634,w_1319,h_753/fill/w_354,h_202,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harmony%204%20All%20logo_G2%20(2).jpg",
-    },
-    {
-      amount: 100,
-      impact: "Your support covers one month of instrument rental, giving a child the chance to practice every day.",
-      icon: Heart,
-      color: "from-gray-900 to-gray-700",
-      image: "https://static.wixstatic.com/media/e65032_cd33c8b9dc8d4a4b986f7fa5ac06df3e~mv2.jpg/v1/crop/x_337,y_634,w_1319,h_753/fill/w_354,h_202,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harmony%204%20All%20logo_G2%20(2).jpg",
-    },
-    {
-      amount: 200,
-      impact: "Your generosity sponsors a student's full music education for a month, including lessons and performance opportunities.",
-      icon: Users,
-      color: "from-gray-900 to-gray-700",
-      image: "https://static.wixstatic.com/media/e65032_cd33c8b9dc8d4a4b986f7fa5ac06df3e~mv2.jpg/v1/crop/x_337,y_634,w_1319,h_753/fill/w_354,h_202,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harmony%204%20All%20logo_G2%20(2).jpg",
-    },
-    {
-      amount: 500,
-      impact: "Your contribution equips an entire classroom with instruments, resources, and mentorship for a month.",
-      icon: Building,
-      color: "from-gray-900 to-gray-700",
-      image: "https://static.wixstatic.com/media/e65032_cd33c8b9dc8d4a4b986f7fa5ac06df3e~mv2.jpg/v1/crop/x_337,y_634,w_1319,h_753/fill/w_354,h_202,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harmony%204%20All%20logo_G2%20(2).jpg",
-    },
-    {
-      amount: 1000,
-      impact: "Your investment sustains community concerts and education programs, bringing the power of music to hundreds of students and families.",
-      icon: Building,
-      color: "from-gray-900 to-gray-700",
-      image: "https://static.wixstatic.com/media/e65032_cd33c8b9dc8d4a4b986f7fa5ac06df3e~mv2.jpg/v1/crop/x_337,y_634,w_1319,h_753/fill/w_354,h_202,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Harmony%204%20All%20logo_G2%20(2).jpg",
-    },
-  ]
-
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
       ...prev,
@@ -243,7 +211,7 @@ export default function DonatePage() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4 md:gap-6">
               {donationLevels.map((level) => (
                 <div
                   key={level.amount}
@@ -289,20 +257,12 @@ export default function DonatePage() {
                 </div>
               ))}
             </div>
-            
-            <div className="text-center mt-6 md:mt-8">
-              <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Or enter a custom amount in the form below</p>
-              <div className="inline-flex items-center space-x-2 text-xs md:text-sm text-gray-500">
-                <span>💡</span>
-                <span>Click any level above for instant selection!</span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* Donation Form */}
-      <section ref={donationFormRef} className="py-12 md:py-16 lg:py-20">
+      <section ref={donationFormRef} className="py-2 md:py-4 lg:py-6">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <Card className="shadow-2xl border-0 rounded-2xl overflow-hidden">
@@ -358,7 +318,7 @@ export default function DonatePage() {
                     <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3 md:mb-4 text-center">
                       Selected {donationType === "monthly" ? "Monthly" : ""} Donation Level
                     </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-3 md:gap-4 mb-4 md:mb-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
                       {donationLevels.map((level) => (
                         <button
                           key={level.amount}

@@ -275,7 +275,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-xs md:text-sm text-gray-500">
                     <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-                    <span>Monthly Events</span>
+                    <span>ONGOING SEASONAL</span>
                   </div>
                   <div className="flex items-center text-xs md:text-sm text-gray-500">
                     <Users className="h-3 w-3 md:h-4 md:w-4 mr-2" />
@@ -306,7 +306,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>Seasonal Programs</span>
+                    <span>ONGOING SEASONAL</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Award className="h-4 w-4 mr-2" />
@@ -338,7 +338,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>Quarterly Events</span>
+                    <span>ONGOING SEASONAL</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Users className="h-4 w-4 mr-2" />
@@ -370,7 +370,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>By Invitation</span>
+                    <span>ONGOING SEASONAL</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Globe className="h-4 w-4 mr-2" />

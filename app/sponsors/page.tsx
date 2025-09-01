@@ -35,15 +35,6 @@ export default function SponsorsPage() {
 
     const currentSponsors = [
         {
-            name: "Education Through Music",
-            logo: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
-            website: "https://etmonline.org/",
-            tier: "Platinum",
-            category: "Education Partner",
-            impact: "Core Program Support",
-            description: "Empowering music education across NYC schools through strategic partnership and program development."
-        },
-        {
             name: "THE NEWYORK INJURY LAW FIRM",
             logo: "https://thenewyorkinjurylawfirm.com/wp-content/uploads/2024/11/New-York-Injury-Firm.png.webp",
             website: "https://thenewyorkinjurylawfirm.com/",
@@ -53,14 +44,59 @@ export default function SponsorsPage() {
             description: "Supporting our mission through legal expertise and financial sponsorship."
         },
         {
-            name: "Maple Grove Cemetery",
-            logo: "https://static.wixstatic.com/media/3e1dd4_d14e438abb2a4f91ae021d74a2f190d2~mv2_d_4500_1669_s_2.png/v1/fill/w_536,h_198,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/FMG%20Logo.png",
-            website: "https://www.friendsofmaplegrove.org/",
+            name: "New York State Senator Joseph P. Addabbo, Jr.",
+            logo: "https://www.nysenate.gov/sites/default/files/2022/11/09/fpo-about-seal.jpg",
+            website: "https://www.nysenate.gov/senators/joseph-p-addabbo-jr",
+            tier: "Gold",
+            category: "Government Partner",
+            impact: "Legislative Support & Advocacy",
+            description: "Supporting music education initiatives and community programs through legislative advocacy."
+        },
+        {
+            name: "New York State Office of the Governor",
+            logo: "/new york state.png",
+            website: "https://www.governor.ny.gov",
+            tier: "Platinum",
+            category: "Government Partner",
+            impact: "State-Level Support",
+            description: "Providing state-level support for arts education and community development initiatives."
+        },
+        {
+            name: "New York State Legislature",
+            logo: "/nys legis.png",
+            website: "https://www.nysenate.gov/issues/new-york-state-legislature",
+            tier: "Platinum",
+            category: "Government Partner",
+            impact: "Legislative Framework",
+            description: "Establishing legislative framework and support for arts education programs."
+        },
+        {
+            name: "New York State Council on the Arts",
+            logo: "/council on the arts.png",
+            website: "https://arts.ny.gov/our-mission",
+            tier: "Gold",
+            category: "Arts Council",
+            impact: "Arts Funding & Support",
+            description: "Providing essential funding and support for arts education and cultural programs."
+        },
+        {
+            name: "New York City Department of Cultural Affairs",
+            logo: "https://www.nyc.gov/assets/dcla/images/content/header/logo.svg",
+            website: "https://www.nyc.gov/site/dcla/index.page",
+            tier: "Gold",
+            category: "City Government",
+            impact: "Cultural Programming Support",
+            description: "Supporting cultural programming and arts education initiatives across NYC."
+        },
+        {
+            name: "New York Foundation for the Arts",
+            logo: "/NYFA.png",
+            website: "https://www.nyfa.org",
             tier: "Silver",
-            category: "Community Partner",
-            impact: "Venue & Event Support",
-            description: "Providing beautiful spaces for our community events and concerts."
-        }
+            category: "Arts Foundation",
+            impact: "Artist Support & Resources",
+            description: "Providing resources and support for artists and arts education programs."
+        },
     ]
 
     const sponsorshipOpportunities = [
@@ -82,7 +118,7 @@ export default function SponsorsPage() {
             icon: Music,
             opportunities: [
                 "Instrument Rental Program",
-                "Music Theory Classes",
+                "Instrument Repair Program",
                 "Performance Training",
                 "Digital Music Production",
                 "Ensemble Programs"
@@ -116,22 +152,22 @@ export default function SponsorsPage() {
 
     const impactMetrics = [
         {
-            number: "500+",
+            number: "300+",
             label: "Students Served",
             description: "Children receiving music education through our programs"
         },
         {
-            number: "25+",
+            number: "10+",
             label: "Schools Partnered",
             description: "Educational institutions across NYC"
         },
         {
-            number: "1000+",
+            number: "100+",
             label: "Instruments Provided",
             description: "Musical instruments donated and maintained"
         },
         {
-            number: "50+",
+            number: "25+",
             label: "Events Hosted",
             description: "Community concerts and educational events"
         }
@@ -245,10 +281,7 @@ export default function SponsorsPage() {
                                     className="bg-white shadow-xl border-0 rounded-xl md:rounded-3xl overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
                                 >
                                     <div className="p-4 md:p-8">
-                                        <div className="flex items-center justify-between mb-3 md:mb-4">
-                                            <Badge className="px-2 md:px-3 py-1 text-xs font-semibold bg-gray-100 text-gray-700">
-                                                {sponsor.tier} Sponsor
-                                            </Badge>
+                                        <div className="flex items-center justify-end mb-3 md:mb-4">
                                             <Badge className="bg-black text-white px-2 md:px-3 py-1 text-xs font-semibold">
                                                 {sponsor.category}
                                             </Badge>
@@ -348,14 +381,11 @@ export default function SponsorsPage() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
-                            <div>
-                                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8">Why Sponsor <span className="font-bold  px-1 rounded">Harmony 4 All</span>?</h2>
+                            <div className="text-center md:text-left">
+                                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8">Why Sponsor <span className="font-bold  px-0 rounded">Harmony 4 All</span>?</h2>
                                 
                                 <div className="space-y-4 md:space-y-8">
                                     <div className="flex items-start space-x-3 md:space-x-4">
-                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Target className="h-4 w-4 md:h-6 md:w-6 text-black" />
-                                        </div>
                                         <div>
                                             <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Proven Impact</h3>
                                             <p className="text-xs md:text-base text-gray-600">
@@ -365,9 +395,7 @@ export default function SponsorsPage() {
                                     </div>
 
                                     <div className="flex items-start space-x-3 md:space-x-4">
-                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Users className="h-4 w-4 md:h-6 md:w-6 text-black" />
-                                        </div>
+                                        
                                         <div>
                                             <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Community Engagement</h3>
                                             <p className="text-xs md:text-base text-gray-600">
@@ -377,9 +405,7 @@ export default function SponsorsPage() {
                                     </div>
 
                                     <div className="flex items-start space-x-3 md:space-x-4">
-                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Megaphone className="h-4 w-4 md:h-6 md:w-6 text-black" />
-                                        </div>
+                                      
                                         <div>
                                             <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Brand Visibility</h3>
                                             <p className="text-xs md:text-base text-gray-600">
@@ -389,9 +415,7 @@ export default function SponsorsPage() {
                                     </div>
 
                                     <div className="flex items-start space-x-3 md:space-x-4">
-                                        <div className="w-8 h-8 md:w-12 md:h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                            <Heart className="h-4 w-4 md:h-6 md:w-6 text-black" />
-                                        </div>
+                                      
                                         <div>
                                             <h3 className="text-sm md:text-xl font-semibold text-gray-900 mb-1 md:mb-2">Social Responsibility</h3>
                                             <p className="text-xs md:text-base text-gray-600">
@@ -402,7 +426,7 @@ export default function SponsorsPage() {
                                 </div>
                             </div>
 
-                            <div className="relative">
+                            <div className="relative text-center md:text-left">
                                 <div className="bg-white rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-2xl">
                                     <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Ready to Get Started?</h3>
                                     <p className="text-sm md:text-lg text-gray-600 mb-4 md:mb-6">
@@ -426,11 +450,11 @@ export default function SponsorsPage() {
                                     </div>
 
                                     <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-200">
-                                        <div className="flex items-center space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600">
+                                        <div className="flex items-center justify-center md:justify-start space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600">
                                             <Phone className="h-3 w-3 md:h-4 md:w-4" />
                                             <span>(347) 554-7712</span>
                                         </div>
-                                        <div className="flex items-center space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
+                                        <div className="flex items-center justify-center md:justify-start space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
                                             <Mail className="h-3 w-3 md:h-4 md:w-4" />
                                             <span>info@harmony4all.org</span>
                                         </div>

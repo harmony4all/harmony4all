@@ -5,10 +5,10 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Heart, 
-  Music, 
-  Star, 
+import {
+  Heart,
+  Music,
+  Star,
   Globe,
   BookOpen,
   Mic,
@@ -50,7 +50,7 @@ export default function BiancaPage() {
 
   const performances = [
     "Carnegie Hall",
-    "Lincoln Center", 
+    "Lincoln Center",
     "The Colburn School",
     "The Juilliard School",
     "New England Conservatory",
@@ -78,7 +78,7 @@ export default function BiancaPage() {
             <Link href="/about" className="text-black hover:text-gray-800">
               About Us
             </Link>
-            
+
             <span className="text-gray-400">/</span>
             <span className="text-gray-600">Bianca Quddus</span>
           </div>
@@ -90,7 +90,7 @@ export default function BiancaPage() {
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{
           backgroundImage: `url('https://static.wixstatic.com/media/8e9eb3_1f1fb0738c554f75b5c0145d843e7995~mv2.jpg/v1/fill/w_1920,h_1058,al_c,q_90,enc_avif,quality_auto/8e9eb3_1f1fb0738c554f75b5c0145d843e7995~mv2.jpg')`
         }}></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
             {/* Profile Image */}
@@ -114,7 +114,7 @@ export default function BiancaPage() {
                 Co-Founder
               </Badge>
               <p className="text-base md:text-lg lg:text-2xl mb-6 md:mb-8 opacity-90 max-w-3xl drop-shadow-lg">
-              Juilliard Preparatory Division Graduate
+                Juilliard Preparatory Division Graduate
               </p>
               <div className="flex flex-wrap gap-3 md:gap-4 justify-center lg:justify-start">
                 <div className="flex items-center space-x-1 md:space-x-2">
@@ -144,7 +144,7 @@ export default function BiancaPage() {
       </div>
 
       {/* Main Content */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-24 bg-white text-center sm:text-left">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
@@ -152,15 +152,15 @@ export default function BiancaPage() {
               <div className="lg:col-span-2 space-y-6 md:space-y-8">
                 {/* Biography */}
                 <Card className="shadow-lg border-0 rounded-2xl">
-                  <CardHeader className="p-4 md:p-6">
-                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center">
+                  <CardHeader className="p-2 md:p-4">
+                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center justify-center sm:justify-start">
                       <BookOpen className="h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 mr-2 md:mr-3 lg:mr-4 text-black" />
                       Biography
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-4 md:space-y-6">
                     {longBio.map((paragraph, i) => (
-                      <p key={i} className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg">
+                      <p key={i} className="text-gray-600 leading-relaxed text-sm md:text-base lg:text-lg text-center sm:text-left">
                         {paragraph}
                       </p>
                     ))}
@@ -169,8 +169,8 @@ export default function BiancaPage() {
 
                 {/* Achievements */}
                 <Card className="shadow-lg border-0 rounded-2xl">
-                  <CardHeader className="p-4 md:p-6">
-                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center">
+                  <CardHeader className="p-2 md:p-4">
+                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center justify-center sm:justify-start">
                       <Trophy className="h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 mr-2 md:mr-3 lg:mr-4 text-black" />
                       Key Achievements
                     </CardTitle>
@@ -179,15 +179,14 @@ export default function BiancaPage() {
                     <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                       {Object.entries(achievements).map(([category, items]) => (
                         <div key={category} className="space-y-2">
-                          <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center text-sm md:text-base">
+                          <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
                             <Star className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
                             {category.charAt(0).toUpperCase() + category.slice(1)}
                           </h4>
                           <div className="space-y-2">
                             {items.map((item, i) => (
-                              <div key={i} className="flex items-start space-x-2 md:space-x-3 p-2 md:p-3 bg-gray-50 rounded-lg">
-                                <Star className="h-4 w-4 md:h-5 md:w-5 text-gray-600 mt-1 flex-shrink-0" />
-                                <span className="text-gray-700 text-xs md:text-sm lg:text-base">{item}</span>
+                              <div key={i} className="flex items-start justify-center sm:justify-start">
+                                <span className="text-gray-700 text-xs md:text-sm lg:text-base text-center sm:text-left">{item}</span>
                               </div>
                             ))}
                           </div>
@@ -199,8 +198,8 @@ export default function BiancaPage() {
 
                 {/* Performance Venues */}
                 <Card className="shadow-lg border-0 rounded-2xl">
-                  <CardHeader className="p-4 md:p-6">
-                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center">
+                  <CardHeader className="p-2 md:p-4">
+                    <CardTitle className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 flex items-center justify-center sm:justify-start">
                       <Mic className="h-6 w-6 md:h-7 md:w-7 lg:h-8 lg:w-8 mr-2 md:mr-3 lg:mr-4 text-black" />
                       Performance Venues
                     </CardTitle>
@@ -208,9 +207,8 @@ export default function BiancaPage() {
                   <CardContent className="p-4 md:p-6">
                     <div className="grid md:grid-cols-2 gap-3 md:gap-4">
                       {performances.map((venue, i) => (
-                        <div key={i} className="flex items-center space-x-2 md:space-x-3 p-2 md:p-3 bg-gray-50 rounded-lg">
-                          <Music className="h-4 w-4 md:h-5 md:w-5 text-gray-600" />
-                          <span className="text-gray-700 font-medium text-xs md:text-sm lg:text-base">{venue}</span>
+                        <div key={i} className="flex items-center justify-center sm:justify-start">
+                          <span className="text-gray-700 font-medium text-xs md:text-sm lg:text-base text-center sm:text-left">{venue}</span>
                         </div>
                       ))}
                     </div>
@@ -222,42 +220,38 @@ export default function BiancaPage() {
               <div className="space-y-6 md:space-y-8 sticky top-[50px] self-start">
                 {/* Quick Stats */}
                 <Card className="shadow-lg border-0 rounded-2xl">
-                  <CardHeader className="p-4 md:p-6">
-                    <CardTitle className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900">Quick Facts</CardTitle>
+                  <CardHeader className="p-2 md:p-4">
+                    <CardTitle className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 text-center sm:text-left">Quick Facts</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-4 md:space-y-6">
                     {/* Education Section */}
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center text-sm md:text-base">
+                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
                         <BookOpen className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
                         Education
                       </h4>
                       <div className="space-y-2">
-                        <div className="flex items-start space-x-2 md:space-x-3">
-                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-xs md:text-sm">Graduated Juilliard Preparatory Division, Class of 2024</span>
+                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
+                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Graduated Juilliard Preparatory Division, Class of 2024</span>
                         </div>
-                        <div className="flex items-start space-x-2 md:space-x-3">
-                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-xs md:text-sm">Currently studying at University of Massachusetts Amherst</span>
+                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
+                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Currently studying at University of Massachusetts Amherst</span>
                         </div>
                       </div>
                     </div>
 
                     {/* Leadership & Advocacy Section */}
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center text-sm md:text-base">
+                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
                         <Globe className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
                         Leadership & Advocacy
                       </h4>
                       <div className="space-y-2">
-                        <div className="flex items-start space-x-2 md:space-x-3">
-                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-xs md:text-sm">Global Youth Ambassador</span>
+                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
+                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Global Youth Ambassador</span>
                         </div>
-                        <div className="flex items-start space-x-2 md:space-x-3">
-                          <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 text-xs md:text-sm">Diverse Voices Scholar</span>
+                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
+                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Diverse Voices Scholar</span>
                         </div>
                       </div>
                     </div>
@@ -266,16 +260,16 @@ export default function BiancaPage() {
 
                 {/* Contact/Connect */}
                 <Card className="shadow-lg border-0 rounded-2xl">
-                  <CardHeader className="p-4 md:p-6">
-                    <CardTitle className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900">Connect</CardTitle>
+                  <CardHeader className="p-2 md:p-4">
+                    <CardTitle className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 text-center sm:text-left">Connect</CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-3 md:space-y-4">
-                    <p className="text-gray-600 text-sm md:text-base">
+                    <p className="text-gray-600 text-sm md:text-base text-center sm:text-left">
                       Interested in learning more about Bianca's work or supporting <span className="font-bold  px-1 rounded">Harmony 4 All</span>?
                     </p>
                     <div className="space-y-2 md:space-y-3">
                       <Link href="/contact">
-                        <Button className="w-full bg-black hover:bg-gray-800 text-sm md:text-base">
+                        <Button className="w-full bg-black mb-2 hover:bg-gray-800 text-sm md:text-base">
                           <Mail className="mr-2 h-4 w-4" />
                           Get in Touch
                         </Button>
@@ -300,7 +294,7 @@ export default function BiancaPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Support Bianca's Vision</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90 max-w-3xl mx-auto">
-            Join Bianca in her mission to make music education accessible to all students. 
+            Join Bianca in her mission to make music education accessible to all students.
             Your support helps us continue this important work.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">

@@ -15,6 +15,8 @@ export const TestimonialsSection = () => {
     {
       name: "Joseph P. Addabbo, Jr.",
       role: "New York State Senator, District 15",
+      category: "Supporter • Funder • Elected Official",
+      website: "https://www.nysenate.gov/senators/joseph-p-addabbo-jr",
       content:
         `"I am pleased to express my strong support for <strong>Harmony 4 All, Inc.</strong> and its mission to provide free, high-quality music education to underserved K-12 students across New York City.<br>
 
@@ -29,14 +31,34 @@ Please do not hesitate to reach out if my office can be of further assistance."`
       image: "/joseph p.jpg",
     },
     {
-      name: "Nick LaFleur",
-      role: "Director of Partnership Programs, Education Through Music",
+      name: "Harvey Epstein",
+      role: "New York State Assembly Member, District 74",
+      category: "Supporter • Elected Official",
+      website: "https://nyassembly.gov/mem/Harvey-Epstein",
+      content:
+        `"I am pleased to write this letter in support of <strong>Harmony 4 All</strong>, a remarkable nonprofit organization dedicated to providing free access to high-quality music education and resources for underserved K-12 students across New York City.<br>
+
+<strong>Harmony 4 All</strong> is a 501(c)(3) nonprofit that has been instrumental in creating meaningful musical opportunities for students who would otherwise lack access to music education, instrument rentals, and essential repairs.<br>
+
+In 2024, my office had the privilege of partnering with <strong>Harmony 4 All</strong> to bring music to our community through engaging performances and initiatives that uplifted constituents of all ages. This partnership exemplifies our shared commitment to equity in music education, ensuring that every child, regardless of their socioeconomic background, has access to enriching learning experiences.<br>
+
+I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programming and impact, as they not only provide free access to music education but also strengthen communities by fostering creativity, cultural engagement, and youth empowerment. With additional financial support, <strong>Harmony 4 All</strong> can reach even more students, ensuring that music remains a vital and accessible part of education in our city.<br>
+
+I look forward to <strong>Harmony 4 All</strong> continuing to serve our constituents and the greater NYC community. Please do not hesitate to contact my office for any additional information."`,
+      rating: 5,
+      image: "/harvey.jpg",
+    },
+    {
+      name: "Education Through Music",
+      role: "Strategic Partner",
+      category: "Strategic Partner",
+      website: "https://etmonline.org",
       content:
         `"<strong>Education Through Music (ETM)</strong> is happy to partner with <strong>Harmony 4 All</strong>, a youth-led nonprofit dedicated to advancing educational equity through access to quality music education for underserved New York City students.<br>
 
 Earlier this year, <strong>Harmony 4 All</strong> provided critical funding that enabled ETM to repair twelve school-owned band instruments at PS 154 in Queens—an ETM partner school serving a predominantly low-income, Title I student population.<br>
 
-These repairs supported our joint goal of expanding the school's band program from 35 to 50 students, creating more opportunities for children to engage with music.<br>
+These repairs supported our joint goal of expanding the school's band program from 35 to 50 students, creating more opportunities for children to engage with music, giving students at PS 154 access to functional, high-quality instruments for years to come.<br>
 
 We share in <strong>Harmony 4 All</strong>'s mission to ensure no child is excluded from the joy and growth of music because of financial hardship, which aligns with ETM's own commitment to educational equity.<br>
 
@@ -45,59 +67,55 @@ ETM looks forward to continuing our partnership with <strong>Harmony 4 All</stro
       image: "https://etmonline.org/wp-content/uploads/2024/08/ETM-Color-Logo-transparent-background.png",
     },
     {
-      name: "Pamela Gathers-Bullard",
-      role: "Principal, P.S. 154 Queens",
+      name: "Friends of Maple Grove Cemetery",
+      role: "Strategic Partner",
+      category: "Strategic Partner",
+      website: "https://www.friendsofmaplegrove.org",
       content:
-        `"I write this letter in support of <strong>Education Through Music (ETM)</strong>, a valued partner which has been supporting the P.S. 154 students and community for over 10 years by providing high quality music education with music instruction and musical instruments.<br>
+        `"On behalf of the Friends of Maple Grove Cemetery, it is with great enthusiasm that I offer this letter of support for <strong>Harmony 4 All</strong>, a remarkable nonprofit dedicated to making music education accessible to underserved students in New York City. Their mission to bridge the gap in musical education resonates deeply with our values of education, preservation, and community engagement.<br>
 
-ETM has also helped us launch and sustain our 4th & 5th grade band program. This has been a wonderful opportunity for many of our students and we would like to continue to provide this opportunity to even more students moving forward.<br>
+<strong>Harmony 4 All</strong> has already left a profound impact on our own community, having brought their extraordinary talents to Maple Grove Cemetery in a concert that not only showcased their musicianship but also uplifted and inspired all who attended. Their commitment to ensuring that students, regardless of financial barriers, have access to quality instruments, instruction, and opportunities is nothing short of commendable.<br>
 
-However, the cost of purchasing new band instruments at this time is not possible. So, by providing the funds to repair these 12 school-owned instruments at P.S. 154 Queens, you will allow many more students to participate in the school band program for many years to come, further enriching their music education.<br>
+Through free instrument rentals, curriculum support for teachers, and partnerships with underfunded schools, <strong>Harmony 4 All</strong> fosters an environment where young musicians can flourish. The dedication of co-founders Bianca and Joshua Quddus, both extraordinary young leaders and musicians, reflects the organization's passion for not only music but also equity and empowerment. Their efforts extend beyond performance—they are shaping the future of arts education, ensuring that the universal language of music is accessible to all.<br>
 
-I sincerely hope you can partner with ETM to make this possible."`,
-      rating: 5,
-      image: "/emt153.png",
-    },
-    {
-      name: "Shahriar Hossain",
-      role: "President of the Friends of Maple Grove",
-      content:
-        `"On behalf of the Friends of Maple Grove Cemetery, it is with great enthusiasm that I offer this letter of support for <strong>Harmony 4 All</strong>, a remarkable nonprofit dedicated to making music education accessible to underserved students in New York City.<br>
+At Maple Grove, we understand the power of music to transcend generations and bring people together. The work of <strong>Harmony 4 All</strong> aligns with this philosophy, creating meaningful experiences that enrich the lives of young artists and the communities they touch. It is our sincere hope that this outstanding organization receives the funding and support necessary to continue its mission and expand its reach.<br>
 
-Their mission to bridge the gap in musical education resonates deeply with our values of education, preservation, and community engagement.<br>
-
-<strong>Harmony 4 All</strong> has already left a profound impact on our own community, having brought their extraordinary talents to Maple Grove Cemetery in a concert that not only showcased their musicianship but also uplifted and inspired all who attended.<br>
-
-Through free instrument rentals, curriculum support for teachers, and partnerships with underfunded schools, <strong>Harmony 4 All</strong> fosters an environment where young musicians can flourish.<br>
-
-We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any institution or funding body to invest in their invaluable work.<br>
-
-Their impact is not only measurable. It is transformative."`,
+We wholeheartedly endorse <strong>Harmony 4 All</strong> and encourage any institution or funding body to invest in their invaluable work. Their impact is not only measurable. It is transformative."`,
       rating: 5,
       image: "/image.png",
     },
     {
-      name: "Harvey Epstein",
-      role: "New York State Assembly Member, District 74",
+      name: "Public School 154, Queens",
+      role: "Pamela Gathers-Bullard, Principal",
+      category: "Strategic Partner",
+      website: "http://www.ps154queensny.org",
       content:
-        `"I am pleased to write this letter in support of <strong>Harmony 4 All</strong>, a remarkable nonprofit organization dedicated to providing free access to high-quality music education and resources for underserved K-12 students across New York City.<br>
+        `"P.S. 154 Queens would like to acknowledge <strong>Harmony 4 All</strong> for their generous support of our Education Through Music (ETM) band program. Working with ETM, <strong>Harmony 4 All</strong> provided a grant that allowed 12 of our band instruments to be repaired, which have now been returned to the school and made ready to create additional opportunities for students to join our 2025-26 band program!<br>
 
-    <strong>Harmony 4 All</strong> is a 501(c)(3) nonprofit that has been instrumental in creating meaningful musical opportunities for students who would otherwise lack access to music education, instrument rentals, and essential repairs.<br>
-
-    In 2024, my office had the privilege of partnering with <strong>Harmony 4 All</strong> to bring music to our community through engaging performances and initiatives that uplifted constituents of all ages.<br>
-
-I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programming and impact, as they not only provide free access to music education but also strengthen communities by fostering creativity, cultural engagement, and youth empowerment."`,
+By providing the funds to repair these 12 school-owned instruments at P.S. 154 Queens, the work of <strong>Harmony 4 All</strong> will have an impact on our students for years into the future."`,
       rating: 5,
-      image: "/harvey.jpg",
+      image: "/emt153.png",
+    },
+    {
+      name: "The New York Injury Law Firm",
+      role: "Sponsor • Strategic Partner",
+      category: "Sponsor • Strategic Partner",
+      website: "https://thenewyorkinjurylawfirm.com",
+      content:
+        `"<strong>The New York Injury Law Firm</strong> is proud to support <strong>Harmony 4 All</strong> in their mission to provide free, high-quality music education to underserved students across New York City.<br>
+
+We believe that every child deserves access to the transformative power of music education, regardless of their economic circumstances. <strong>Harmony 4 All</strong>'s innovative approach to breaking down barriers through instrument rentals, repair services, and community programs aligns perfectly with our commitment to supporting our local community.<br>
+
+Through our partnership, we've seen firsthand the positive impact that music education has on students' academic performance, social development, and overall well-being. The dedication of <strong>Harmony 4 All</strong>'s team to ensuring no child is left behind is truly inspiring.<br>
+
+We are honored to be part of this important work and look forward to continuing our support as <strong>Harmony 4 All</strong> expands their reach and impact across New York City."`,
+      rating: 5,
+      image: "https://thenewyorkinjurylawfirm.com/wp-content/uploads/2024/11/New-York-Injury-Firm.png.webp",
     }
   ]
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
-
-  const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
   }
 
   const togglePlayPause = () => {
@@ -115,15 +133,15 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
     // Remove HTML tags for length calculation
     const textContent = content.replace(/<[^>]*>/g, '')
     if (textContent.length <= maxLength) return content
-    
+
     // Find a good breaking point (end of sentence or word)
     const truncated = textContent.substring(0, maxLength)
     const lastPeriod = truncated.lastIndexOf('.')
     const lastSpace = truncated.lastIndexOf(' ')
-    
+
     const breakPoint = lastPeriod > maxLength * 0.7 ? lastPeriod : lastSpace
     const finalText = textContent.substring(0, breakPoint) + '... <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read More</span>'
-    
+
     // Reconstruct with basic HTML formatting
     return finalText.replace(/\n/g, '<br>')
   }
@@ -158,25 +176,25 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
 
   // Determine if current slide should have image on left or right
   const isImageOnLeft = currentTestimonial % 2 === 0
-  
+
   // Check if current testimonial content is long enough to need truncation
   const currentContent = testimonials[currentTestimonial].content
   const textContent = currentContent.replace(/<[^>]*>/g, '')
   const isLongContent = textContent.length > 300
   const isExpanded = expandedTestimonials[currentTestimonial] || false
-  const displayContent = isExpanded ? 
-    currentContent + ' <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read Less</span>' : 
+  const displayContent = isExpanded ?
+    currentContent + ' <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read Less</span>' :
     truncateContent(currentContent)
 
   return (
-    <section id="testimonials-section" className="py-24 bg-gradient-to-br from-gray-50 to-white">
+    <section id="testimonials-section" className="py-4 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div
-          className={`text-center mb-20 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          className={`text-center mb-8 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Success Stories</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Success Stories</h2>
+          <p className="text-sm text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Voices of support. What our community says.
           </p>
         </div>
@@ -226,11 +244,11 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
 
 
                     {/* Quote */}
-                    <blockquote 
+                    <blockquote
                       className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 leading-relaxed font-light relative"
                       onClick={() => isLongContent && toggleExpanded(currentTestimonial)}
                     >
-                      <div 
+                      <div
                         className="text-[16px]"
                         dangerouslySetInnerHTML={{ __html: displayContent }}
                       />
@@ -242,9 +260,27 @@ I fully support <strong>Harmony 4 All</strong>'s efforts to expand its programmi
                       <div className="font-bold text-xl text-gray-900 mb-2">
                         {testimonials[currentTestimonial].name}
                       </div>
-                      <div className="text-gray-600 font-medium text-lg">
+                      <div className="text-gray-600 font-medium text-lg mb-2">
                         {testimonials[currentTestimonial].role}
                       </div>
+                      {testimonials[currentTestimonial].category && (
+                        <div className="text-gray-500 text-sm mb-3">
+                          {testimonials[currentTestimonial].category}
+                        </div>
+                      )}
+                      {testimonials[currentTestimonial].website && (
+                        <a
+                          href={testimonials[currentTestimonial].website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-200"
+                        >
+                          Visit Website
+                          <svg className="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </a>
+                      )}
                     </div>
                   </div>
                 </CardContent>
