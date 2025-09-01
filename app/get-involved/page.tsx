@@ -41,37 +41,37 @@ export default function GetInvolvedPage() {
 
   const donationLevels = [
     {
-      amount: "$50",
+      amount: 50,
       impact: "Your gift provides a month of music supplies so a student can keep learning without barriers.",
       icon: Gift,
       image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
-      amount: "$100",
+      amount: 100,
       impact: "Your support covers one month of instrument rental, giving a child the chance to practice every day.",
       icon: Heart,
       image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
-      amount: "$200",
+      amount: 200,
       impact: "Your generosity sponsors a student's full music education for a month, including lessons and performance opportunities.",
       icon: Users,
       image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
-      amount: "$500",
+      amount: 500,
       impact: "Your contribution equips an entire classroom with instruments, resources, and mentorship for a month.",
       icon: Building,
       image: "https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
-      amount: "$750",
+      amount: 750,
       impact: "Your generosity funds instrument repairs and resources for an entire school band, restoring the sound of music for dozens of students.",
       icon: Music,
       image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
-      amount: "$1000",
+      amount: 1000,
       impact: "Your investment sustains community concerts and education programs, bringing the power of music to hundreds of students and families.",
       icon: Building,
       image: "https://plus.unsplash.com/premium_photo-1683140538884-07fb31428ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
@@ -200,7 +200,7 @@ export default function GetInvolvedPage() {
             {donationLevels.map((level, index) => (
               <Link 
                 key={index} 
-                href={`/donate?amount=${level.amount.replace('$', '')}`}
+                href={`/donate?amount=${level.amount}`}
                 className="block"
               >
                 <Card className="text-center shadow-lg border-0 rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group hover:scale-105">
@@ -215,7 +215,7 @@ export default function GetInvolvedPage() {
                     <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-black rounded-2xl flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300">
                       <level.icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
                     </div>
-                    <CardTitle className="text-2xl md:text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">{level.amount}</CardTitle>
+                    <CardTitle className="text-2xl md:text-3xl font-bold text-black group-hover:text-gray-700 transition-colors">${level.amount}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-gray-600 text-xs md:text-sm">{level.impact}</p>

@@ -65,7 +65,7 @@ export default function ContactPage() {
             {[
               {
                 question: "What is Harmony 4 All?",
-                answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. We offer free musical instrument rentals, repairs, and access to musical curriculums.",
+                answer: "Harmony 4 All is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. We offer free musical instrument rentals, repairs, and access to musical curriculums.",
                 image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
               },
               {
@@ -75,7 +75,7 @@ export default function ContactPage() {
               },
               {
                 question: "How does the musical instrument rental process work?",
-                answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> at a competitive rate.",
+                answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through Harmony 4 All at a competitive rate.",
                 image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
               },
               {

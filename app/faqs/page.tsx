@@ -46,19 +46,19 @@ export default function FAQsPage() {
       id: 1,
       category: "story",
       question: "What is Harmony 4 All?",
-      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential. We offer free musical instrument rentals, repairs, and access to musical curriculums."
+      answer: "Harmony 4 All is a 501(c)(3) nonprofit organization based in New York City, dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential. We offer free musical instrument rentals, repairs, and access to musical curriculums."
     },
     {
       id: 2,
       category: "story",
       question: "When was Harmony 4 All founded?",
-      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> was officially approved as a nonprofit organization by the IRS in September 2023. Since then, we've been working tirelessly to bring the joy of music to communities that need it most."
+      answer: "Harmony 4 All was officially approved as a nonprofit organization by the IRS in September 2023. Since then, we've been working tirelessly to bring the joy of music to communities that need it most."
     },
     {
       id: 3,
       category: "story",
       question: "What impact has Harmony 4 All made so far?",
-      answer: "In 2024, <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> expanded its reach by serving two different districts: Senate District 15 and Assembly District 74, providing free musical instruments, repairs, and educational resources to students and schools in need, including multiple free musical performances for the community."
+      answer: "In 2024, Harmony 4 All expanded its reach by serving two different districts: Senate District 15 and Assembly District 74, providing free musical instruments, repairs, and educational resources to students and schools in need, including multiple free musical performances for the community."
     },
     {
       id: 4,
@@ -70,7 +70,7 @@ export default function FAQsPage() {
       id: 5,
       category: "story",
       question: "What is Harmony 4 All's long-term vision?",
-      answer: "By 2030, we envision <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> becoming a household name in New York City, recognized as a pillar of support for students from marginalized backgrounds who seek opportunities in music. We want every K-12 student, no matter their circumstances, to have access to the instruments, education, and resources they need to pursue their musical dreams."
+      answer: "By 2030, we envision Harmony 4 All becoming a household name in New York City, recognized as a pillar of support for students from marginalized backgrounds who seek opportunities in music. We want every K-12 student, no matter their circumstances, to have access to the instruments, education, and resources they need to pursue their musical dreams."
     },
 
     // Our Programs and Services
@@ -78,7 +78,7 @@ export default function FAQsPage() {
       id: 6,
       category: "programs",
       question: "What types of programs does Harmony 4 All offer?",
-      answer: "<span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> provides: • Free musical instrument rentals and repairs for eligible students. • Music education resources, including a digital curriculum. • Concerts, workshops, and community events to promote music education and engagement. • Collaborations with schools and local leaders to integrate music into underserved communities."
+      answer: "Harmony 4 All provides: • Free musical instrument rentals and repairs for eligible students. • Music education resources, including a digital curriculum. • Concerts, workshops, and community events to promote music education and engagement. • Collaborations with schools and local leaders to integrate music into underserved communities."
     },
     {
       id: 7,
@@ -90,7 +90,7 @@ export default function FAQsPage() {
       id: 8,
       category: "programs",
       question: "How does the musical instrument rental process work?",
-      answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through <span className=\"font-bold  px-1 rounded\">Harmony 4 All</span> at a competitive rate."
+      answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through Harmony 4 All at a competitive rate."
     },
     {
       id: 9,

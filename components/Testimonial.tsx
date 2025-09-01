@@ -131,15 +131,15 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
     // Remove HTML tags for length calculation
     const textContent = content.replace(/<[^>]*>/g, '')
     if (textContent.length <= maxLength) return content
-
+    
     // Find a good breaking point (end of sentence or word)
     const truncated = textContent.substring(0, maxLength)
     const lastPeriod = truncated.lastIndexOf('.')
     const lastSpace = truncated.lastIndexOf(' ')
-
+    
     const breakPoint = lastPeriod > maxLength * 0.7 ? lastPeriod : lastSpace
     const finalText = textContent.substring(0, breakPoint) + '... <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read More</span>'
-
+    
     // Reconstruct with basic HTML formatting
     return finalText.replace(/\n/g, '<br>')
   }
@@ -174,14 +174,14 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
 
   // Determine if current slide should have image on left or right
   const isImageOnLeft = currentTestimonial % 2 === 0
-
+  
   // Check if current testimonial content is long enough to need truncation
   const currentContent = testimonials[currentTestimonial].content
   const textContent = currentContent.replace(/<[^>]*>/g, '')
   const isLongContent = textContent.length > 300
   const isExpanded = expandedTestimonials[currentTestimonial] || false
-  const displayContent = isExpanded ?
-    currentContent + ' <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read Less</span>' :
+  const displayContent = isExpanded ? 
+    currentContent + ' <span class="font-bold text-black text-[16px] cursor-pointer hover:underline">Read Less</span>' : 
     truncateContent(currentContent)
 
   return (
@@ -242,11 +242,11 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
 
 
                     {/* Quote */}
-                    <blockquote
+                    <blockquote 
                       className="text-lg md:text-xl lg:text-2xl text-gray-800 mb-8 leading-relaxed font-light relative"
                       onClick={() => isLongContent && toggleExpanded(currentTestimonial)}
                     >
-                      <div
+                      <div 
                         className="text-[16px]"
                         dangerouslySetInnerHTML={{ __html: displayContent }}
                       />
