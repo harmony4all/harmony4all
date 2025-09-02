@@ -70,13 +70,13 @@ export const Footer = () => {
   ]
 
   const contactInfo = [
-    { icon: Mail, text: "info@harmony4all.org", href: "mailto:media@harmony4all.org" },
-    { icon: Phone, text: "Contact us (347) 554-7712", href: "#" },
-    { icon: MapPin, text: "New York City, NY, United States", href: "#" },
+    { icon: Mail, text: "info@harmony4all.org", href: "mailto:info@harmony4all.org" },
+    { icon: Phone, text: "(347) 554-7712", href: "#" },
+    { icon: MapPin, text: "New York City, United States", href: "#" },
   ]
 
   return (
-    <footer className="bg-black text-white border-t border-white/10 py-12" role="contentinfo">
+    <footer className="bg-black text-white border-t border-white/10 pt-0 sm:pt-8 pb-6" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-8 mb-10">
           {/* Brand Section */}

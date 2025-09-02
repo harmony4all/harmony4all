@@ -210,7 +210,7 @@ export default function VolunteerPage() {
               <CardHeader className="bg-black text-white text-center py-4 sm:py-6 md:py-8">
                 <CardTitle className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Volunteer Application</CardTitle>
                 <CardDescription className="text-gray-300 text-xs sm:text-sm md:text-lg">
-                  Start your journey as a <span className="font-bold  px-1 rounded">Harmony 4 All</span> volunteer
+                  Start your journey as a <span className="font-bold  px-0 rounded">Harmony 4 All</span> volunteer
                 </CardDescription>
               </CardHeader>
 

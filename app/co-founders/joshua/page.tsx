@@ -34,7 +34,6 @@ export default function JoshuaPage() {
   const achievements = {
     education: [
       "Senior at Hunter College High School",
-      " Graduated, Bronx High School of Science (Class of 2025)", 
       "Saxophone Graduate of Juilliard Preparatory Division"
     ],
     leadership: [
@@ -85,7 +84,7 @@ export default function JoshuaPage() {
             </Link>
 
             <span className="text-gray-400">/</span>
-            <span className="text-gray-600">Joshua Quddus</span>
+            <span className="text-gray-600"><strong>Joshua Quddus</strong></span>
           </div>
         </div>
       </div>
@@ -114,7 +113,7 @@ export default function JoshuaPage() {
 
             {/* Hero Content */}
             <div className="text-center lg:text-left text-white">
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 drop-shadow-lg">Joshua Quddus</h1>
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 drop-shadow-lg"><strong>Joshua Quddus</strong></h1>
               <Badge className="bg-white text-black text-sm md:text-base lg:text-lg px-4 md:px-6 py-1 md:py-2 mb-4 md:mb-6">
                 Co-Founder
               </Badge>
@@ -149,7 +148,7 @@ export default function JoshuaPage() {
       </div>
 
       {/* Main Content */}
-      <section className="py-12 md:py-16 lg:py-24 bg-white text-center sm:text-left">
+      <section className="py-12 md:py-16 lg:py-24 bg-white ">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
@@ -181,20 +180,21 @@ export default function JoshuaPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 md:p-6">
-                    <div className="grid md:grid-cols-2 gap-3 md:gap-4">
+                    <div className="space-y-8">
                       {Object.entries(achievements).map(([category, items]) => (
-                        <div key={category} className="space-y-2">
-                          <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
-                            <Star className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
+                        <div key={category} className="bg-white p-6 rounded-lg border border-gray-100">
+                          <h4 className="font-bold text-black text-lg md:text-xl mb-4 flex items-center">
+                            <Star className="h-5 w-5 md:h-6 md:w-6 mr-2 text-yellow-500" />
                             {category.charAt(0).toUpperCase() + category.slice(1)}
                           </h4>
-                          <div className="space-y-2">
+                          <ul className="space-y-3">
                             {items.map((item, i) => (
-                              <div key={i} className="flex items-start justify-center sm:justify-start">
-                                <span className="text-gray-700 text-xs md:text-sm lg:text-base text-center sm:text-left">{item}</span>
-                              </div>
+                              <li key={i} className="flex items-start">
+                                <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                <span className="text-black font-medium text-sm md:text-base">{item}</span>
+                              </li>
                             ))}
-                          </div>
+                          </ul>
                         </div>
                       ))}
                     </div>
@@ -210,12 +210,15 @@ export default function JoshuaPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="p-4 md:p-6">
-                    <div className="grid md:grid-cols-2 gap-3 md:gap-4">
-                      {performances.map((venue, i) => (
-                        <div key={i} className="flex items-center justify-center sm:justify-start">
-                          <span className="text-gray-700 font-medium text-xs md:text-sm lg:text-base text-center sm:text-left">{venue}</span>
-                        </div>
-                      ))}
+                    <div className="bg-white p-6 rounded-lg border border-gray-100">
+                      <ul className="space-y-3">
+                        {performances.map((venue, i) => (
+                          <li key={i} className="flex items-start">
+                            <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                            <span className="text-black font-medium text-sm md:text-base">{venue}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -230,35 +233,39 @@ export default function JoshuaPage() {
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-4 md:space-y-6">
                     {/* Education Section */}
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
-                        <BookOpen className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
+                    <div className="bg-white p-4 rounded-lg border border-gray-100 mb-4">
+                      <h4 className="font-bold text-black text-base md:text-lg mb-3 flex items-center">
+                        <BookOpen className="h-4 w-4 md:h-5 md:w-5 mr-2 text-yellow-500" />
                         Education
                       </h4>
-                      <div className="space-y-2">
-                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
-                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Senior at Hunter College High School</span>
-                        </div>
-                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
-                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left"> Graduated, Bronx High School of Science (Class of 2025)</span>
-                        </div>
-                      </div>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-black font-medium text-xs md:text-sm">Senior at Hunter College High School</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-black font-medium text-xs md:text-sm">Saxophone Graduate of Juilliard Preparatory Division</span>
+                        </li>
+                      </ul>
                     </div>
 
                     {/* Leadership & Advocacy Section */}
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2 md:mb-3 flex items-center justify-center sm:justify-start text-sm md:text-base">
-                        <Globe className="h-4 w-4 md:h-5 md:w-5 mr-1 md:mr-2 text-black" />
+                    <div className="bg-white p-4 rounded-lg border border-gray-100">
+                      <h4 className="font-bold text-black text-base md:text-lg mb-3 flex items-center">
+                        <Globe className="h-4 w-4 md:h-5 md:w-5 mr-2 text-yellow-500" />
                         Leadership & Advocacy
                       </h4>
-                      <div className="space-y-2">
-                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
-                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Global Youth Ambassador</span>
-                        </div>
-                        <div className="flex items-start space-x-2 md:space-x-3 justify-center sm:justify-start">
-                          <span className="text-gray-700 text-xs md:text-sm text-center sm:text-left">Tutor through Relume Organization</span>
-                        </div>
-                      </div>
+                      <ul className="space-y-2">
+                        <li className="flex items-start">
+                          <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-black font-medium text-xs md:text-sm">Global Youth Ambassador</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-black font-medium text-xs md:text-sm">Tutor through Relume Organization</span>
+                        </li>
+                      </ul>
                     </div>
                   </CardContent>
                 </Card>
@@ -270,7 +277,7 @@ export default function JoshuaPage() {
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-3 md:space-y-4">
                     <p className="text-gray-600 text-sm md:text-base text-center sm:text-left">
-                      Interested in learning more about Joshua's work or supporting <span className="font-bold  px-1 rounded">Harmony 4 All</span>?
+                      Interested in learning more about <strong>Joshua</strong>'s work or supporting <span className="font-bold  px-0 rounded">Harmony 4 All</span>?
                     </p>
                     <div className="space-y-2 md:space-y-3">
                       <Link href="/contact">
@@ -297,9 +304,9 @@ export default function JoshuaPage() {
       {/* Call to Action */}
       <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Support Joshua's Vision</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Support <strong>Joshua</strong>'s Vision</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90 max-w-3xl mx-auto">
-            Join Joshua in his mission to make music education accessible to all students.
+            Join <strong>Joshua</strong> in his mission to make music education accessible to all students.
             Your support helps us continue this important work.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
@@ -310,7 +317,7 @@ export default function JoshuaPage() {
               </Button>
             </Link>
             <Link href="/volunteer">
-              <Button size="lg" variant="outline" className="border-2 w-full border-white text-black hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+              <Button size="lg" variant="outline" className="border-2 w-full border-white bg-transparent text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                 Volunteer With Us
               </Button>
             </Link>

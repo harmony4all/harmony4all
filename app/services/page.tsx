@@ -18,8 +18,7 @@ export default function ServicesPage() {
         "Easy returns",
       ],
       ageGroups: ["Children", "Teens", "Adults"],
-      duration: "Monthly",
-      frequency: "Flexible",
+      duration: "Ongoing/Seasonal",
       image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       icon: Music,
     },
@@ -33,8 +32,7 @@ export default function ServicesPage() {
         "All instrument types",
       ],
       ageGroups: ["All Ages"],
-      duration: "1-7 days",
-      frequency: "As needed",
+      duration: "Ongoing/Seasonal",
       image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       icon: Wrench,
     },
@@ -60,8 +58,7 @@ export default function ServicesPage() {
         },
       ],
       ageGroups: ["Children", "Teens", "Adults", "Seniors"],
-      duration: "30-60 minutes",
-      frequency: "1-3 times per week",
+      duration: "Ongoing/Seasonal",
       image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       icon: BookOpen,
     },
@@ -75,8 +72,7 @@ export default function ServicesPage() {
         "Quality inspection",
       ],
       ageGroups: ["All Ages"],
-      duration: "Flexible",
-      frequency: "Ongoing",
+        duration: "Ongoing/Seasonal",
       image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       icon: Gift,
     },
@@ -228,7 +224,6 @@ export default function ServicesPage() {
                             <span className="font-medium text-xs md:text-sm">Schedule</span>
                           </div>
                           <p className="text-xs md:text-sm text-gray-600 font-medium">{service.duration}</p>
-                          <p className="text-xs md:text-sm text-gray-600">{service.frequency}</p>
                         </div>
                       </div>
                     </div>
@@ -275,7 +270,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-xs md:text-sm text-gray-500">
                     <Calendar className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-                    <span>ONGOING SEASONAL</span>
+                    <span>Ongoing/Seasonal</span>
                   </div>
                   <div className="flex items-center text-xs md:text-sm text-gray-500">
                     <Users className="h-3 w-3 md:h-4 md:w-4 mr-2" />
@@ -306,7 +301,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>ONGOING SEASONAL</span>
+                    <span>Ongoing/Seasonal</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Award className="h-4 w-4 mr-2" />
@@ -338,7 +333,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>ONGOING SEASONAL</span>
+                    <span>Ongoing/Seasonal</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Users className="h-4 w-4 mr-2" />
@@ -370,7 +365,7 @@ export default function ServicesPage() {
                 <div className="space-y-2">
                   <div className="flex items-center text-sm text-gray-500">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>ONGOING SEASONAL</span>
+                    <span>Ongoing/Seasonal</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Globe className="h-4 w-4 mr-2" />
@@ -419,7 +414,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-900 text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Get Started?</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
@@ -427,7 +422,7 @@ export default function ServicesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white text-teal-600 w-full hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
+              <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                 <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us
               </Button>
@@ -435,7 +430,7 @@ export default function ServicesPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black hover:bg-gray-800 text-white w-full px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full"
+                className="bg-white text-black hover:bg-white/60 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full"
               >
                 <Gift className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Donate Instruments

@@ -123,7 +123,7 @@ html {
               </a>
               
               <Header />
-              <main id="main-content" className="pt-16" role="main">
+              <main id="main-content" className="pt-14" role="main">
                 {children}
               </main>
               <Footer />

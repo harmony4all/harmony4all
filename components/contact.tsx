@@ -94,7 +94,7 @@ export default function ContactSection() {
     }, [])
 
     return (
-        <section id="contact-section" className="py-20 bg-gray-50">
+        <section id="contact-section" className="py-6 md:py-8 bg-gray-50">
             <div className="container mx-auto px-4">
                 <div
                     className={`text-center mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"

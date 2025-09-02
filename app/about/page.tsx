@@ -47,7 +47,7 @@ export default function AboutPage() {
     {
       year: "Instrument Access",
       event: "Faced limitations with only clarinets and saxophones available",
-      details: "Teacher taught Bianca clarinet and Joshua saxophone to continue musical education",
+      details: "Teacher taught <strong>Bianca</strong> clarinet and <strong>Joshua</strong> saxophone to continue musical education",
       image: "https://static.wixstatic.com/media/30dc3d_48dd3451c59c4497ba617d56f5bcab77~mv2.jpg?dn=Bianca chambers performance at Juilliard.JPG"
     },
     {
@@ -150,7 +150,7 @@ export default function AboutPage() {
                     <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900">Our Impact</h3>
                   </div>
                   <p className="text-xs md:text-sm lg:text-base text-gray-600 leading-relaxed">
-                    Every gift to <span className="font-bold  px-1 rounded">Harmony 4 All</span> places music in a child's hands and hope in their heart.
+                    Every gift to <span className="font-bold  px-0 rounded">Harmony 4 All</span> places music in a child's hands and hope in their heart.
                     Together, we're opening doors for underserved students across New York City-giving them confidence, community, and a voice that will resonate far beyond the classroom.
                   </p>
                 </div>
@@ -292,7 +292,7 @@ export default function AboutPage() {
               <div className="max-w-4xl mx-auto">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Building a Harmonious Future</h3>
                 <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 ">
-                  At <span className="font-bold  px-1 rounded">Harmony 4 All</span>, we believe music has the power to change lives. By placing instruments in the hands of children and opening doors to music education, we spark creativity, confidence, and connection that ripple far beyond the classroom. Together, we are creating a future where music knows no boundaries-and every child's voice can rise, be heard, and inspire the work.
+                  At <span className="font-bold  px-0 rounded">Harmony 4 All</span>, we believe music has the power to change lives. By placing instruments in the hands of children and opening doors to music education, we spark creativity, confidence, and connection that ripple far beyond the classroom. Together, we are creating a future where music knows no boundaries-and every child's voice can rise, be heard, and inspire the work.
                 </p>
               </div>
             </div>
@@ -321,7 +321,7 @@ export default function AboutPage() {
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">The Foundation of Our Mission</h2>
               <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                Our values are the heartbeat of <span className="font-bold  px-1 rounded">Harmony 4 All</span>. They shape how we bring music to students, guide our programs, and define the legacy we hope to leave in the lives of young musicians and their communities.
+                Our values are the heartbeat of <span className="font-bold  px-0 rounded">Harmony 4 All</span>. They shape how we bring music to students, guide our programs, and define the legacy we hope to leave in the lives of young musicians and their communities.
               </p>
             </div>
 
@@ -420,7 +420,7 @@ export default function AboutPage() {
               <div className="max-w-6xl mx-auto">
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">The Power of Music to Inspire, Connect, and Transform</h3>
                 <p className="text-sm md:text-base lg:text-xl leading-relaxed opacity-90 mb-6 md:mb-8">
-                  We believe in the transformative power of music to open doors, nurture creativity, and bring communities together. Our values are not just words-they are the guiding principles that shape every decision we make and every program we create at <span className="font-bold  px-1 rounded">Harmony 4 All</span>.
+                  We believe in the transformative power of music to open doors, nurture creativity, and bring communities together. Our values are not just words-they are the guiding principles that shape every decision we make and every program we create at <span className="font-bold  px-0 rounded">Harmony 4 All</span>.
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {[
@@ -538,7 +538,7 @@ export default function AboutPage() {
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Our Story</h3>
                 <div className="space-y-3 md:space-y-4 text-gray-600 leading-relaxed text-sm md:text-base">
                   <p>
-                    <span className="font-bold  px-1 rounded">Harmony 4 All</span> was founded by Bianca and Joshua Quddus, who began their musical journey at PS100Q,
+                    <span className="font-bold  px-0 rounded">Harmony 4 All</span> was founded by <strong>Bianca</strong> and <strong>Joshua Quddus</strong>, who began their musical journey at PS100Q,
                     a public elementary school in South Ozone Park, Queens, New York. Their inspiring music teacher,
                     April Rachmuth, introduced them to the joy of music through the recorder, igniting a passion for
                     music that shaped their future.
@@ -549,7 +549,7 @@ export default function AboutPage() {
                     unforgettable experience solidified their commitment to music.
                   </p>
                   <p>
-                    As they progressed through elementary school, Bianca and Joshua faced limitations in access to
+                    As they progressed through elementary school, <strong>Bianca</strong> and <strong>Joshua</strong> faced limitations in access to
                     advanced musical instruments. Despite the availability of only clarinets and saxophones, their
                     music teacher taught Bianca the clarinet and Joshua the saxophone, allowing them to continue
                     their musical education.
@@ -566,12 +566,12 @@ export default function AboutPage() {
                   <h4 className="text-lg md:text-xl font-bold text-white mb-3 md:mb-4">The Turning Point</h4>
                   <p className="text-white leading-relaxed mb-3 md:mb-4 text-sm md:text-base">
                     Witnessing many of their friends abandon their musical pursuits due to a lack of resources
-                    deeply affected Bianca and Joshua. This fueled their determination to make a difference.
+                    deeply affected <strong>Bianca</strong> and <strong>Joshua</strong>. This fueled their determination to make a difference.
                   </p>
                   <p className="text-white leading-relaxed text-sm md:text-base">
                     Enrolling in the Juilliard Music Advancement Program further deepened their understanding
                     of the barriers within the music community and music education. Grateful for their opportunities,
-                    Bianca and Joshua realized that not everyone had the same access to music education.
+                    <strong>Bianca</strong> and <strong>Joshua</strong> realized that not everyone had the same access to music education.
                   </p>
                 </div>
               </div>
@@ -625,15 +625,13 @@ export default function AboutPage() {
 
                 <div className="space-y-4 md:space-y-6 text-base md:text-lg leading-relaxed max-w-4xl mx-auto">
                   <p className="text-gray-700 text-sm md:text-base">
-                    Driven by their passion and belief in the transformative power of education, they founded
-                    <span className="font-bold  px-1 rounded">Harmony 4 All</span>. Their mission is to break down the barriers
+                    Driven by their passion and belief in the transformative power of education, they founded <span className="font-bold  px-0 rounded">Harmony 4 All</span>. Their mission is to break down the barriers
                     hindering access to music education for aspiring young musicians from all backgrounds.
                   </p>
 
                   <p className="text-gray-700 text-sm md:text-base">
-                    Through fundraising and resource distribution, <span className="font-bold  px-1 rounded">Harmony 4 All</span> provides essential support to underserved communities,
-                    ensuring every child has the opportunity to discover and develop their musical talents.
-                    <span className="font-semibold">Bianca and Joshua</span> are committed to enriching lives,
+                    Through fundraising and resource distribution, <span className="font-bold  px-0 rounded">Harmony 4 All</span> provides essential support to underserved communities,
+                    ensuring every child has the opportunity to discover and develop their musical talents. <span className="font-semibold"><strong>Bianca</strong> and <strong>Joshua</strong></span> are committed to enriching lives,
                     instilling discipline, and fostering creativity through the power of music.
                   </p>
                 </div>
@@ -662,7 +660,7 @@ export default function AboutPage() {
           >
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 md:mb-8">Our Team</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed px-4">
-              <span className="font-bold  px-1 rounded">Harmony 4 All</span> is driven by a passionate youth-led team of musicians and advocates working to ensure every child has the chance to discover their voice, grow in confidence, and inspire their community through music.
+              <span className="font-bold  px-0 rounded">Harmony 4 All</span> is driven by a passionate youth-led team of musicians and advocates working to ensure every child has the chance to discover their voice, grow in confidence, and inspire their community through music.
             </p>
           </div>
 
@@ -858,11 +856,11 @@ export default function AboutPage() {
                     <div className="space-y-3 text-gray-700 text-sm md:text-base">
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Address:</span>
-                        <span>New York City, NY, United States</span>
+                        <span>New York City, United States</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Email:</span>
-                        <a href="mailto:media@harmony4all.org" className="text-gray-600 hover:text-gray-800 font-medium">media@harmony4all.org</a>
+                        <a href="mailto:media@harmony4all.org" className="text-gray-600 hover:text-gray-800 font-medium">info@harmony4all.org</a>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Website:</span>
@@ -870,7 +868,7 @@ export default function AboutPage() {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Phone:</span>
-                        <span>Contact us for inquiries</span>
+                        <span>(347) 554-7712</span>
                       </div>
                     </div>
                   </div>
@@ -910,7 +908,7 @@ export default function AboutPage() {
                       </div>
                       <div className="flex justify-between items-start">
                         <span className="font-medium">Executive Leadership:</span>
-                        <span className="text-right">Co-Founders:<br />Bianca & Joshua Quddus</span>
+                        <span className="text-right">Co-Founders:<br /><strong>Bianca</strong> & <strong>Joshua Quddus</strong></span>
                       </div>
                       <div className="flex justify-between items-start">
                         <span className="font-medium">Advisory Council:</span>
@@ -926,7 +924,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2
             className={`text-4xl font-bold mb-6 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
@@ -947,7 +945,7 @@ export default function AboutPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black w-full hover:bg-gray-800 text-white px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
+                className="bg-white w-full hover:bg-white/60 text-black px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 font-semibold shadow-lg hover:shadow-xl"
               >
                 <Heart className="mr-2 h-5 w-5" />
                 <span>Donate Now</span>

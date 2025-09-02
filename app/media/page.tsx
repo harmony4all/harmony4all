@@ -241,7 +241,7 @@ export default function MediaPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-900 text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Share Your Story</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">Have a success story or memorable moment to share? We'd love to feature your experience in our media gallery.</p>

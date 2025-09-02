@@ -115,17 +115,12 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between w-full">
-            <Link 
-              href="/" 
-              className="flex items-center focus:outline-none rounded-lg p-1 transition-transform hover:scale-105"
-              aria-label="Harmony 4 All - Home"
-            >
+
               <img 
                 src="/logo.png"
                 alt="Harmony 4 All Logo"
                 className="w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] rounded-full object-contain"
               />
-            </Link>
 
             {/* Desktop Menu */}
               {navLinks.map((link, index) => {
@@ -179,18 +174,11 @@ export const Header = () => {
               )}
             </button>
 
-            {/* Mobile Logo - Center */}
-            <Link 
-              href="/" 
-              className="flex items-center focus:outline-none rounded-lg p-1 transition-transform hover:scale-105"
-              aria-label="Harmony 4 All - Home"
-            >
               <img 
                 src="/logo.png"
                 alt="Harmony 4 All Logo"
                 className="w-[100px] h-[100px] rounded-full object-contain"
               />
-            </Link>
 
             {/* Mobile Donate Button - Right */}
             <Link href="/donate">

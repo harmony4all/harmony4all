@@ -209,7 +209,7 @@ export default function SponsorsPage() {
                                 Become a Sponsor
                             </h1>
                             <p className="text-sm md:text-base lg:text-xl xl:text-2xl text-white/90 mb-4 md:mb-6 lg:mb-8 leading-relaxed drop-shadow-md">
-                                Partner with <span className="font-bold  px-1 rounded">Harmony 4 All</span> to create lasting impact in music education and build stronger communities together.
+                                Partner with <span className="font-bold  px-0 rounded">Harmony 4 All</span> to create lasting impact in music education and build stronger communities together.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                                 <Link href="/contact">
@@ -476,7 +476,7 @@ export default function SponsorsPage() {
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                             <Link href="/contact">
-                                <Button size="lg" className="bg-white text-black w-full hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold">
+                                <Button size="lg" className="bg-white text-black w-full hover:bg-white/60 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold">
                                     <Crown className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                                     Become a Sponsor
                                 </Button>
@@ -485,7 +485,7 @@ export default function SponsorsPage() {
                                 <Button
                                     size="lg"
                                     variant="outline"
-                                    className="border-2 border-white text-white w-full hover:bg-white hover:text-purple-600 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+                                    className="border-2 border-white text-white w-full hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
                                 >
                                     Learn More About Us
                                 </Button>

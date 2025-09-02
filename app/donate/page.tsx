@@ -564,15 +564,15 @@ export default function DonatePage() {
                 <div className="mx-auto w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-gray-900 to-gray-700 rounded-2xl flex items-center justify-center mb-3 md:mb-4">
                   <Gift className="h-6 w-6 md:h-8 md:w-8 text-white" />
                 </div>
-                <CardTitle className="text-lg md:text-xl font-bold text-gray-900">Instrument Donations</CardTitle>
+                <CardTitle className="text-lg md:text-xl font-bold text-gray-900">Sponsor</CardTitle>
               </CardHeader>
               <CardContent className="p-4 md:p-6">
                 <p className="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">
-                  Donate musical instruments to help students who cannot afford their own.
+                  Support our music education programs with a donation.
                 </p>
-                <Link href="/instrument-donations">
+                <Link href="/sponsors">
                   <Button variant="outline" className="rounded-full bg-transparent text-sm md:text-base">
-                    Donate Instruments
+                  Become a Sponsor
                   </Button>
                 </Link>
               </CardContent>
@@ -619,157 +619,15 @@ export default function DonatePage() {
         </div>
       </section>
 
-      {/* Impact Stories */}
-      <section className="py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Your Donations at Work</h2>
-            <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-              See how your generosity directly impacts the lives of individuals and families in our community through real events and programs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_7a1e0e4d80f248708f5b77587d1a0175~mv2.jpg?dn=harmony4all-1addabbo.jpg"
-                  alt="Senator Addabbo Supports Harmony 4 All"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-base md:text-lg font-bold text-gray-900 mb-2">Senator Addabbo Supports Our Mission</h3>
-                <p className="text-gray-600 mb-3 text-xs md:text-sm">
-                  Senator Addabbo joined us in collecting musical instruments to donate to schools, supporting our mission to make music education accessible to all.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700 text-xs md:text-sm">July 2024</Badge>
-                  <Badge className="bg-blue-100 text-blue-700 text-xs md:text-sm">Community Support</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_b5c4336e3ce6419a8f7876904f80a6dc~mv2.png?dn=Instrument Donation Drive.HEIC"
-                  alt="Harmony 4 All's First Instrument Donation Drive"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">First Instrument Donation Drive</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Our inaugural instrument donation drive successfully collected instruments to provide students with the tools they need for their musical journey.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700">June 2024</Badge>
-                  <Badge className="bg-green-100 text-green-700">Instrument Drive</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_aa40dc3c9693403a8515dd76298641a8~mv2.jpg?dn=With Juilliard Teacher at H4A concert.JPG"
-                  alt="Harmony 4 All Concert with Juilliard Faculty"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Concert with Juilliard Faculty</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Willie Morris from Juilliard Faculty joined us for a special concert, showcasing the power of music education and community collaboration.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700">May 2024</Badge>
-                  <Badge className="bg-purple-100 text-purple-700">Juilliard Partnership</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_f16d853d6b354b9fb7b0ed46be6f8483~mv2.jpg?dn=B&J received the awarded artist as citizen from Juilliard.jpg"
-                  alt="Bianca and Joshua Receiving Commencement Award"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Commencement Award from Juilliard</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Bianca and Joshua received the prestigious Commencement Award from the Juilliard Preparatory Division, recognizing their dedication to music and community service.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700">May 2024</Badge>
-                  <Badge className=" text-yellow-700">Achievement</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_02f838cac6a24d86946860f03d4b50a4~mv2.jpg?dn=B&J with the NY Philharmonic Youth Orchestra conducted by Maestro Gustavo Dudamel.JPG"
-                  alt="NY Philharmonic Youth Orchestra Performance"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">NY Philharmonic Youth Orchestra Debut</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Bianca and Joshua performed with the NY Philharmonic Youth Orchestra, conducted by the renowned Maestro Gustavo Dudamel, showcasing the heights our students can achieve.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700">April 2024</Badge>
-                  <Badge className="bg-red-100 text-red-700">Orchestra Performance</Badge>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src="https://static.wixstatic.com/media/30dc3d_6f4e1ff4a05d4f889a2616fbb5576dc1~mv2.png?dn=H4A community concert valentines. PNG.PNG"
-                  alt="Harmony 4 All Valentines Day Concert"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Valentine's Day Community Concert</h3>
-                <p className="text-gray-600 mb-3 text-sm">
-                  Our Valentine's Day community concert brought together families and music lovers, creating a warm atmosphere of celebration and musical appreciation.
-                </p>
-                <div className="flex items-center justify-between">
-                  <Badge className="bg-gray-100 text-gray-700">February 2024</Badge>
-                  <Badge className="bg-pink-100 text-pink-700">Community Event</Badge>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center mt-8 md:mt-12">
-            <Link href="/media">
-              <Button className="bg-black hover:bg-gray-800 text-white px-6 md:px-8 py-2 md:py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-sm md:text-base">
-                View All Media
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gradient-to-r from-gray-900 to-gray-700 text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Every Gift Creates Futures That Sing</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
             Your gift turns possibility into music, sparking a lifetime of harmony-and together, we create futures that sing.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
-            <Button size="lg" className="bg-black w-full hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            <Button size="lg" className="bg-white text-black hover:bg-white/60 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
               <Heart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
               <span>Donate Today</span>
             </Button>

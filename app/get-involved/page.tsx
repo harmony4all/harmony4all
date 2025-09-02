@@ -153,7 +153,7 @@ export default function GetInvolvedPage() {
                 <CardDescription className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base leading-relaxed">
                 Support our mission by becoming a sponsor. Your generosity helps us provide instruments, resources, and opportunities for students who need it most.
                 </CardDescription>
-                <Link href="/funders">
+                <Link href="/sponsors">
                   <Button className="bg-black text-white hover:shadow-lg transition-all duration-300 rounded-full px-4 md:px-6 py-2 w-full text-sm md:text-base">
                     Become a Sponsor
                   </Button>
@@ -295,7 +295,7 @@ export default function GetInvolvedPage() {
       </section >
 
       {/* Call to Action */}
-      < section className="py-12 md:py-16 lg:py-20 bg-gray-900 text-white" >
+      < section className="py-12 md:py-16 lg:py-20 bg-black text-white" >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Ready to Make a Difference?</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
@@ -303,7 +303,7 @@ export default function GetInvolvedPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Link href="/contact">
-              <Button size="lg" className="bg-white w-full text-black hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
+              <Button size="lg" className="bg-transparent border-2 border-white w-full text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full">
                 <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 Contact Us
               </Button>
@@ -311,7 +311,7 @@ export default function GetInvolvedPage() {
             <Link href="/donate">
               <Button
                 size="lg"
-                className="bg-black w-full hover:bg-gray-800 text-white px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-white w-full text-black hover:bg-white/60 px-6 md:px-8 py-3 md:py-4 text-base md:text-lg rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Heart className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                 <span>Donate Today</span>

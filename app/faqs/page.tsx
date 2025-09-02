@@ -57,99 +57,87 @@ export default function FAQsPage() {
     {
       id: 3,
       category: "story",
-      question: "What impact has Harmony 4 All made so far?",
-      answer: "In 2024, Harmony 4 All expanded its reach by serving two different districts: Senate District 15 and Assembly District 74, providing free musical instruments, repairs, and educational resources to students and schools in need, including multiple free musical performances for the community."
-    },
-    {
-      id: 4,
-      category: "story",
-      question: "What is Harmony 4 All's goal for 2025?",
-      answer: "For 2025, our goal is ambitious but achievable—we aim to expand our programs to serve 10 more districts across NYC, ensuring that even more students have access to the transformative power of music education."
-    },
-    {
-      id: 5,
-      category: "story",
       question: "What is Harmony 4 All's long-term vision?",
       answer: "By 2030, we envision Harmony 4 All becoming a household name in New York City, recognized as a pillar of support for students from marginalized backgrounds who seek opportunities in music. We want every K-12 student, no matter their circumstances, to have access to the instruments, education, and resources they need to pursue their musical dreams."
     },
 
     // Our Programs and Services
     {
-      id: 6,
+      id: 4,
       category: "programs",
       question: "What types of programs does Harmony 4 All offer?",
-      answer: "Harmony 4 All provides: • Free musical instrument rentals and repairs for eligible students. • Music education resources, including a digital curriculum. • Concerts, workshops, and community events to promote music education and engagement. • Collaborations with schools and local leaders to integrate music into underserved communities."
+      answer: "• Free musical instrument rentals and repairs for eligible students<br><br>• Music education resources, including a digital curriculum<br>• Concerts, workshops, and community events that promote music education<br>• Collaborations with schools and local leaders to bring music into underserved communities"
     },
     {
-      id: 7,
+      id: 5,
       category: "programs",
       question: "Who can benefit from Harmony 4 All's services?",
       answer: "We serve K-12 students in NYC, focusing on those from low-income families, underfunded schools, and marginalized communities. We also work closely with educators, schools, and community organizations to expand our impact."
     },
     {
-      id: 8,
+      id: 6,
       category: "programs",
       question: "How does the musical instrument rental process work?",
       answer: "Students, parents, or teachers can contact us directly via email to request an instrument. If the student qualifies, we arrange for our vendor to deliver the instrument to their school or home. If they don't qualify for a free rental, they can still rent through Harmony 4 All at a competitive rate."
     },
     {
-      id: 9,
+      id: 7,
       category: "programs",
       question: "How can I donate an instrument to Harmony 4 All?",
-      answer: "We gladly accept instrument donations, especially smaller items due to logistical constraints. If you'd like to donate, please reach out to us at info@harmony4all.org. For larger donations, like pianos, we work to find suitable homes within the community."
+      answer: "We gladly accept instrument donations, especially smaller items due to logistical constraints. If you'd like to donate, please reach out to us at <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>. For larger donations, like pianos, we work to find suitable homes within the community. You can also visit our <a href='/donate' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>donate page</a> for more information."
     },
 
     // Getting Involved
     {
-      id: 10,
+      id: 8,
       category: "involvement",
       question: "How can I get involved with Harmony 4 All?",
-      answer: "There are several ways to support our mission: • Partner with us as a school, business, or community leader. • Make a donation (monetary or instruments). • Volunteer in event planning, instrument repair, teaching, or outreach."
+      answer: "There are several ways to support our mission: • Partner with us as a school, business, or community leader. • Make a donation (monetary or instruments). • Volunteer in event planning, instrument repair, teaching, or outreach. Visit our <a href='/get-involved' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>get involved page</a> to learn more about opportunities."
     },
     {
-      id: 11,
+      id: 9,
       category: "involvement",
       question: "How can I make a donation?",
-      answer: "Donations can be made through our website at harmony4all.org, or you can contact us directly for other ways to give. Every dollar and instrument donated directly supports students in need."
+      answer: "Donations can be made through our <a href='/donate' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>donate page</a> at <a href='https://harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>harmony4all.org</a>, or you can contact us directly for other ways to give. Every dollar and instrument donated directly supports students in need."
+    },
+    {
+      id: 10,
+      category: "involvement",
+      question: "Can I make a recurring donation?",
+      answer: "Yes! Setting up a recurring donation helps us sustain and grow our programs, ensuring continuous support for NYC students. Visit our <a href='/donate' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>donate page</a> to set up your recurring donation."
+    },
+    {
+     id: 11,
+      category: "involvement",
+      question: "How is my donation used?",
+      answer: "100% of donations go directly toward:<br>• Providing free instrument rentals and repairs<br>• Expanding our music education curriculum<br>• Funding concerts, workshops, and outreach programs"
     },
     {
       id: 12,
       category: "involvement",
-      question: "Can I make a recurring donation?",
-      answer: "Yes! Setting up a recurring donation helps us sustain and grow our programs, ensuring continuous support for NYC students."
+      question: "Can businesses support Harmony 4 All?",
+      answer: "Absolutely! Businesses can sponsor events, donate funds or instruments, or partner with us on community initiatives. Email us at <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a> to explore ways to collaborate. Visit our <a href='/get-involved' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>get involved page</a> to learn more about business partnership opportunities."
     },
     {
       id: 13,
       category: "involvement",
-      question: "How is my donation used?",
-      answer: "100% of donations go directly toward: • Providing free instrument rentals and repairs. • Expanding our music education curriculum. • Funding concerts, workshops, and outreach programs."
+      question: "Can I host a fundraiser for Harmony 4 All?",
+      answer: "Yes! If you're interested in hosting a fundraiser, we'd love to work with you. Contact us for guidance and resources at <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>.<br><br> Visit our <a href='/get-involved' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>get involved page</a> to learn more about hosting fundraisers."
     },
     {
       id: 14,
       category: "involvement",
-      question: "Can businesses support Harmony 4 All?",
-      answer: "Absolutely! Businesses can sponsor events, donate funds or instruments, or partner with us on community initiatives. Email us at info@harmony4all.org to explore ways to collaborate."
-    },
-    {
-      id: 15,
-      category: "involvement",
-      question: "Can I host a fundraiser for Harmony 4 All?",
-      answer: "Yes! If you're interested in hosting a fundraiser, we'd love to work with you. Contact us for guidance and resources."
-    },
-    {
-      id: 16,
-      category: "involvement",
       question: "How can I volunteer with Harmony 4 All?",
-      answer: "Volunteers can help with: • Event planning and coordination • Instrument repair and maintenance • Teaching and mentoring students • Community outreach"
+      answer: "• Event planning that brings music to life in our communities<br>• Instrument repair and care, keeping the music alive for students<br>• Mentoring young musicians, guiding them to find their own voice<br>• Community outreach that extends the gift of music to every corner<br><br>Visit our <a href='/get-involved' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>get involved page</a> to learn more about volunteer opportunities."
     },
     {
-      id: 17,
+    id: 15,
       category: "involvement",
       question: "Are there age restrictions for volunteering?",
       answer: "Generally, volunteers must be 14 years or older, but opportunities vary by role."
     },
     {
-      id: 18,
+      id: 16,
       category: "involvement",
       question: "Can I volunteer remotely?",
       answer: "Yes! Some roles, such as event planning, outreach, and curriculum development, can be done remotely."
@@ -157,72 +145,66 @@ export default function FAQsPage() {
 
     // Events and Engagement
     {
-      id: 19,
+      id: 17,
       category: "events",
       question: "How can I participate in a Harmony 4 All event?",
       answer: "We host concerts, community events, and workshops throughout the year. Follow us on social media or check our website for upcoming events."
     },
     {
-      id: 20,
+      id: 18,
       category: "events",
       question: "What can I expect from a Harmony 4 All concert?",
-      answer: "Each concert features: • A 10-15 minute introduction by our co-founders to share our mission. • 45-50 minutes of live classical and jazz performances by our talented musicians, mentors, and faculty from Juilliard, the NY Youth Symphony, and Jazz at Lincoln Center."
+      answer: "Each concert features:<br><br>• A 10-15 minute introduction by our co-founders to share our mission<br>• 45-50 minutes of live classical and jazz performances by our talented musicians, mentors, and faculty from Juilliard, the NY Youth Symphony, and Jazz at Lincoln Center"
     },
     {
-      id: 21,
+      id: 19,
       category: "events",
       question: "How can I register for an event or workshop?",
       answer: "Visit harmony4all.org or check our social media pages for registration details."
     },
     {
-      id: 22,
+      id: 20,
       category: "events",
       question: "Can I collaborate with Harmony 4 All on a project?",
-      answer: "We welcome collaborations with schools, community organizations, and businesses. If you'd like to co-host a workshop, festival, or educational program, reach out to info@harmony4all.org."
+      answer: "We welcome collaborations with schools, community organizations, and businesses. If you'd like to co-host a workshop, festival, or educational program, reach out to <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>."
     },
 
     // Additional Information
     {
-      id: 23,
+      id: 21,
       category: "info",
       question: "Does Harmony 4 All provide educational content for schools?",
-      answer: "Yes! We offer digital music curriculums and classroom resources to support schools. Educators interested in using our materials can contact us."
+      answer: "Yes! We offer digital music curriculums and classroom resources to support schools. Educators interested in using our materials can contact us at <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>."
+    },
+    {
+      id: 22,
+      category: "info",
+      question: "Does Harmony 4 All offer internships?",
+      answer: "Yes, we have internship opportunities in music education, nonprofit management, and event planning. Contact us at <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a> or visit our <a href='/contact' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>contact page</a> to learn more."
+    },
+    {
+      id: 23,
+      category: "info",
+      question: "How can I stay updated on Harmony 4 All's activities?",
+      answer: "Follow us on social media and visit <a href='https://harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>harmony4all.org</a> for updates.<br><br><div style='display: flex; gap: 12px; justify-content: center; margin-top: 16px;'><a href='https://www.facebook.com/harmony4all.org?mibextid=kFxxJD' style='display: inline-block; width: 40px; height: 40px; background-color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;'><svg style='width: 20px; height: 20px; fill: white;' viewBox='0 0 24 24'><path d='M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z'/></svg></a><a href='https://www.instagram.com/_harmony4all_/' style='display: inline-block; width: 40px; height: 40px; background-color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;'><svg style='width: 20px; height: 20px; fill: white;' viewBox='0 0 24 24'><path d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z'/></svg></a><a href='https://www.linkedin.com/company/harmony4all/?viewAsMember=true' style='display: inline-block; width: 40px; height: 40px; background-color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;'><svg style='width: 20px; height: 20px; fill: white;' viewBox='0 0 24 24'><path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'/></svg></a><a href='https://www.youtube.com/watch?v=CQXnJpY_zR8&ab_channel=Harmony4All' style='display: inline-block; width: 40px; height: 40px; background-color: black; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none;'><svg style='width: 20px; height: 20px; fill: white;' viewBox='0 0 24 24'><path d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z'/></svg></a></div>"
     },
     {
       id: 24,
       category: "info",
-      question: "Does Harmony 4 All offer internships?",
-      answer: "Yes, we have internship opportunities in music education, nonprofit management, and event planning. Contact us to learn more."
+      question: "How can I report an issue with the website?",
+      answer: "If you experience any issues, please email <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>."
     },
     {
       id: 25,
       category: "info",
-      question: "How can I stay updated on Harmony 4 All's activities?",
-      answer: "Follow us on social media and visit harmony4all.org for updates."
+      question: "How does Harmony 4 All ensure the privacy of its users?",
+      answer: "We take privacy seriously and follow strict data protection policies. Visit our <a href='/privacy' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>privacy page</a> to view our Privacy Policy."
     },
     {
       id: 26,
       category: "info",
-      question: "How can I report an issue with the website?",
-      answer: "If you experience any issues, please email info@harmony4all.org."
-    },
-    {
-      id: 27,
-      category: "info",
-      question: "How does Harmony 4 All ensure the privacy of its users?",
-      answer: "We take privacy seriously and follow strict data protection policies. Visit our website to view our Privacy Policy."
-    },
-    {
-      id: 28,
-      category: "info",
-      question: "What is Harmony 4 All's refund policy?",
-      answer: "Donations are generally non-refundable. If you have concerns, please contact us."
-    },
-    {
-      id: 29,
-      category: "info",
       question: "How do I get in touch with Harmony 4 All?",
-      answer: "You can reach us at: info@harmony4all.org, (347) 554-7712, or visit harmony4all.org"
+      answer: "You can reach us at: <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>, <a href='tel:(347) 554-7712' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>(347) 554-7712</a>, or visit <a href='https://harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>harmony4all.org</a>"
     }
   ]
 
@@ -255,7 +237,7 @@ export default function FAQsPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-16 lg:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="relative py-12 md:py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 md:px-6 py-2 md:py-3 rounded-full mb-6 md:mb-8">
@@ -283,7 +265,7 @@ export default function FAQsPage() {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 md:py-12 bg-white border-b border-gray-100">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
             {categories.map((category) => (
@@ -306,7 +288,7 @@ export default function FAQsPage() {
       </section>
 
       {/* FAQs Section */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {filteredFaqs.length === 0 ? (
@@ -354,12 +336,15 @@ export default function FAQsPage() {
                       </div>
                     </div>
                     
-                    {/* Collapsible Answer */}
-                    {openFaq === faq.id && (
-                      <div className="px-4 md:px-6 pb-4 md:pb-6 border-t border-gray-100">
-                        <p className="text-gray-600 pt-3 md:pt-4 leading-relaxed text-sm md:text-base">{faq.answer}</p>
-                      </div>
-                    )}
+                                         {/* Collapsible Answer */}
+                     {openFaq === faq.id && (
+                       <div className="px-4 md:px-6 pb-4 md:pb-6 border-t border-gray-100">
+                         <p 
+                           className="text-gray-600 pt-3 md:pt-4 leading-relaxed text-sm md:text-base"
+                           dangerouslySetInnerHTML={{ __html: faq.answer }}
+                         />
+                       </div>
+                     )}
                   </Card>
                 ))}
               </div>
@@ -369,17 +354,17 @@ export default function FAQsPage() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-black text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 lg:p-12">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 md:mb-6">Still Have Questions?</h2>
-              <p className="text-sm md:text-lg lg:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed">
+            <div className="rounded-3xl p-6 md:p-8 lg:p-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Still Have Questions?</h2>
+              <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 leading-relaxed">
                 We're here to help! Don't hesitate to reach out with any questions or concerns.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                 <Link href="/contact">
-                  <Button size="lg" className="bg-black w-full text-white hover:bg-gray-800 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
+                  <Button size="lg" className="bg-black border-2 border-white w-full text-white hover:bg-white hover:text-black px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full">
                     <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                     Contact Us
                   </Button>
@@ -387,7 +372,7 @@ export default function FAQsPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-2 w-full border-black text-black hover:bg-black hover:text-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
+                  className="border-2 border-black text-black hover:bg-black hover:text-white hover:border-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
                 >
                   <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
                   Call (347) 554-7712

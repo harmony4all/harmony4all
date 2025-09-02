@@ -100,7 +100,7 @@ const HeroCarousel = () => {
           {/* Mobile: Fixed height image container */}
           <div className="sm:hidden w-full h-[180px] relative mt-10">
             <div
-              className="w-full h-full bg-contain bg-center bg-no-repeat"
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url('${slide.image}')` }}
               role="img"
               aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
@@ -254,13 +254,13 @@ const WhoWeAreSection = () => {
     <section id="who-we-are-section" className="py-4 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-                      <div
-              className={`text-center mb-4 sm:mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
-            >
+          <div
+            className={`text-center mb-4 sm:mb-12 md:mb-16 transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+          >
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-2 sm:mb-6 md:mb-8">Who We Are</h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed px-2">
-              <span className="font-bold  px-1 rounded">Harmony 4 All</span> is a youth-led nonprofit founded on the belief that every child deserves the opportunity to explore their fullest potential. We provide underserved K-12 students across New York City with free access to instruments, music education resources, and community concerts—nurturing creativity, confidence, and connection. Through the power of music, we strengthen schools, uplift families, and inspire generations.
+              <span className="font-bold  px-0 rounded">Harmony 4 All</span> is a youth-led nonprofit founded on the belief that every child deserves the opportunity to explore their fullest potential. We provide underserved K-12 students across New York City with free access to instruments, music education resources, and community concerts—nurturing creativity, confidence, and connection. Through the power of music, we strengthen schools, uplift families, and inspire generations.
             </p>
           </div>
         </div>
@@ -301,7 +301,7 @@ const MissionValuesSection = () => {
             >
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">Our Mission</h3>
               <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-6 sm:mb-8 md:mb-10 leading-relaxed">
-                At <span className="font-bold  px-1 rounded">Harmony 4 All</span>, our mission is to ensure that music is not a privilege, but a pathway open to every child. As a youth-led nonprofit, we provide underserved K-12 students across New York City with free instruments, educational resources, and community programs. Through music, we spark creativity, strengthen confidence, and weave connections that uplift families and communities. Our vision is a world where every child can discover their voice and shape a brighter future in harmony with others.
+                At <span className="font-bold  px-0 rounded">Harmony 4 All</span>, our mission is to ensure that music is not a privilege, but a pathway open to every child. As a youth-led nonprofit, we provide underserved K-12 students across New York City with free instruments, educational resources, and community programs. Through music, we spark creativity, strengthen confidence, and weave connections that uplift families and communities. Our vision is a world where every child can discover their voice and shape a brighter future in harmony with others.
               </p>
 
               <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">Our Core Values</h4>

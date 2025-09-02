@@ -5,10 +5,8 @@ import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { CheckCircle, Heart, Share2, Mail, Calendar } from "lucide-react"
-import { donationAPI } from "@/lib/api"
 
 export default function DonationSuccessPage() {
-  const [donationStatus, setDonationStatus] = useState<any>(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -59,12 +57,12 @@ export default function DonationSuccessPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <Card className="shadow-2xl border-0 rounded-2xl overflow-hidden">
-              <CardHeader className="bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-8 md:py-12">
+              <CardHeader className="bg-black text-white text-center py-8 md:py-12">
                 <div className="mx-auto w-16 h-16 md:w-20 md:h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 md:mb-6">
                   <CheckCircle className="h-8 w-8 md:h-10 md:w-10 text-white" />
                 </div>
                 <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Thank You!</CardTitle>
-                <CardDescription className="text-green-100 text-base md:text-lg lg:text-xl">
+                <CardDescription className="text-white text-base md:text-lg lg:text-xl">
                   Your donation has been successfully processed
                 </CardDescription>
               </CardHeader>

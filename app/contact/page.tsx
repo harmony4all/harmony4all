@@ -52,7 +52,7 @@ export default function ContactPage() {
       <ContactSection />
 
       {/* FAQ Section */}
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="py-6 md:py-8 lg:py-10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 md:mb-6">Frequently Asked Questions</h2>
@@ -136,7 +136,7 @@ export default function ContactPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-12 md:py-16 lg:py-20 bg-gray-900 text-white">
+      <section className="py-6 md:py-8 lg:py-10 bg-black text-white">  
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Still Have Questions?</h2>
           <p className="text-sm md:text-lg lg:text-xl mb-6 md:mb-8 opacity-90">
@@ -145,7 +145,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
             <Button 
               size="lg" 
-              className="bg-white w-full text-gray-900 hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
+              className="bg-white text-black hover:bg-white/60 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
               onClick={() => window.open('tel:+13475547712', '_self')}
             >
               <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
@@ -154,7 +154,7 @@ export default function ContactPage() {
             <Button
               size="lg"
               variant="outline"
-              className="border-2 w-full border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
+              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full bg-transparent"
               onClick={() => window.open('mailto:info@harmony4all.org', '_self')}
             >
               <Mail className="mr-2 h-4 w-4 md:h-5 md:w-5" />
