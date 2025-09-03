@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import api from '../../api/api';
+import { blogAPI } from '../../lib/api';
 
 interface Blog {
   _id: string;
@@ -27,28 +27,57 @@ interface Blog {
   };
 }
 
+interface PaginationData {
+  currentPage: number;
+  totalPages: number;
+  totalBlogs: number;
+  hasNextPage: boolean;
+  hasPrevPage: boolean;
+  limit: number;
+}
+
 export default function BlogPage() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pagination, setPagination] = useState<PaginationData | null>(null);
 
   useEffect(() => {
-    fetchBlogs();
-  }, []);
+    fetchBlogs(currentPage);
+  }, [currentPage]);
 
-  const fetchBlogs = async () => {
+  const fetchBlogs = async (page: number = 1) => {
     try {
       setLoading(true);
-      const response = await api.get('/blogs');
+      setError('');
+      const response = await blogAPI.getBlogs({ page, limit: 12 });
+
       // Handle the response structure: { blogs: [...], pagination: {...} }
-      const blogsData = response.data?.blogs || response.data || []
+      // The API returns data directly, not wrapped in another data object
+      const blogsData = response.blogs || response.data?.blogs || response.data || [];
+      const paginationData = response.pagination || response.data?.pagination;
+
       setBlogs(Array.isArray(blogsData) ? blogsData : []);
+      setPagination(paginationData || null);
+
+      // Update current page if it's different from the requested page
+      if (paginationData && paginationData.currentPage !== page) {
+        setCurrentPage(paginationData.currentPage);
+      }
     } catch (err) {
       setError('Failed to load blogs');
       console.error('Error fetching blogs:', err);
+      setBlogs([]);
+      setPagination(null);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const formatDate = (dateString: string) => {
@@ -75,8 +104,8 @@ export default function BlogPage() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <p className="text-red-600">{error}</p>
-          <button 
-            onClick={fetchBlogs}
+          <button
+            onClick={() => fetchBlogs(1)}
             className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
             Try Again
@@ -256,6 +285,103 @@ export default function BlogPage() {
           </div>
         )}
       </div>
+
+      {/* Pagination */}
+      {pagination && pagination.totalPages > 1 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+          <div className="flex flex-col sm:flex-row items-center justify-between bg-white rounded-2xl shadow-lg p-4 md:p-6 border border-gray-100">
+            {/* Page Info */}
+            <div className="text-sm md:text-base text-gray-600 mb-4 sm:mb-0">
+              Showing {blogs.length > 0 ? ((currentPage - 1) * pagination.limit) + 1 : 0} to{' '}
+              {Math.min(currentPage * pagination.limit, pagination.totalBlogs)} of{' '}
+              {pagination.totalBlogs} blogs
+            </div>
+
+            {/* Pagination Controls */}
+            <div className="flex items-center space-x-2">
+              {/* Previous Button */}
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={!pagination.hasPrevPage || loading}
+                className="flex items-center px-3 md:px-4 py-2 text-sm md:text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+              >
+                <svg className="w-4 h-4 md:w-5 md:h-5 mr-1 md:mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Previous
+              </button>
+
+              {/* Page Numbers */}
+              <div className="flex items-center space-x-1">
+                {Array.from({ length: pagination.totalPages }, (_, i) => i + 1)
+                  .filter(page => {
+                    // Show first page, last page, current page, and pages around current page
+                    return page === 1 ||
+                           page === pagination.totalPages ||
+                           (page >= currentPage - 1 && page <= currentPage + 1);
+                  })
+                  .map((page, index, array) => {
+                    // Add ellipsis if there's a gap
+                    const showEllipsis = index > 0 && page - array[index - 1] > 1;
+
+                    return (
+                      <React.Fragment key={page}>
+                        {showEllipsis && (
+                          <span className="px-2 py-2 text-gray-400">...</span>
+                        )}
+                        <button
+                          onClick={() => handlePageChange(page)}
+                          disabled={loading}
+                          className={`px-3 md:px-4 py-2 text-sm md:text-base font-medium rounded-lg transition-colors duration-200 ${
+                            page === currentPage
+                              ? 'bg-blue-600 text-white'
+                              : 'text-gray-700 bg-white border border-gray-300 hover:bg-gray-50'
+                          } disabled:opacity-50 disabled:cursor-not-allowed`}
+                        >
+                          {page}
+                        </button>
+                      </React.Fragment>
+                    );
+                  })}
+              </div>
+
+              {/* Next Button */}
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={!pagination.hasNextPage || loading}
+                className="flex items-center px-3 md:px-4 py-2 text-sm md:text-base font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+              >
+                Next
+                <svg className="w-4 h-4 md:w-5 md:h-5 ml-1 md:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          {/* Jump to Page (for larger page counts) */}
+          {pagination.totalPages > 5 && (
+            <div className="flex items-center justify-center mt-4 space-x-2">
+              <span className="text-sm text-gray-600">Go to page:</span>
+              <input
+                type="number"
+                min="1"
+                max={pagination.totalPages}
+                value={currentPage}
+                onChange={(e) => {
+                  const page = parseInt(e.target.value);
+                  if (page >= 1 && page <= pagination.totalPages) {
+                    setCurrentPage(page);
+                  }
+                }}
+                className="w-16 px-2 py-1 text-sm border border-gray-300 rounded text-center focus:outline-none focus:ring-2 focus:ring-blue-500"
+                disabled={loading}
+              />
+              <span className="text-sm text-gray-600">of {pagination.totalPages}</span>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

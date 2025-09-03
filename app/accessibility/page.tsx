@@ -117,7 +117,7 @@ export default function AccessibilityPage() {
           >
             <h1 className="text-2xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6">Accessibility Statement</h1>
             <p className="text-sm md:text-lg lg:text-xl text-gray-600 leading-relaxed">
-              <span className="font-bold  px-0 rounded">Harmony 4 All</span> is committed to ensuring digital accessibility for people with disabilities. We continually
+              <span className="font-bold">Harmony 4 All</span> is committed to ensuring digital accessibility for people with disabilities. We continually
               improve the user experience for everyone and apply relevant accessibility standards.
             </p>
           </div>
@@ -142,7 +142,7 @@ export default function AccessibilityPage() {
             >
               <CardContent className="p-4 md:p-6 lg:p-8">
                 <p className="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed mb-4 md:mb-6">
-                  At <span className="font-bold  px-0 rounded">Harmony 4 All</span>, accessibility is not just a compliance requirement—it's a core value that reflects
+                  At <span className="font-bold">Harmony 4 All</span>, accessibility is not just a compliance requirement—it's a core value that reflects
                   our mission to serve individuals with disabilities. We believe that everyone deserves equal access to
                   information and functionality, and we are dedicated to providing an inclusive digital experience.
                 </p>

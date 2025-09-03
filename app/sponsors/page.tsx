@@ -209,7 +209,7 @@ export default function SponsorsPage() {
                                 Become a Sponsor
                             </h1>
                             <p className="text-sm md:text-base lg:text-xl xl:text-2xl text-white/90 mb-4 md:mb-6 lg:mb-8 leading-relaxed drop-shadow-md">
-                                Partner with <span className="font-bold  px-0 rounded">Harmony 4 All</span> to create lasting impact in music education and build stronger communities together.
+                                Partner with <span className="font-bold">Harmony 4 All</span> to create lasting impact in music education and build stronger communities together.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center">
                                 <Link href="/contact">
@@ -382,7 +382,7 @@ export default function SponsorsPage() {
                     <div className="max-w-6xl mx-auto">
                         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center">
                             <div className="text-center md:text-left">
-                                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8">Why Sponsor <span className="font-bold  px-0 rounded">Harmony 4 All</span>?</h2>
+                                <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-8">Why Sponsor <span className="font-bold">Harmony 4 All</span>?</h2>
                                 
                                 <div className="space-y-4 md:space-y-8">
                                     <div className="flex items-start space-x-3 md:space-x-4">

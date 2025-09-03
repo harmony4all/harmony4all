@@ -272,7 +272,7 @@ export default function BiancaPage() {
                   </CardHeader>
                   <CardContent className="p-4 md:p-6 space-y-3 md:space-y-4">
                     <p className="text-gray-600 text-sm md:text-base text-center sm:text-left">
-                      Interested in learning more about <strong>Bianca</strong>'s work or supporting <span className="font-bold  px-0 rounded">Harmony 4 All</span>?
+                      Interested in learning more about <strong>Bianca</strong>'s work or supporting <span className="font-bold">Harmony 4 All</span>?
                     </p>
                     <div className="space-y-2 md:space-y-3">
                       <Link href="/contact">

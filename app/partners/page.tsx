@@ -166,7 +166,7 @@ export default function PartnersPage() {
                                     Partnering to build a world where all children have access to music education, regardless of their circumstances.
                                 </p>
                                 <p className="text-sm md:text-base lg:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
-                                    <span className="font-bold  px-0 rounded">Harmony 4 All</span> is a 501(c)(3) nonprofit organization dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential.
+                                    <span className="font-bold">Harmony 4 All</span> is a 501(c)(3) nonprofit organization dedicated to providing free access to high-quality music education and resources to underserved K-12 students. Our mission is to help students from low-income families, underfunded schools, and marginalized communities discover their musical potential.
                                 </p>
                                 <p className="text-sm md:text-base lg:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
                                     We offer free musical instrument rentals, repairs, and access to musical curriculums, ensuring that every child has the opportunity to experience the transformative power of music.

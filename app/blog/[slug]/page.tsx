@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import api from '../../../api/api';
+import WixBlogRenderer from '../../../components/blogRender';
 
 interface Blog {
   _id: string;
@@ -293,9 +294,11 @@ export default function BlogPostPage() {
         )}
 
         {/* Blog Content */}
-        <article className="prose prose-sm md:prose-base lg:prose-lg max-w-none mb-8 md:mb-12">
+        {/* <article className="prose prose-sm md:prose-base lg:prose-lg max-w-none mb-8 md:mb-12">
           <div dangerouslySetInnerHTML={{ __html: blog.content }} />
-        </article>
+        </article> */}
+
+        <WixBlogRenderer content={blog.content} />
 
         {/* Tags */}
         {blog.tags && blog.tags.length > 0 && (

@@ -114,5 +114,84 @@ export const donationAPI = {
     return response.data;
   },
 };
+// Blog API functions
+export const blogAPI = {
+  // Get all blogs with pagination and filters
+  getBlogs: async (params?: {
+    page?: number;
+    limit?: number;
+    category?: string;
+    tag?: string;
+    featured?: boolean;
+  }) => {
+    const queryParams = new URLSearchParams();
+    if (params?.page) queryParams.append('page', params.page.toString());
+    if (params?.limit) queryParams.append('limit', params.limit.toString());
+    if (params?.category) queryParams.append('category', params.category.toString());
+    if (params?.tag) queryParams.append('tag', params.tag.toString());
+    if (params?.featured !== undefined) queryParams.append('featured', params.featured.toString());
+
+    const queryString = queryParams.toString();
+    const url = `/blogs${queryString ? `?${queryString}` : ''}`;
+
+    const response = await api.get(url);
+    return response.data;
+  },
+
+  // Get featured blogs
+  getFeaturedBlogs: async (limit?: number) => {
+    const queryParams = new URLSearchParams();
+    if (limit) queryParams.append('limit', limit.toString());
+
+    const response = await api.get(`/blogs/featured${queryParams.toString() ? `?${queryParams.toString()}` : ''}`);
+    return response.data;
+  },
+
+  // Get blog categories
+  getCategories: async () => {
+    const response = await api.get('/blogs/categories');
+    return response.data;
+  },
+
+  // Get popular tags
+  getTags: async () => {
+    const response = await api.get('/blogs/tags');
+    return response.data;
+  },
+
+  // Get single blog by slug or id
+  getBlog: async (slugOrId: string) => {
+    const response = await api.get(`/blogs/${slugOrId}`);
+    return response.data;
+  },
+
+  // Get related blogs
+  getRelatedBlogs: async (blogId: string, limit?: number) => {
+    const queryParams = new URLSearchParams();
+    if (limit) queryParams.append('limit', limit.toString());
+
+    const response = await api.get(`/blogs/${blogId}/related${queryParams.toString() ? `?${queryParams.toString()}` : ''}`);
+    return response.data;
+  },
+
+  // Like a blog
+  likeBlog: async (blogId: string) => {
+    const response = await api.post(`/blogs/${blogId}/like`);
+    return response.data;
+  },
+
+  // Share a blog
+  shareBlog: async (blogId: string) => {
+    const response = await api.post(`/blogs/${blogId}/share`);
+    return response.data;
+  },
+
+  // Add comment to blog
+  addComment: async (blogId: string, content: string) => {
+    const response = await api.post(`/blogs/${blogId}/comments`, { content });
+    return response.data;
+  }
+};
+
 // Export the base api instance for custom requests
 export default api;
