@@ -189,7 +189,7 @@ const HeroCarousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent sm:bg-white/20 sm:text-white text-black"
+        className="absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 text-black focus:outline-none focus:ring-0"
         onClick={prevSlide}
         aria-label="Previous slide"
       >
@@ -199,7 +199,7 @@ const HeroCarousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm border-white/30 text-white hover:bg-white/30 rounded-full z-20 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-transparent sm:bg-white/20 sm:text-white text-black"
+        className="absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 text-black focus:outline-none focus:ring-0"
         onClick={nextSlide}
         aria-label="Next slide"
       >
@@ -382,26 +382,25 @@ const ProgramsSection = () => {
   }, [])
 
   const programs = [
-
     {
       icon: Music,
-      title: "Instrument Rental",
-      description: "Affordable instrument rental program for students who want to try different instruments.",
-      features: ["Monthly rentals", "Student discounts", "Maintenance included", "Easy returns"],
+      title: "Free Instrument Rentals",
+      description: "Giving every eligible student the chance to explore their potential through music.",
+      features: ["Quality instruments at no cost", "Easy access for schools and families", "Maintenance included", "Support for musical growth"],
       image: "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
       icon: Wrench,
-      title: "Instrument Repair",
-      description: "Professional repair services to keep instruments in perfect playing condition.",
-      features: ["Expert technicians", "Quick turnaround", "Warranty included", "All instrument types"],
+      title: "Free Instrument Repairs",
+      description: "Ensuring every child's instrument stays in perfect condition to keep the music alive.",
+      features: ["Skilled repair technicians", "Quick turnaround time", "Covers all common instruments", "No cost for eligible students"],
       image: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
       icon: Mic,
-      title: "Musical Curriculum",
-      description: "Empowering students with resources and opportunities to learn, grow, and shine through music.",
-      features: ["Engaging digital and print learning resources", "Student-centered educational pathways", "Community concerts and workshops", "Performance opportunities"],
+      title: "Free Musical Curriculum",
+      description: "Opening doors for every student to learn, grow, and shine through music.",
+      features: ["Engaging digital and print resources", "Student-centered learning pathways", "Community concerts and workshops", "Performance opportunities"],
       image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     },
     {
@@ -422,7 +421,7 @@ const ProgramsSection = () => {
         >
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2 sm:mb-6">Our Services</h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-6xl mx-auto px-2">
-            Discover how Harmony 4 All opens doors of opportunity through music. Our programs provide the tools, resources, and support that help underserved students explore their creativity, strengthen their confidence, and grow with their communities.
+            Discover how <span className="font-bold">Harmony 4 All</span> opens doors of opportunity through music. Our programs provide the tools, resources, and support that help underserved students explore their creativity, strengthen their confidence, and grow with their communities.
 
           </p>
         </div>

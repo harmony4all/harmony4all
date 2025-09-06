@@ -30,9 +30,9 @@ export default function BiancaPage() {
 
   const achievements = {
     education: [
-      "Graduated Juilliard Preparatory Division, Class of 2024",
-      "Currently studying at University of Massachusetts Amherst",
-      "Clarinet Graduate of Juilliard Preparatory Division"
+      "Graduated Bronx High School of Science, Class of 2025",
+      "Graduated Juilliard Preparatory Division (Clarinet), Class of 2024",
+      "Currently studying at University of Massachusetts Amherst"
     ],
     leadership: [
       "Global Youth Ambassador to the Foundation of Support for the UN",
@@ -236,7 +236,11 @@ export default function BiancaPage() {
                       <ul className="space-y-2">
                         <li className="flex items-start">
                           <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
-                          <span className="text-black font-medium text-xs md:text-sm">Graduated Juilliard Preparatory Division, Class of 2024</span>
+                          <span className="text-black font-medium text-xs md:text-sm">Graduated Bronx High School of Science, Class of 2025</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                          <span className="text-black font-medium text-xs md:text-sm">Graduated Juilliard Preparatory Division (Clarinet), Class of 2024</span>
                         </li>
                         <li className="flex items-start">
                           <span className="inline-block w-2 h-2 bg-black rounded-full mt-2 mr-2 flex-shrink-0"></span>

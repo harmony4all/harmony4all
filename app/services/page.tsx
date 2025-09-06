@@ -9,13 +9,13 @@ import { Heart, Users, Clock, MapPin, Phone, CheckCircle, Calendar, ArrowRight, 
 export default function ServicesPage() {
   const services = [
     {
-      title: "Instrument Rental",
-      description: "Affordable instrument rental program for students who want to try different instruments.",
+      title: "Free Instrument Rentals",
+      description: "Giving every eligible student the chance to explore their potential through music.",
       features: [
-        "Monthly rentals",
-        "Student discounts",
+        "Quality instruments at no cost",
+        "Easy access for schools and families",
         "Maintenance included",
-        "Easy returns",
+        "Support for musical growth",
       ],
       ageGroups: ["Children", "Teens", "Adults"],
       duration: "Ongoing/Seasonal",
@@ -23,13 +23,13 @@ export default function ServicesPage() {
       icon: Music,
     },
     {
-      title: "Instrument Repair",
-      description: "Professional repair services to keep instruments in perfect playing condition.",
+      title: "Free Instrument Repairs",
+      description: "Ensuring every child's instrument stays in perfect condition to keep the music alive.",
       features: [
-        "Expert technicians",
-        "Quick turnaround",
-        "Warranty included",
-        "All instrument types",
+        "Skilled repair technicians",
+        "Quick turnaround time",
+        "Covers all common instruments",
+        "No cost for eligible students",
       ],
       ageGroups: ["All Ages"],
       duration: "Ongoing/Seasonal",
@@ -37,25 +37,13 @@ export default function ServicesPage() {
       icon: Wrench,
     },
     {
-      title: "Musical Curriculum",
-      description: "Comprehensive music education support designed to inspire students and strengthen classrooms.",
+      title: "Free Musical Curriculum",
+      description: "Opening doors for every student to learn, grow, and shine through music.",
       features: [
-        {
-          name: "Teacher Resources",
-          tooltip: "Curriculum guides and tools that help educators bring music to life in every classroom."
-        },
-        {
-          name: "Digital Learning Materials",
-          tooltip: "Accessible resources that expand music education beyond the classroom walls."
-        },
-        {
-          name: "Adaptive teaching",
-          tooltip: "Flexible approaches that meet students where they are, fostering growth at every level."
-        },
-        {
-          name: "Performance opportunities",
-          tooltip: "Stages for young voices to shine and share their music with the community."
-        },
+        "Engaging digital and print resources",
+        "Student-centered learning pathways",
+        "Community concerts and workshops",
+        "Performance opportunities",
       ],
       ageGroups: ["Children", "Teens", "Adults", "Seniors"],
       duration: "Ongoing/Seasonal",
@@ -169,7 +157,7 @@ export default function ServicesPage() {
                   
                   <div className="p-6 md:p-8">
                     <div className="text-center mb-6 md:mb-8">
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
+                      <h3 className="text-xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">{service.title}</h3>
                       <p className="text-gray-600 leading-relaxed text-sm md:text-lg mb-4 md:mb-6">
                         {service.description}
                       </p>
@@ -187,13 +175,13 @@ export default function ServicesPage() {
                             <div key={i} className="flex items-start space-x-2">
                               <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-black rounded-full mt-1.5 md:mt-2 flex-shrink-0"></div>
                               <span className="text-gray-700 text-xs md:text-sm">
-                                {typeof feature === 'string' ? feature : feature.name}
+                                {typeof feature === 'string' ? feature : (feature as any).name}
                               </span>
-                              {typeof feature === 'object' && feature.tooltip && (
+                              {typeof feature === 'object' && (feature as any).tooltip && (
                                 <div className="relative group/tooltip">
                                   <HelpCircle className="h-3 w-3 md:h-4 md:w-4 text-gray-400 cursor-help hover:text-gray-600 transition-colors" />
                                   <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-lg opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none z-10 w-48 md:w-64">
-                                    {feature.tooltip}
+                                      {(feature as any).tooltip}  
                                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
                                   </div>
                                 </div>

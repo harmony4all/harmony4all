@@ -460,7 +460,8 @@ export default function AboutPage() {
               >
                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4 flex items-center">
                   <Music className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
-                  Free Community Concerts                </h3>
+                  Free Community Concerts
+                  </h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   Live music for underserved neighborhoods, fostering unity and cultural appreciation.
                 </p>
@@ -473,11 +474,24 @@ export default function AboutPage() {
               >
                 <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4 flex items-center">
                   <Users className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
-                  Free Music Workshops                </h3>
+                  Free Music Workshops 
+                  </h3>
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   Hands-on learning and mentorship to help students unlock their musical potential.</p>
               </div>
-
+              <div
+                className={`bg-white rounded-2xl p-4 md:p-8 shadow-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                style={{ transitionDelay: "400ms" }}
+              >
+                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4 flex items-center">
+                  <Award className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
+                 Free Music for Wellness
+                 </h3>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                Music performance in community centers, nursing homes, and senior homes to promote emotional well-being.
+                </p>
+              </div>
               <div
                 className={`bg-white rounded-2xl p-4 md:p-8 shadow-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}
@@ -490,18 +504,7 @@ export default function AboutPage() {
                 <p className="text-sm md:text-base text-gray-600 leading-relaxed">
                   Bringing free music programs to underfunded NYC public schools for consistent education.</p>
               </div>
-              <div
-                className={`bg-white rounded-2xl p-4 md:p-8 shadow-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-                style={{ transitionDelay: "400ms" }}
-              >
-                <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 mb-3 md:mb-4 flex items-center">
-                  <Award className="h-5 w-5 md:h-6 md:w-6 text-black mr-2 md:mr-3" />
-                  Music for Wellness                </h3>
-                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                  Music education in community centers, hospitals, and senior homes to promote emotional well-being.
-                </p>
-              </div>
+   
               <div
                 className={`bg-white rounded-2xl p-4 md:p-8 shadow-lg transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                   }`}

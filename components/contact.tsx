@@ -16,20 +16,20 @@ interface Contact {
     message: string;
 }
 
-    // Contact Section Component
+// Contact Section Component
 export default function ContactSection() {
-        const [isVisible, setIsVisible] = useState(false)
-        const [formData, setFormData] = useState({
-            firstName: '',
-            lastName: '',
-            email: '',
-            phone: '',
-            subject: '',
-            message: ''
-        })
-        const [isSubmitting, setIsSubmitting] = useState(false)
-        const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-        const [errorMessage, setErrorMessage] = useState('')
+    const [isVisible, setIsVisible] = useState(false)
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+    })
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+    const [errorMessage, setErrorMessage] = useState('')
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
         setFormData(prev => ({
@@ -40,7 +40,7 @@ export default function ContactSection() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        
+
         // Basic validation
         if (!formData.email.trim()) {
             setErrorMessage('Email is required')
@@ -63,7 +63,7 @@ export default function ContactSection() {
                 subject: '',
                 message: ''
             })
-            
+
             // Reset success status after 5 seconds
             setTimeout(() => {
                 setSubmitStatus('idle')
@@ -123,7 +123,7 @@ export default function ContactSection() {
                                     <p className="text-green-800 font-medium">Message sent successfully! We'll get back to you soon.</p>
                                 </div>
                             )}
-                            
+
                             {submitStatus === 'error' && (
                                 <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg">
                                     <AlertCircle className="h-5 w-5 text-red-600" />
@@ -132,7 +132,7 @@ export default function ContactSection() {
                             )}
 
                             <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid grid-cols-2 gap-4">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2">First Name <span className="text-red-500">*</span></label>
                                         <Input
@@ -197,7 +197,7 @@ export default function ContactSection() {
                                         className="rounded-lg min-h-[120px] transition-all duration-300 focus:scale-105"
                                     />
                                 </div>
-                                <Button 
+                                <Button
                                     type="submit"
                                     disabled={isSubmitting}
                                     className="w-full bg-black hover:bg-gray-800 text-white rounded-lg py-3 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
@@ -216,30 +216,6 @@ export default function ContactSection() {
                     </Card>
 
                     <div className="space-y-8">
-                        {[
-                            { icon: Mail, title: "Email Us", content: "info@harmony4all.org" },
-                            { icon: Phone, title: "Call Us", content: "(347) 554-7712" },
-                        ].map((item, index) => (
-                            <Card
-                                key={index}
-                                className={`bg-white shadow-lg border-0 rounded-2xl transition-all duration-1000 hover:shadow-xl hover:scale-105 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-                                    }`}
-                                style={{ transitionDelay: `${(index + 1) * 200}ms` }}
-                            >
-                                <CardContent className="p-6">
-                                    <div className="flex items-start space-x-4">
-                                        <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                                            <item.icon className="h-6 w-6 text-black" />
-                                        </div>
-                                        <div>
-                                            <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
-                                            <p className="text-gray-600 whitespace-pre-line">{item.content}</p>
-                                        </div>
-                                    </div>
-                                </CardContent>
-                            </Card>
-                        ))}
-
                         <div
                             className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-1000 hover:shadow-xl ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
                                 }`}

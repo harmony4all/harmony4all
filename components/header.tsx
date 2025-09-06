@@ -74,53 +74,54 @@ export const Header = () => {
   }
 
   return (
-    <header
-      className={`relative z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white" : "bg-white"
-      }`}
-      role="banner"
-    >
-        {/* Legal Status Banner */}
-        <div className="bg-black text-white p-2 sm:p-4 hidden md:block">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs sm:text-sm">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center">
-              <span className="font-semibold">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization. 
-              </span>
-              <span>EIN: 93-2460195</span>
-            </div>
-            <div className="flex flex-col sm:flex-row items-start sm:items-center">
-              <span className="font-semibold">NYS Attorney General&apos;s Charities Bureau Registered
-              </span>
-              <span>Registration No: 50-22-90</span>
-            </div>
+    <>
+      {/* Legal Status Banner - Non-sticky */}
+      <div className="bg-black text-white p-2 sm:p-4 hidden md:block">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-xs sm:text-sm">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center">
+            <span className="font-semibold">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization.
+            </span>
+            <span>EIN: 93-2460195</span>
+          </div>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center">
+            <span className="font-semibold">NYS Attorney General&apos;s Charities Bureau Registered
+            </span>
+            <span>Registration No: 50-22-90</span>
           </div>
         </div>
+      </div>
 
-        <div className="bg-black text-white py-4 px-4 block md:hidden">
-          <div className="flex flex-col p-0 text-center">
-            <div className="flex flex-col">
-              <span className="font-semibold text-[8.5px]">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization.</span>
-              <span className="text-[8.5px]">EIN: 93-2460195 </span>
-            </div>
-            <div className="border-t border-gray-600 my-2"></div>
-            <div className="flex flex-col">
-              <span className="font-semibold text-[8.5px]">New York State Attorney General's Charities Bureau</span>
-              <span className="text-[8.5px]">Registration No: 50-22-90</span>
-            </div>
+      <div className="bg-black text-white py-4 px-4 block md:hidden">
+        <div className="flex flex-col p-0 text-center">
+          <div className="flex flex-col">
+            <span className="font-semibold text-[8.5px]">Harmony 4 All is an IRS approved, tax exempt 501(c)(3), nonprofit organization.</span>
+            <span className="text-[8.5px]">EIN: 93-2460195 </span>
+          </div>
+          <div className="border-t border-gray-600 my-2"></div>
+          <div className="flex flex-col">
+            <span className="font-semibold text-[8.5px]">New York State Attorney General's Charities Bureau</span>
+            <span className="text-[8.5px]">Registration No: 50-22-90</span>
           </div>
         </div>
+      </div>
 
-      <nav className="container mx-auto p-1.5 h-12 sm:h-28" role="navigation" aria-label="Main navigation">
+      {/* Sticky Navigation Header */}
+      <header className="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300" role="banner">
+        <nav className={`container mx-auto w-full transition-all duration-300 ${
+          isScrolled ? 'px-1 sm:px-10 py-1 h-28 sm:h-16' : 'p-1.5 h-28'
+        }`} role="navigation" aria-label="Main navigation">
         
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between w-full">
           {/* Desktop Layout */}
-          <div className="hidden md:flex items-center justify-between w-full">
+          <div className="hidden md:flex items-center justify-between w-full bg-white">
 
               <Link href="/">
                 <img
                   src="/logo.png"
                   alt="Harmony 4 All Logo"
-                  className="w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] rounded-full object-contain"
+                  className={`rounded-full object-contain transition-all duration-300 ${
+                    isScrolled ? 'w-[60px] h-[60px]' : 'w-[120px] h-[120px]'
+                  }`}
                 />
               </Link>
 
@@ -198,10 +199,10 @@ export const Header = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div 
+          <div
             ref={mobileMenuRef}
             id="mobile-menu"
-            className="md:hidden bg-white border-t shadow-lg animate-in slide-in-from-top-2 duration-300"
+            className="md:hidden bg-white border-t shadow-lg animate-in slide-in-from-top-2 duration-300 z-[60] relative"
             role="menu"
             aria-label="Mobile navigation menu"
           >
@@ -238,7 +239,8 @@ export const Header = () => {
             </div>
           </div>
         )}
-      </nav>
-    </header>
+        </nav>
+      </header>
+    </>
   )
 } 

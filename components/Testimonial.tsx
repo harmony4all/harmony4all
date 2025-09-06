@@ -214,7 +214,7 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
                     testimonials[currentTestimonial].image === '/image.png' ||
                     testimonials[currentTestimonial].image === '/emt153.png' ? (
                     // Logo styling - centered with actual size
-                    <div className="p-4 sm:p-6 md:p-8 flex items-center justify-center h-full w-full">
+                    <div className="p-0 sm:p-6 md:p-8 flex items-center justify-center h-full w-full">
                       <img
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
@@ -222,12 +222,12 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
                       />
                     </div>
                   ) : (
-                    // Media image styling - contain instead of cover
+                    // Media image styling - cover on mobile, contain on desktop
                     <>
                       <img
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
-                        className="w-full h-full object-contain object-center transition-transform duration-700 hover:scale-105"
+                        className="w-full h-full object-cover sm:object-contain object-center transition-transform duration-700 hover:scale-105"
                       />
                     </>
                   )}

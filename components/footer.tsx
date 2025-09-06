@@ -76,7 +76,7 @@ export const Footer = () => {
   ]
 
   return (
-    <footer className="bg-black text-white border-t border-white/10 pt-0 sm:pt-8 pb-6" role="contentinfo">
+    <footer className="bg-black text-white border-t border-white/10 pt-4 sm:pt-8 pb-6" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-8 mb-10">
           {/* Brand Section */}
@@ -85,9 +85,9 @@ export const Footer = () => {
               <div className="relative">
                 <Link href="/">
                   <img
-                    src="https://static.wixstatic.com/media/d717d4_3cc4d0b71fe04619ab30bb4bcfbe4224~mv2.png"
+                    src="/footer_logo.png"
                     alt="Harmony 4 All Logo"
-                    className="w-32 h-32 rounded-2xl object-contain shadow-2xl"
+                    className="w-32 h-32 rounded-full object-contain shadow-0"
                   />
                 </Link>
               </div>

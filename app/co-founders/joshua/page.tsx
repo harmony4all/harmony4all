@@ -42,11 +42,11 @@ export default function JoshuaPage() {
       "Vargas-Vetter/Ukena Fellowship Recipient (2022)"
     ],
     music: [
-      "Former Member of JLCO",
-      "Member of Mary Lou Williams Combo",
-      "Member of NYYS",
-      "Founder of Quddus Quintet Band",
-      "Senior Jazz Ensemble Member"
+      "Former Member, High School Jazz Academy at Jazz at Lincoln Center",
+      "Member, Mary Lou Williams Combo",
+      "Member, New York Youth Symphony Jazz Ensemble",
+      "Founder, Quddus Quintet Band",
+      "Member, Senior Jazz Ensemble"
     ]
   }
 
