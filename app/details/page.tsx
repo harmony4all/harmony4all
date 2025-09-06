@@ -90,18 +90,9 @@ export default function DetailsPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8 md:py-12 px-4">
       <div className="max-w-md mx-auto">
-        <div className="mb-6 md:mb-8">
-          <Link href="/">
-            <Button variant="outline" className="mb-3 md:mb-4 text-sm md:text-base">
-              <ArrowLeft className="h-3 w-3 md:h-4 md:w-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
-          
+        <div className="mb-6 md:mb-8">          
           <div className="text-center mb-6 md:mb-8">
-            <div className="w-16 h-16 md:w-20 md:h-20 bg-black rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-              <User className="h-8 w-8 md:h-10 md:w-10 text-white" />
-            </div>
+        
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
               User Details
             </h1>
