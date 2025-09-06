@@ -21,6 +21,7 @@ interface Blog {
   comments: any[];
   estimatedReadTime: number;
   createdAt: string;
+  publishedAt?: string;
   writer: {
     name: string;
     image: string;
@@ -58,6 +59,7 @@ export default function BlogPage() {
       const blogsData = response.blogs || response.data?.blogs || response.data || [];
       const paginationData = response.pagination || response.data?.pagination;
 
+      // Blogs are already sorted by published date (newest first) from the backend
       setBlogs(Array.isArray(blogsData) ? blogsData : []);
       setPagination(paginationData || null);
 
@@ -267,7 +269,7 @@ export default function BlogPage() {
                       )}
                       <div>
                         <p className="text-xs md:text-sm font-semibold text-gray-900">{blog.writer?.name || 'Anonymous'}</p>
-                        <p className="text-xs text-gray-500">{formatDate(blog.createdAt)}</p>
+                        <p className="text-xs text-gray-500">{formatDate(blog.publishedAt || blog.createdAt)}</p>
                       </div>
                     </div>
                     

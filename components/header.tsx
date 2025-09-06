@@ -116,11 +116,13 @@ export const Header = () => {
           {/* Desktop Layout */}
           <div className="hidden md:flex items-center justify-between w-full">
 
-              <img 
-                src="/logo.png"
-                alt="Harmony 4 All Logo"
-                className="w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] rounded-full object-contain"
-              />
+              <Link href="/">
+                <img
+                  src="/logo.png"
+                  alt="Harmony 4 All Logo"
+                  className="w-[100px] h-[100px] sm:w-[160px] sm:h-[160px] rounded-full object-contain"
+                />
+              </Link>
 
             {/* Desktop Menu */}
               {navLinks.map((link, index) => {
@@ -174,11 +176,13 @@ export const Header = () => {
               )}
             </button>
 
-              <img 
-                src="/logo.png"
-                alt="Harmony 4 All Logo"
-                className="w-[100px] h-[100px] rounded-full object-contain"
-              />
+              <Link href="/">
+                <img
+                  src="/logo.png"
+                  alt="Harmony 4 All Logo"
+                  className="w-[100px] h-[100px] rounded-full object-contain"
+                />
+              </Link>
 
             {/* Mobile Donate Button - Right */}
             <Link href="/donate">

@@ -83,13 +83,15 @@ export const Footer = () => {
           <div className="lg:col-span-2 text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start mb-1">
               <div className="relative">
-                <img 
-                  src="https://static.wixstatic.com/media/d717d4_3cc4d0b71fe04619ab30bb4bcfbe4224~mv2.png"
-                  alt="Harmony 4 All Logo"
-                  className="w-32 h-32 rounded-2xl object-contain shadow-2xl"
-                />
+                <Link href="/">
+                  <img
+                    src="https://static.wixstatic.com/media/d717d4_3cc4d0b71fe04619ab30bb4bcfbe4224~mv2.png"
+                    alt="Harmony 4 All Logo"
+                    className="w-32 h-32 rounded-2xl object-contain shadow-2xl"
+                  />
+                </Link>
               </div>
-             
+
             </div>
             <p className="text-white/70 mb-6 leading-relaxed text-base max-w-2xl mx-auto lg:mx-0">
               Shaping future generations through the power of music. Where every child's voice find its song.
