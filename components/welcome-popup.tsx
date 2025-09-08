@@ -27,25 +27,76 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
+  const [fieldErrors, setFieldErrors] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    cellNumber: "",
+    agreeToTerms: "",
+  })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Basic validation
-    if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.cellNumber.trim()) {
-      setError("Please fill in all required fields")
-      return
+    // Clear previous errors
+    setError("")
+    setFieldErrors({
+      firstName: "",
+      lastName: "",
+      email: "",
+      cellNumber: "",
+      agreeToTerms: "",
+    })
+    
+    // Individual field validation
+    const newFieldErrors = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      cellNumber: "",
+      agreeToTerms: "",
     }
-
+    
+    let hasErrors = false
+    
+    // First Name validation
+    if (!formData.firstName.trim()) {
+      newFieldErrors.firstName = "First name is required"
+      hasErrors = true
+    }
+    
+    // Last Name validation
+    if (!formData.lastName.trim()) {
+      newFieldErrors.lastName = "Last name is required"
+      hasErrors = true
+    }
+    
     // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    if (!emailRegex.test(formData.email)) {
-      setError("Please enter a valid email address")
-      return
+    if (!formData.email.trim()) {
+      newFieldErrors.email = "Email is required"
+      hasErrors = true
+    } else {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+      if (!emailRegex.test(formData.email)) {
+        newFieldErrors.email = "Please enter a valid email address"
+        hasErrors = true
+      }
     }
-
+    
+    // Cell Number validation
+    if (!formData.cellNumber.trim()) {
+      newFieldErrors.cellNumber = "Cell number is required"
+      hasErrors = true
+    }
+    
+    // Terms agreement validation
     if (!formData.agreeToTerms) {
-      setError("Please agree to the terms and conditions")
+      newFieldErrors.agreeToTerms = "Please agree to the terms and conditions"
+      hasErrors = true
+    }
+    
+    if (hasErrors) {
+      setFieldErrors(newFieldErrors)
       return
     }
     
@@ -64,6 +115,13 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
         promotionalUpdates: false,
         agreeToTerms: false,
       })
+      setFieldErrors({
+        firstName: "",
+        lastName: "",
+        email: "",
+        cellNumber: "",
+        agreeToTerms: "",
+      })
       setTimeout(() => {
         onClose()
         setSuccess("")
@@ -78,6 +136,11 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
 
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData((prev) => ({ ...prev, [field]: value }))
+    
+    // Clear field error when user starts typing
+    if (fieldErrors[field as keyof typeof fieldErrors]) {
+      setFieldErrors((prev) => ({ ...prev, [field]: "" }))
+    }
   }
 
   if (!isOpen) return null
@@ -121,9 +184,16 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 type="text"
                 value={formData.firstName}
                 onChange={(e) => handleInputChange("firstName", e.target.value)}
-                className="w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm"
-                required
+                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                  fieldErrors.firstName ? "border-red-500 focus:border-red-500" : ""
+                }`}
               />
+              {fieldErrors.firstName && (
+                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {fieldErrors.firstName}
+                </p>
+              )}
             </div>
 
             <div>
@@ -134,9 +204,16 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 type="text"
                 value={formData.lastName}
                 onChange={(e) => handleInputChange("lastName", e.target.value)}
-                className="w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm"
-                required
+                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                  fieldErrors.lastName ? "border-red-500 focus:border-red-500" : ""
+                }`}
               />
+              {fieldErrors.lastName && (
+                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {fieldErrors.lastName}
+                </p>
+              )}
             </div>
 
             <div>
@@ -147,9 +224,16 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className="w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm"
-                required
+                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                  fieldErrors.email ? "border-red-500 focus:border-red-500" : ""
+                }`}
               />
+              {fieldErrors.email && (
+                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {fieldErrors.email}
+                </p>
+              )}
             </div>
 
             <div>
@@ -161,9 +245,16 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 value={formData.cellNumber}
                 onChange={(e) => handleInputChange("cellNumber", e.target.value)}
                 placeholder="+13245667890"
-                className="w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm"
-                required
+                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                  fieldErrors.cellNumber ? "border-red-500 focus:border-red-500" : ""
+                }`}
               />
+              {fieldErrors.cellNumber && (
+                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+                  {fieldErrors.cellNumber}
+                </p>
+              )}
             </div>
 
             {/* Checkboxes */}
@@ -178,25 +269,34 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 <span className="text-xs text-gray-700 leading-relaxed">Want to receive promotional updates</span>
               </label>
 
-              <label className="flex items-start space-x-1.5 sm:space-x-2 md:space-x-3">
-                <input
-                  type="checkbox"
-                  checked={formData.agreeToTerms}
-                  onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
-                  className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 text-black border-gray-300 rounded focus:ring-black flex-shrink-0"
-                  required
-                />
-                <span className="text-xs text-gray-700 leading-relaxed">
-                  By checking the box, you indicate that you've read our{" "}
-                  <Link href="/privacy" className="text-black underline hover:text-gray-700">
-                    Privacy Policy
-                  </Link>{" "}
-                  and agree to our{" "}
-                  <Link href="/terms" className="text-black underline hover:text-gray-700">
-                    Terms and Use
-                  </Link>
-                </span>
-              </label>
+              <div>
+                <label className="flex items-start space-x-1.5 sm:space-x-2 md:space-x-3">
+                  <input
+                    type="checkbox"
+                    checked={formData.agreeToTerms}
+                    onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
+                    className={`mt-0.5 h-3 w-3 sm:h-4 sm:w-4 text-black border-gray-300 rounded focus:ring-black flex-shrink-0 ${
+                      fieldErrors.agreeToTerms ? "border-red-500" : ""
+                    }`}
+                  />
+                  <span className="text-xs text-gray-700 leading-relaxed">
+                    By checking the box, you indicate that you've read our{" "}
+                    <Link href="/privacy" className="text-black underline hover:text-gray-700">
+                      Privacy Policy
+                    </Link>{" "}
+                    and agree to our{" "}
+                    <Link href="/terms" className="text-black underline hover:text-gray-700">
+                      Terms and Use
+                    </Link>
+                  </span>
+                </label>
+                {fieldErrors.agreeToTerms && (
+                  <p className="text-red-600 text-xs mt-1 flex items-center gap-1">
+                    <AlertCircle className="h-3 w-3" />
+                    {fieldErrors.agreeToTerms}
+                  </p>
+                )}
+              </div>
             </div>
 
             {/* Error Message */}
