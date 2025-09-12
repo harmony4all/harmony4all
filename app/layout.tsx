@@ -51,10 +51,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  // Check if this is an admin route
+  // Check if this is an admin route or social page
   const headersList = await headers()
   const pathname = headersList.get('x-invoke-path') || ''
   const isAdminRoute = pathname.startsWith('/admin') || pathname.includes('/admin')
+  const isSocialPage = pathname === '/social-page'
 
   return (
     <html lang="en" suppressHydrationWarning>
@@ -109,8 +110,8 @@ html {
           enableSystem
           disableTransitionOnChange
         >
-          {isAdminRoute ? (
-            // Admin routes - no header or footer
+          {isAdminRoute || isSocialPage ? (
+            // Admin routes and social page - no header or footer
             <main role="main" className="min-h-screen">
               {children}
             </main>

@@ -3,8 +3,18 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Heart, Home, ArrowLeft } from 'lucide-react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function NotFound() {
+  const router = useRouter()
+
+  useEffect(() => {
+    // Check if the current path is /contact-4 and redirect to home
+    if (window.location.pathname === '/contact-4') {
+      router.replace('/')
+    }
+  }, [router])
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-4">
       <div className="text-center max-w-md">

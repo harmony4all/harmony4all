@@ -146,98 +146,98 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
   if (!isOpen) return null
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-0.5 sm:p-1 md:p-4">
-      <Card className="w-full max-w-[280px] sm:max-w-[320px] md:max-w-xl bg-white rounded-xl sm:rounded-2xl shadow-2xl relative max-h-[98vh] sm:max-h-[95vh] overflow-y-auto">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-0 md:p-4">
+      <Card className="w-full h-full md:w-full md:max-w-xl md:h-auto bg-white rounded-none md:rounded-2xl shadow-2xl relative overflow-y-auto">
         <button
           onClick={onClose}
-          className="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 md:top-4 md:right-4 p-1 sm:p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
+          className="absolute top-5 right-5 sm:top-1 sm:right-1 md:top-4 md:right-4 p-1 sm:p-2 hover:bg-gray-100 rounded-full transition-colors z-10"
           aria-label="Close popup"
         >
-          <X className="h-3 w-3 sm:h-4 sm:w-4 md:h-6 md:w-6 text-gray-600" />
+          <X className="h-5 w-5 sm:h-4 sm:w-4 md:h-6 md:w-6 text-gray-600" />
         </button>
 
-        <CardContent className="p-2 sm:p-3 md:p-6">
+        <CardContent className="p-4 sm:p-6 md:p-6">
           {/* Logo */}
-          <div className="text-center mb-2 sm:mb-4 md:mb-6">
-            <div className="flex items-center justify-center mb-1 sm:mb-2">
+          <div className="text-center mb-4 sm:mb-6 md:mb-6">
+            <div className="flex items-center justify-center mb-2 sm:mb-3 md:mb-2">
               <img 
                 src="https://static.wixstatic.com/media/8e9eb3_89823dd9b54c45a997ebbf6f4419ea19~mv2.png/v1/fill/w_391,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e9eb3_89823dd9b54c45a997ebbf6f4419ea19~mv2.png"
                 alt="Harmony 4 All Logo"
-                className="w-full max-w-[150px] sm:max-w-[200px] md:max-w-xs h-auto"
+                className="w-full max-w-[180px] sm:max-w-[220px] md:max-w-xs h-auto"
               />
             </div>
             <hr className="border-gray-300" />
           </div>
 
           {/* Title */}
-          <h2 className="text-xs sm:text-sm md:text-lg font-semibold text-center text-gray-900 mb-2 sm:mb-3 md:mb-6 leading-tight">
+          <h2 className="text-sm sm:text-base md:text-lg font-semibold text-center text-gray-900 mb-4 sm:mb-5 md:mb-6 leading-tight">
             Thank you for joining our mission and get a free gift!
           </h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-1.5 sm:space-y-2 md:space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4 md:space-y-4">
             <div>
-              <label className="block text-xs font-medium text-gray-700 mb-0.5 sm:mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                 First Name <span className="text-red-500">*</span>
               </label>
               <Input
                 type="text"
                 value={formData.firstName}
                 onChange={(e) => handleInputChange("firstName", e.target.value)}
-                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                className={`w-full border-gray-300 rounded-md h-10 sm:h-11 md:h-11 text-sm sm:text-base ${
                   fieldErrors.firstName ? "border-red-500 focus:border-red-500" : ""
                 }`}
               />
               {fieldErrors.firstName && (
-                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <p className="text-red-600 text-sm mt-1 flex items-center gap-1">
+                  <AlertCircle className="h-4 w-4" />
                   {fieldErrors.firstName}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-gray-700 mb-0.5 sm:mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                 Last Name <span className="text-red-500">*</span>
               </label>
               <Input
                 type="text"
                 value={formData.lastName}
                 onChange={(e) => handleInputChange("lastName", e.target.value)}
-                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                className={`w-full border-gray-300 rounded-md h-10 sm:h-11 md:h-11 text-sm sm:text-base ${
                   fieldErrors.lastName ? "border-red-500 focus:border-red-500" : ""
                 }`}
               />
               {fieldErrors.lastName && (
-                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <p className="text-red-600 text-sm mt-1 flex items-center gap-1">
+                  <AlertCircle className="h-4 w-4" />
                   {fieldErrors.lastName}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-gray-700 mb-0.5 sm:mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                 Email <span className="text-red-500">*</span>
               </label>
               <Input
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                className={`w-full border-gray-300 rounded-md h-10 sm:h-11 md:h-11 text-sm sm:text-base ${
                   fieldErrors.email ? "border-red-500 focus:border-red-500" : ""
                 }`}
               />
               {fieldErrors.email && (
-                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <p className="text-red-600 text-sm mt-1 flex items-center gap-1">
+                  <AlertCircle className="h-4 w-4" />
                   {fieldErrors.email}
                 </p>
               )}
             </div>
 
             <div>
-              <label className="block text-xs font-medium text-gray-700 mb-0.5 sm:mb-1">
+              <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                 Cell Number <span className="text-red-500">*</span>
               </label>
               <Input
@@ -245,41 +245,41 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                 value={formData.cellNumber}
                 onChange={(e) => handleInputChange("cellNumber", e.target.value)}
                 placeholder="+13245667890"
-                className={`w-full border-gray-300 rounded-md h-8 sm:h-9 md:h-11 text-xs sm:text-sm ${
+                className={`w-full border-gray-300 rounded-md h-10 sm:h-11 md:h-11 text-sm sm:text-base ${
                   fieldErrors.cellNumber ? "border-red-500 focus:border-red-500" : ""
                 }`}
               />
               {fieldErrors.cellNumber && (
-                <p className="text-red-600 text-xs mt-0.5 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
+                <p className="text-red-600 text-sm mt-1 flex items-center gap-1">
+                  <AlertCircle className="h-4 w-4" />
                   {fieldErrors.cellNumber}
                 </p>
               )}
             </div>
 
             {/* Checkboxes */}
-            <div className="space-y-1.5 sm:space-y-2 md:space-y-3 pt-1 sm:pt-2">
-              <label className="flex items-start space-x-1.5 sm:space-x-2 md:space-x-3">
+            <div className="space-y-3 sm:space-y-4 md:space-y-3 pt-2 sm:pt-3">
+              <label className="flex items-start space-x-2 sm:space-x-3 md:space-x-3">
                 <input
                   type="checkbox"
                   checked={formData.promotionalUpdates}
                   onChange={(e) => handleInputChange("promotionalUpdates", e.target.checked)}
-                  className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 text-black border-gray-300 rounded focus:ring-black flex-shrink-0"
+                  className="mt-1 h-4 w-4 sm:h-5 sm:w-5 text-black border-gray-300 rounded focus:ring-black flex-shrink-0"
                 />
-                <span className="text-xs text-gray-700 leading-relaxed">Want to receive promotional updates</span>
+                <span className="text-sm sm:text-base text-gray-700 leading-relaxed">Want to receive promotional updates</span>
               </label>
 
               <div>
-                <label className="flex items-start space-x-1.5 sm:space-x-2 md:space-x-3">
+                <label className="flex items-start space-x-2 sm:space-x-3 md:space-x-3">
                   <input
                     type="checkbox"
                     checked={formData.agreeToTerms}
                     onChange={(e) => handleInputChange("agreeToTerms", e.target.checked)}
-                    className={`mt-0.5 h-3 w-3 sm:h-4 sm:w-4 text-black border-gray-300 rounded focus:ring-black flex-shrink-0 ${
+                    className={`mt-1 h-4 w-4 sm:h-5 sm:w-5 text-black border-gray-300 rounded focus:ring-black flex-shrink-0 ${
                       fieldErrors.agreeToTerms ? "border-red-500" : ""
                     }`}
                   />
-                  <span className="text-xs text-gray-700 leading-relaxed">
+                  <span className="text-sm sm:text-base text-gray-700 leading-relaxed">
                     By checking the box, you indicate that you've read our{" "}
                     <Link href="/privacy" className="text-black underline hover:text-gray-700">
                       Privacy Policy
@@ -291,8 +291,8 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
                   </span>
                 </label>
                 {fieldErrors.agreeToTerms && (
-                  <p className="text-red-600 text-xs mt-1 flex items-center gap-1">
-                    <AlertCircle className="h-3 w-3" />
+                  <p className="text-red-600 text-sm mt-2 flex items-center gap-1">
+                    <AlertCircle className="h-4 w-4" />
                     {fieldErrors.agreeToTerms}
                   </p>
                 )}
@@ -301,29 +301,29 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
 
             {/* Error Message */}
             {error && (
-              <div className="flex items-start gap-1.5 sm:gap-2 p-1.5 sm:p-2 md:p-3 bg-red-50 border border-red-200 rounded-lg mt-1.5 sm:mt-2 md:mt-3">
-                <AlertCircle className="h-3 w-3 sm:h-4 sm:w-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <p className="text-red-800 text-xs">{error}</p>
+              <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 md:p-3 bg-red-50 border border-red-200 rounded-lg mt-3 sm:mt-4 md:mt-3">
+                <AlertCircle className="h-4 w-4 sm:h-5 sm:w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                <p className="text-red-800 text-sm sm:text-base">{error}</p>
               </div>
             )}
 
             {/* Success Message */}
             {success && (
-              <div className="flex items-start gap-1.5 sm:gap-2 p-1.5 sm:p-2 md:p-3 bg-green-50 border border-green-200 rounded-lg mt-1.5 sm:mt-2 md:mt-3">
-                <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-600 flex-shrink-0 mt-0.5" />
-                <p className="text-green-800 text-xs">{success}</p>
+              <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 md:p-3 bg-green-50 border border-green-200 rounded-lg mt-3 sm:mt-4 md:mt-3">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <p className="text-green-800 text-sm sm:text-base">{success}</p>
               </div>
             )}
 
             {/* Submit Button */}
             <Button
               type="submit"
-              className="w-full bg-black hover:bg-gray-800 text-white py-2 sm:py-2.5 md:py-4 rounded-full font-medium mt-2 sm:mt-3 md:mt-6 disabled:opacity-50 disabled:cursor-not-allowed text-xs sm:text-sm md:text-base"
+              className="w-full bg-black hover:bg-gray-800 text-white py-3 sm:py-4 md:py-4 rounded-full font-medium mt-4 sm:mt-5 md:mt-6 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base md:text-base"
               disabled={!formData.agreeToTerms || isLoading}
             >
               {isLoading ? (
                 <>
-                  <Loader2 className="mr-1.5 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4 animate-spin" />
+                  <Loader2 className="mr-2 h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
                   Submitting...
                 </>
               ) : (
