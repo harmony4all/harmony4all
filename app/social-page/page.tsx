@@ -28,7 +28,7 @@ export default function SocialPage() {
         <div className="space-y-4 max-w-md w-full">
           {/* Facebook Button */}
           <Link
-            href="https://www.facebook.com/harmony4all.org?mibextid=kFxxJD"
+            href="https://www.facebook.com/JoinHarmony4All"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-lg transition-colors duration-300"
@@ -39,7 +39,7 @@ export default function SocialPage() {
 
           {/* Instagram Button */}
           <Link
-            href="https://www.instagram.com/_harmony4all_/"
+            href="https://www.instagram.com/joinharmony4all/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-lg transition-colors duration-300"
@@ -50,7 +50,7 @@ export default function SocialPage() {
 
           {/* LinkedIn Button */}
           <Link
-            href="https://www.linkedin.com/company/harmony4all/?viewAsMember=true"
+            href="https://www.linkedin.com/company/joinharmony4all/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-lg transition-colors duration-300"
@@ -61,7 +61,7 @@ export default function SocialPage() {
 
           {/* YouTube Button */}
           <Link
-            href="https://www.youtube.com/watch?v=CQXnJpY_zR8&ab_channel=Harmony4All"
+            href="https://youtu.be/CQXnJpY_zR8"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full bg-black hover:bg-gray-900 text-white py-4 px-6 rounded-lg transition-colors duration-300"

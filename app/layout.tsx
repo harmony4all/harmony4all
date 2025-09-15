@@ -8,7 +8,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { headers } from 'next/headers'
 
 export const metadata: Metadata = {
-  title: 'Harmony 4 All - Empowering Individuals with Disabilities',
+  title: 'Harmony 4 All - Making Music Accessible',
   description: 'Comprehensive therapy, education, and community support for individuals with disabilities. Building inclusive communities where everyone can thrive.',
   keywords: 'disability services, therapy, occupational therapy, physical therapy, speech therapy, special education, community support, New York',
   authors: [{ name: 'Harmony 4 All' }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL('https://harmony4all.org'),
   openGraph: {
-    title: 'Harmony 4 All - Empowering Individuals with Disabilities',
+    title: 'Harmony 4 All - Making Music Accessible',
     description: 'Comprehensive therapy, education, and community support for individuals with disabilities.',
     url: 'https://harmony4all.org',
     siteName: 'Harmony 4 All',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Harmony 4 All - Empowering Individuals with Disabilities',
+    title: 'Harmony 4 All - Making Music Accessible',
     description: 'Comprehensive therapy, education, and community support for individuals with disabilities.',
   },
   robots: {
