@@ -2,6 +2,7 @@
 
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function SocialPage() {
   return (
@@ -10,7 +11,7 @@ export default function SocialPage() {
       <div className="text-center mb-4">
         {/* Logo - Musical instrument with notes */}
         {/* Musical instrument (saxophone/clarinet style) */}
-        <img src="/logo.png" alt="Harmony 4 All Logo" className="w-36 h-36 rounded-full object-contain" />
+        <Image src="/logo.png" alt="Harmony 4 All Logo" width={144} height={144} className="rounded-full object-contain" />
 
       </div>
 

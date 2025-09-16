@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Star, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react"
+import Image from "next/image"
 
 // Testimonials Section Component
 export const TestimonialsSection = () => {
@@ -215,19 +216,22 @@ Thank you for all you do. We look forward to seeing <strong>Harmony 4 All</stron
                     testimonials[currentTestimonial].image === '/emt153.png' ? (
                     // Logo styling - centered with actual size
                     <div className="p-0 sm:p-6 md:p-8 flex items-center justify-center h-full w-full">
-                      <img
+                      <Image
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
+                        width={300}
+                        height={300}
                         className="max-w-[90%] max-h-[90%] object-contain transition-transform duration-700 hover:scale-110"
                       />
                     </div>
                   ) : (
                     // Media image styling - cover on mobile, contain on desktop
                     <>
-                      <img
+                      <Image
                         src={testimonials[currentTestimonial].image}
                         alt={testimonials[currentTestimonial].name}
-                        className="w-full h-full object-cover sm:object-contain object-center transition-transform duration-700 hover:scale-105"
+                        fill
+                        className="object-cover sm:object-contain object-center transition-transform duration-700 hover:scale-105"
                       />
                     </>
                   )}

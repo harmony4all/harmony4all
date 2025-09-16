@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -182,28 +183,40 @@ export default function PartnersPage() {
                             </div>
                             <div className="grid grid-cols-2 gap-3 md:gap-4">
                                 <div className="space-y-3 md:space-y-4">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                        alt="Students with instruments"
-                                        className="w-full h-48 md:h-64 object-cover rounded-xl md:rounded-2xl"
-                                    />
-                                    <img
-                                        src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                        alt="Music education"
-                                        className="w-full h-36 md:h-48 object-cover rounded-xl md:rounded-2xl"
-                                    />
+                                    <div className="relative w-full h-48 md:h-64 rounded-xl md:rounded-2xl overflow-hidden">
+                                        <Image
+                                            src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                            alt="Students with instruments"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="relative w-full h-36 md:h-48 rounded-xl md:rounded-2xl overflow-hidden">
+                                        <Image
+                                            src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                            alt="Music education"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </div>
                                 <div className="space-y-3 md:space-y-4 pt-6 md:pt-8">
-                                    <img
-                                        src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                                        alt="Community music"
-                                        className="w-full h-36 md:h-48 object-cover rounded-xl md:rounded-2xl"
-                                    />
-                                    <img
-                                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
-                                        alt="Youth music program"
-                                        className="w-full h-48 md:h-64 object-cover rounded-xl md:rounded-2xl"
-                                    />
+                                    <div className="relative w-full h-36 md:h-48 rounded-xl md:rounded-2xl overflow-hidden">
+                                        <Image
+                                            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                                            alt="Community music"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                    <div className="relative w-full h-48 md:h-64 rounded-xl md:rounded-2xl overflow-hidden">
+                                        <Image
+                                            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80"
+                                            alt="Youth music program"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -406,11 +419,12 @@ export default function PartnersPage() {
                                                 {/* Logo Side */}
                                                 <div className="flex-1">
                                                     <div className="bg-gray-50 rounded-2xl md:rounded-3xl p-4 md:p-8 shadow-lg border border-gray-200 transform hover:scale-105 transition-all duration-500 group">
-                                                        <div className={`w-32 h-32 md:w-48 md:h-48 mx-auto rounded-xl md:rounded-2xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-500 ${partner.name === "Maple Grove Cemetery" ? "bg-[rgb(53,77,3)]" : "bg-white border border-gray-200"}`}>
-                                                            <img
+                                                        <div className={`w-32 h-32 md:w-48 md:h-48 mx-auto rounded-xl md:rounded-2xl shadow-md flex items-center justify-center group-hover:shadow-lg transition-all duration-500 ${partner.name === "Maple Grove Cemetery" ? "bg-[rgb(53,77,3)]" : "bg-white border border-gray-200"} relative`}>
+                                                            <Image
                                                                 src={partner.logo}
                                                                 alt={`${partner.name} logo`}
-                                                                className="p-3 md:p-6 w-full h-full object-contain transition-all duration-500 group-hover:scale-110"
+                                                                fill
+                                                                className="p-3 md:p-6 object-contain transition-all duration-500 group-hover:scale-110"
                                                             />
                                                         </div>
                                                     </div>
@@ -466,11 +480,12 @@ export default function PartnersPage() {
                                         style={{ transitionDelay: `${index * 100}ms` }}
                                     >
                                         <div className="w-full h-16 md:h-20 flex items-center justify-center mb-3 md:mb-4">
-                                            <div className={`w-16 h-16 md:w-20 md:h-20 rounded-lg md:rounded-xl shadow-sm flex items-center justify-center group-hover:shadow-md transition-all duration-500 group-hover:scale-110 ${partner.name === "Maple Grove Cemetery" ? "bg-[rgb(53,77,3)]" : "bg-gray-50 border border-gray-200"}`}>
-                                                <img
+                                            <div className={`w-16 h-16 md:w-20 md:h-20 rounded-lg md:rounded-xl shadow-sm flex items-center justify-center group-hover:shadow-md transition-all duration-500 group-hover:scale-110 ${partner.name === "Maple Grove Cemetery" ? "bg-[rgb(53,77,3)]" : "bg-gray-50 border border-gray-200"} relative`}>
+                                                <Image
                                                     src={partner.logo}
                                                     alt={`${partner.name} logo`}
-                                                    className="p-1 md:p-2 w-full h-full object-contain transition-all duration-500 group-hover:scale-105"
+                                                    fill
+                                                    className="p-1 md:p-2 object-contain transition-all duration-500 group-hover:scale-105"
                                                 />
                                             </div>
                                         </div>

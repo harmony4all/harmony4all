@@ -2,24 +2,16 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-    Heart,
-    Users,
     Music,
-    Award,
-    Star,
     Gift,
-    Target,
-    ArrowRight,
-    CheckCircle,
     Phone,
     Mail,
     ExternalLink,
-    Lightbulb,
-    Trophy,
     Crown,
     DollarSign,
     Calendar,
@@ -287,11 +279,12 @@ export default function SponsorsPage() {
                                             </Badge>
                                         </div>
 
-                                        <div className="w-full h-16 md:h-24 flex items-center justify-center mb-3 md:mb-4 bg-gray-50 rounded-lg md:rounded-xl">
-                                            <img
+                                        <div className="w-full h-16 md:h-24 flex items-center justify-center mb-3 md:mb-4 bg-gray-50 rounded-lg md:rounded-xl relative">
+                                            <Image
                                                 src={sponsor.logo}
                                                 alt={`${sponsor.name} logo`}
-                                                className="max-w-full max-h-full object-contain p-1 md:p-2"
+                                                fill
+                                                className="object-contain p-1 md:p-2"
                                             />
                                         </div>
 

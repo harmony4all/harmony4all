@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Heart, Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin, LinkedinIcon, LucideLinkedin } from "lucide-react"
 import { usePathname } from "next/navigation"
 
@@ -84,10 +85,12 @@ export const Footer = () => {
             <div className="flex items-center justify-center lg:justify-start mb-1">
               <div className="relative">
                 <Link href="/">
-                  <img
+                  <Image
                     src="/footer_logo.png"
                     alt="Harmony 4 All Logo"
-                    className="w-32 h-32 rounded-full object-contain shadow-0"
+                    width={128}
+                    height={128}
+                    className="rounded-full object-contain shadow-0"
                   />
                 </Link>
               </div>
@@ -170,10 +173,12 @@ export const Footer = () => {
                 className="transition-transform duration-300 hover:scale-105 mb-6"
                 aria-label="View our Candid Platinum Transparency profile"
               >
-                <img 
+                <Image 
                   src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
                   alt="Candid Platinum Transparency 2025"
-                  className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
+                  width={160}
+                  height={160}
+                  className="object-contain"
                 />
               </Link>
 

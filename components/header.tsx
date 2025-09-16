@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Heart, Menu, X } from "lucide-react"
@@ -116,12 +117,13 @@ export const Header = () => {
           <div className="hidden md:flex items-center justify-between w-full bg-white">
 
               <Link href="/">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Harmony 4 All Logo"
-                  className={`rounded-full object-contain transition-all duration-300 ${
-                    isScrolled ? 'w-[60px] h-[60px]' : 'w-[120px] h-[120px]'
-                  }`}
+                  width={isScrolled ? 60 : 120}
+                  height={isScrolled ? 60 : 120}
+                  className={`rounded-full object-contain transition-all duration-300`}
+                  priority
                 />
               </Link>
 
@@ -178,10 +180,13 @@ export const Header = () => {
             </button>
 
               <Link href="/">
-                <img
+                <Image
                   src="/logo.png"
                   alt="Harmony 4 All Logo"
-                  className="w-[100px] h-[100px] rounded-full object-contain"
+                  width={100}
+                  height={100}
+                  className="rounded-full object-contain"
+                  priority
                 />
               </Link>
 

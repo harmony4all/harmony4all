@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -94,11 +95,12 @@ export default function BiancaPage() {
           <div className="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
             {/* Profile Image */}
             <div className="relative">
-              <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 md:border-6 lg:border-8 border-white ring-2 md:ring-4 ring-gray-100">
-                <img
+              <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-2xl border-4 md:border-6 lg:border-8 border-white ring-2 md:ring-4 ring-gray-100 relative">
+                <Image
                   src="/bianca.png"
                   alt="Bianca Quddus"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="absolute -bottom-2 -right-2 md:-bottom-3 md:-right-3 lg:-bottom-4 lg:-right-4 w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 bg-black rounded-full flex items-center justify-center shadow-lg">

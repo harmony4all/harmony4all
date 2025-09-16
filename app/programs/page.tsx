@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -147,8 +148,8 @@ export default function ProgramsPage() {
               >
                 <div className="lg:w-1/2">
                   <Card className="shadow-xl border-0 rounded-2xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500">
-                    <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                      <img
+                    <div className="aspect-video bg-gray-200 flex items-center justify-center relative">
+                      <Image
                         src={program.id === "music-therapy" 
                           ? "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                           : program.id === "music-education"
@@ -158,7 +159,8 @@ export default function ProgramsPage() {
                           : "https://images.unsplash.com/photo-1511379938547-c1f69419868d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
                         }
                         alt={`${program.title} in action`}
-                        className="w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                       />
                     </div>
                   </Card>

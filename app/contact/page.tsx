@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
   import { Button } from "@/components/ui/button"
   import { Card } from "@/components/ui/card"
 import { Phone, Mail,ChevronDown, ChevronUp, ArrowRight } from "lucide-react"
@@ -90,11 +91,12 @@ export default function ContactPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                 >
                   {/* Small Image on the Left */}
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0 mr-3 md:mr-4">
-                    <img
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl overflow-hidden flex-shrink-0 mr-3 md:mr-4 relative">
+                    <Image
                       src={faq.image}
                       alt={faq.question}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   

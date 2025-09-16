@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -239,11 +240,12 @@ export default function DonatePage() {
                   className="group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                   <Card className="h-full border-2 border-gray-200 hover:border-gray-900 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                    <div className="aspect-[4/3] overflow-hidden">
-                      <img
+                    <div className="aspect-[4/3] overflow-hidden relative">
+                      <Image
                         src={level.image}
                         alt={level.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
                     <CardContent className="p-4 md:p-6">
@@ -389,11 +391,12 @@ export default function DonatePage() {
                       if (selectedLevel && amount > 0) {
                         return (
                           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
-                            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                              <img
+                            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-xl overflow-hidden shadow-lg flex-shrink-0 relative">
+                              <Image
                                 src={selectedLevel.image}
                                 alt={`Impact for ${selectedLevel.title}`}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover"
                               />
                             </div>
                             <div className="text-center md:text-left flex-1">
@@ -411,11 +414,12 @@ export default function DonatePage() {
                         )
                         return (
                           <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6">
-                            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-                              <img
+                            <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 rounded-xl overflow-hidden shadow-lg flex-shrink-0 relative">
+                              <Image
                                 src={closestLevel.image}
                                 alt={`Impact for $${amount}`}
-                                className="w-full h-full object-cover"
+                                fill
+                                className="object-cover"
                               />
                             </div>
                             <div className="text-center md:text-left flex-1">

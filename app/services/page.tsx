@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -143,11 +144,12 @@ export default function ServicesPage() {
                   className="group bg-white shadow-2xl border-0 rounded-3xl overflow-hidden hover:shadow-3xl transition-all duration-500 hover:scale-[102%]"
                 >
                   <div className="relative">
-                    <div className="w-full h-60 md:h-80 overflow-hidden">
-                      <img
+                    <div className="w-full h-60 md:h-80 overflow-hidden relative">
+                      <Image
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                     </div>
                     <div className="absolute top-4 md:top-6 right-4 md:right-6 w-12 h-12 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center shadow-lg">
@@ -238,11 +240,12 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* Community Concerts */}
             <Card className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-36 md:h-48 overflow-hidden">
-                <img
+              <div className="h-36 md:h-48 overflow-hidden relative">
+                <Image
                   src="https://static.wixstatic.com/media/30dc3d_37cdc33f2bda4b66b3ab7334339417a0~mv2.jpeg?dn=H4A Community Concert.JPEG"
                   alt="Community Concert"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-4 md:p-6">
@@ -270,11 +273,12 @@ export default function ServicesPage() {
 
             {/* Youth Orchestra Programs */}
             <Card className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
+              <div className="h-48 overflow-hidden relative">
+                <Image
                   src="https://static.wixstatic.com/media/30dc3d_02f838cac6a24d86946860f03d4b50a4~mv2.jpg?dn=B&J with the NY Philharmonic Youth Orchestra conducted by Maestro Gustavo Dudamel.JPG"
                   alt="Youth Orchestra"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
@@ -301,11 +305,12 @@ export default function ServicesPage() {
 
             {/* Educational Workshops */}
             <Card className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
+              <div className="h-48 overflow-hidden relative">
+                <Image
                   src="https://static.wixstatic.com/media/30dc3d_39ef049e71884adfb38ba96bad3ec69c~mv2.jpeg?dn=With elementary teacher who introduced B&J to their instruments and the world of music - A"
                   alt="Educational Workshop"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
@@ -333,11 +338,12 @@ export default function ServicesPage() {
 
             {/* Advocacy & Speaking */}
             <Card className="shadow-lg border-0 rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <div className="h-48 overflow-hidden">
-                <img
+              <div className="h-48 overflow-hidden relative">
+                <Image
                   src="https://static.wixstatic.com/media/30dc3d_1cfdf310673f4b5cb7ec5b31ddc8e0b8~mv2.jpg?dn=Bianca address about H4A at The United Nations.JPG"
                   alt="Advocacy Speaking"
-                  className="bg-bottom w-full h-full  object-cover hover:scale-105 transition-transform duration-300"
+                  fill
+                  className="bg-bottom object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <CardContent className="p-6">
@@ -380,11 +386,12 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-4 gap-6 md:gap-8">
               {processSteps.map((step, index) => (
                 <Card key={index} className="text-center shadow-lg border-0 rounded-2xl overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img
+                  <div className="aspect-video overflow-hidden relative">
+                    <Image
                       src={step.image}
                       alt={step.title}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <CardContent className="p-4 md:p-6">

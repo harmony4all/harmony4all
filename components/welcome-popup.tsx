@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { X, Heart, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { welcomePopupAPI } from '../lib/api'
 
 interface WelcomePopupProps {
@@ -160,10 +161,13 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
           {/* Logo */}
           <div className="text-center mb-4 sm:mb-6 md:mb-6">
             <div className="flex items-center justify-center mb-2 sm:mb-3 md:mb-2">
-              <img 
+              <Image 
                 src="https://static.wixstatic.com/media/8e9eb3_89823dd9b54c45a997ebbf6f4419ea19~mv2.png/v1/fill/w_391,h_144,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e9eb3_89823dd9b54c45a997ebbf6f4419ea19~mv2.png"
                 alt="Harmony 4 All Logo"
+                width={391}
+                height={144}
                 className="w-full max-w-[180px] sm:max-w-[220px] md:max-w-xs h-auto"
+                priority
               />
             </div>
             <hr className="border-gray-300" />

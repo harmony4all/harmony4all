@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Users, HandHeart, Building, Clock, Phone, DollarSign, Gift, Music } from "lucide-react"
@@ -204,11 +205,12 @@ export default function GetInvolvedPage() {
                 className="block"
               >
                 <Card className="text-center shadow-lg border-0 rounded-2xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer group hover:scale-105">
-                  <div className="aspect-video overflow-hidden">
-                    <img
+                  <div className="aspect-video overflow-hidden relative">
+                    <Image
                       src={level.image}
                       alt={`Donation level ${level.amount}`}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
                   <CardHeader>
@@ -249,11 +251,12 @@ export default function GetInvolvedPage() {
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
             {volunteerOpportunities.map((opportunity, index) => (
               <Card key={index} className="shadow-lg border-0 rounded-2xl overflow-hidden">
-                <div className="aspect-video overflow-hidden">
-                  <img
+                <div className="aspect-video overflow-hidden relative">
+                  <Image
                     src={opportunity.image}
                     alt={opportunity.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <CardHeader>

@@ -21,6 +21,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { WelcomePopup } from "@/components/welcome-popup"
 import ContactSection from "@/components/contact"
 import NewsletterSection from "@/components/news-letter"
@@ -343,9 +344,11 @@ const MissionValuesSection = () => {
                 }`}
             >
               <div className="relative">
-                <img
+                <Image
                   src="https://static.wixstatic.com/media/8e9eb3_12bc08b163d4457c8ad38ec76bcbb751~mv2.jpg/v1/fill/w_1046,h_1046,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/samuel-sianipar-4TNd3hsW3PM-unsplash.jpg"
                   alt="Orchestra performing music"
+                  width={1046}
+                  height={850}
                   className="w-full h-[300px] sm:h-[400px] md:h-[600px] lg:h-[850px] object-cover rounded-2xl sm:rounded-3xl shadow-2xl hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute -bottom-4 sm:-bottom-6 md:-bottom-8 right-0 bg-black text-white p-2 sm:p-3 md:p-4 rounded-2xl sm:rounded-3xl shadow-xl animate-pulse">
@@ -434,11 +437,12 @@ const ProgramsSection = () => {
                 }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="aspect-video overflow-hidden">
-                <img
+              <div className="aspect-video overflow-hidden relative">
+                <Image
                   src={program.image}
                   alt={program.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <CardHeader className="text-center pb-4">
@@ -532,11 +536,12 @@ const GetInvolvedSection = () => {
                 }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <div className="aspect-video overflow-hidden">
-                <img
+              <div className="aspect-video overflow-hidden relative">
+                <Image
                   src={way.image}
                   alt={way.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <CardHeader className="text-center pb-4">
@@ -663,17 +668,19 @@ const HomeBlogSection = () => {
                             className="block w-full h-full"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <img
+                            <Image
                               src={post.image || '/placeholder.jpg'}
                               alt={post.title}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer"
+                              fill
+                              className="object-cover group-hover:scale-110 transition-transform duration-700 cursor-pointer"
                             />
                           </a>
                         ) : (
-                          <img
+                          <Image
                             src={post.image || '/placeholder.jpg'}
                             alt={post.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
                           />
                         )}
                       </div>

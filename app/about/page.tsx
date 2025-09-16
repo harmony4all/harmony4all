@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -160,11 +161,12 @@ export default function AboutPage() {
               <div className="relative">
                 {/* Main Circular Image with Animation */}
                 <div className="relative">
-                  <div className="w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl mb-4 md:mb-6 lg:mb-8 transform hover:scale-105 transition-transform duration-500 mx-auto">
-                    <img
+                  <div className="w-48 h-48 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl mb-4 md:mb-6 lg:mb-8 transform hover:scale-105 transition-transform duration-500 mx-auto relative">
+                    <Image
                       src="https://static.wixstatic.com/media/8e9eb3_3834f19b1e524414910533bdd46c701b~mv2.jpg/v1/fill/w_560,h_562,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5751_edited.jpg"
                       alt="Young musicians playing clarinet and saxophone"
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
 
@@ -179,11 +181,12 @@ export default function AboutPage() {
                 </div>
 
                 {/* Smaller Overlapping Circular Image */}
-                <div className="absolute top-1/2 right-0 transform -translate-y-1/2 w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-xl border-2 md:border-3 lg:border-4 border-white hover:scale-110 transition-transform duration-300">
-                  <img
+                <div className="absolute top-1/2 right-0 transform -translate-y-1/2 w-20 h-20 md:w-32 md:h-32 lg:w-48 lg:h-48 rounded-full overflow-hidden shadow-xl border-2 md:border-3 lg:border-4 border-white hover:scale-110 transition-transform duration-300 relative">
+                  <Image
                     src="https://static.wixstatic.com/media/8e9eb3_e1e9a6056e3c44d0ada5dfcdfa45e46e~mv2.jpg/v1/fill/w_248,h_258,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_5750_edited_edited.jpg"
                     alt="Young musicians smiling together"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
 
@@ -391,11 +394,12 @@ export default function AboutPage() {
 
               {/* Enhanced Image Section */}
               <div className="relative">
-                <div className="w-full md:w-[90%] h-64 md:h-96 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 mx-auto">
-                  <img
+                <div className="w-full md:w-[90%] h-64 md:h-96 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500 mx-auto relative">
+                  <Image
                     src="https://static.wixstatic.com/media/8e9eb3_12bc08b163d4457c8ad38ec76bcbb751~mv2.jpg/v1/fill/w_600,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e9eb3_12bc08b163d4457c8ad38ec76bcbb751~mv2.jpg"
                     alt="Orchestra"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
 
@@ -596,11 +600,12 @@ export default function AboutPage() {
                   </div>
                   <div className="bg-white rounded-xl p-4 md:p-6 shadow-lg flex-1">
                     <div className="flex items-start space-x-3 md:space-x-4">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden flex-shrink-0">
-                        <img
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden flex-shrink-0 relative">
+                        <Image
                           src={milestone.image}
                           alt={milestone.year}
-                          className="w-full h-full object-cover"
+                          fill
+                          className="object-cover"
                         />
                       </div>
                       <div className="flex-1">
@@ -676,11 +681,12 @@ export default function AboutPage() {
                 style={{ transitionDelay: `${index * 300}ms` }}
               >
                 <div className="relative">
-                  <div className="w-full h-64 md:h-96 overflow-hidden">
-                    <img
+                  <div className="w-full h-64 md:h-96 overflow-hidden relative">
+                    <Image
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
                   </div>
                   <div className="absolute top-4 right-4 md:top-6 md:right-6 w-12 h-12 md:w-16 md:h-16 bg-black rounded-full flex items-center justify-center shadow-lg">

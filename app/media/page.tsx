@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -136,10 +137,11 @@ export default function MediaPage() {
                 className="shadow-lg border-0 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
+                  <Image
                     src={item.thumbnail}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   {/* Always Visible Text Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
@@ -194,10 +196,11 @@ export default function MediaPage() {
                 {displayedItems.map((item, index) => (
                   <Card key={index} className="shadow-lg border-0 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <img 
+                      <Image 
                         src={item.thumbnail || PLACEHOLDER} 
                         alt={item.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300" 
                       />
                       {/* Always Visible Text Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent">
