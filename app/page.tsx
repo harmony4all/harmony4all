@@ -100,24 +100,22 @@ const HeroCarousel = () => {
         >
           {/* Mobile: Fixed height image container */}
           <div className="sm:hidden w-full h-[180px] relative mt-10">
-            <div
-              className="w-full h-full bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url('${slide.image}')` }}
-              role="img"
-              aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
+           <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="w-full h-full object-cover"
             />
           </div>
 
           {/* Desktop: Full background image */}
           <div className="hidden sm:block absolute inset-0 bg-cover bg-center">
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('${slide.image}')` }}
-              role="img"
-              aria-label={`Background image for slide ${index + 1}: ${slide.title}`}
-            >
-              <div className="absolute inset-0 bg-black/40"></div>
-            </div>
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Mobile: Content below image */}
