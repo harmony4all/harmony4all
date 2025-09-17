@@ -23,7 +23,7 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
     email: "",
     cellNumber: "",
     promotionalUpdates: true,
-    agreeToTerms: false,
+    agreeToTerms: true,
   })
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
@@ -114,7 +114,7 @@ export function WelcomePopup({ isOpen, onClose }: WelcomePopupProps) {
         email: "",
         cellNumber: "",
         promotionalUpdates: true,
-        agreeToTerms: false,
+        agreeToTerms: true,
       })
       setFieldErrors({
         firstName: "",
