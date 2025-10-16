@@ -383,5 +383,5 @@ export default function FAQsPage() {
         </div>
       </section>
     </div>
-  )
+  ) 
 }
