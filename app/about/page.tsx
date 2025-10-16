@@ -877,7 +877,7 @@ export default function AboutPage() {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Phone:</span>
-                        <span>(347) 554-7712</span>
+                        <span> (737)HARMONY (427-6669)</span>
                       </div>
                     </div>
                   </div>
