@@ -72,8 +72,8 @@ export const Footer = () => {
 
   const contactInfo = [
     { icon: Mail, text: "info@harmony4all.org", href: "mailto:info@harmony4all.org" },
-    { icon: Phone, text: " (737)HARMONY (427-6669)", href: "#" },
-    { icon: MapPin, text: "New York City, United States", href: "#" },
+    { icon: Phone, text: " (737) HARMONY (427-6669)", href: "tel:+13475547712" },
+    { icon: MapPin, text: "New York City, United States", href: "https://maps.app.goo.gl/1234567890" },
   ]
 
   return (

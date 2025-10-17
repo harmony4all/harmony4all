@@ -204,7 +204,7 @@ export default function FAQsPage() {
       id: 26,
       category: "info",
       question: "How do I get in touch with Harmony 4 All?",
-      answer: "You can reach us at: <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>, <a href='tel: (737)HARMONY (427-6669)' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'> (737)HARMONY (427-6669)</a>, or visit <a href='https://harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>harmony4all.org</a>"
+      answer: "You can reach us at: <a href='mailto:info@harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>info@harmony4all.org</a>, <a href='tel: +13475547712' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'> (737) HARMONY (427-6669)</a>, or visit <a href='https://harmony4all.org' style='font-weight: bold; color: black; ' onmouseover='this.style.color=\"#374151\"' onmouseout='this.style.color=\"black\"'>harmony4all.org</a>"
     }
   ]
 
@@ -375,7 +375,7 @@ export default function FAQsPage() {
                   className="border-2 border-black text-black hover:bg-black hover:text-white hover:border-white px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg rounded-full"
                 >
                   <Phone className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                  Call  (737)HARMONY (427-6669)
+                  Call  (737) HARMONY (427-6669)
                 </Button>
               </div>
             </div>

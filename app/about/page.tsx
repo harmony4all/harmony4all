@@ -877,7 +877,7 @@ export default function AboutPage() {
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="font-medium">Phone:</span>
-                        <span> (737)HARMONY (427-6669)</span>
+                        <span><a href="tel:+13475547712"> (737) HARMONY (427-6669)</a></span>
                       </div>
                     </div>
                   </div>

@@ -445,11 +445,11 @@ export default function SponsorsPage() {
                                     <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-gray-200">
                                         <div className="flex items-center justify-center md:justify-start space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600">
                                             <Phone className="h-3 w-3 md:h-4 md:w-4" />
-                                            <span> (737)HARMONY (427-6669)</span>
+                                            <span><a href="tel:+13475547712" className="text-gray-600 hover:text-gray-800 font-medium">(737) HARMONY (427-6669)</a></span>
                                         </div>
                                         <div className="flex items-center justify-center md:justify-start space-x-3 md:space-x-4 text-xs md:text-sm text-gray-600 mt-1 md:mt-2">
                                             <Mail className="h-3 w-3 md:h-4 md:w-4" />
-                                            <span>info@harmony4all.org</span>
+                                            <span><a href="mailto:info@harmony4all.org" className="text-gray-600 hover:text-gray-800 font-medium">info@harmony4all.org</a></span>
                                         </div>
                                     </div>
                                 </div>
