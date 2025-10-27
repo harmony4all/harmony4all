@@ -90,10 +90,54 @@ function WixBlogRenderer({ content }: { content: string | BlogNode }) {
       .replace(/\s+/g, ' ') // Clean up extra whitespace
       .trim();
 
+    // Add custom CSS for better paragraph spacing
+    const htmlWithStyles = `
+      <style>
+        .prose p {
+          margin-bottom: 1.5rem !important;
+          margin-top: 0.5rem !important;
+          line-height: 1.7 !important;
+        }
+        .prose p:first-child {
+          margin-top: 0 !important;
+        }
+        .prose p:last-child {
+          margin-bottom: 0 !important;
+        }
+        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+          margin-top: 2rem !important;
+          margin-bottom: 1rem !important;
+        }
+        .prose h1:first-child, .prose h2:first-child, .prose h3:first-child, 
+        .prose h4:first-child, .prose h5:first-child, .prose h6:first-child {
+          margin-top: 0 !important;
+        }
+      </style>
+      ${cleanHtml}
+    `;
+
     return (
       <article 
         className="prose prose-lg max-w-none"
-        dangerouslySetInnerHTML={{ __html: cleanHtml }}
+        style={{
+          '--tw-prose-body': '#374151',
+          '--tw-prose-headings': '#111827',
+          '--tw-prose-lead': '#4b5563',
+          '--tw-prose-links': '#2563eb',
+          '--tw-prose-bold': '#111827',
+          '--tw-prose-counters': '#6b7280',
+          '--tw-prose-bullets': '#d1d5db',
+          '--tw-prose-hr': '#e5e7eb',
+          '--tw-prose-quotes': '#111827',
+          '--tw-prose-quote-borders': '#e5e7eb',
+          '--tw-prose-captions': '#6b7280',
+          '--tw-prose-code': '#111827',
+          '--tw-prose-pre-code': '#e5e7eb',
+          '--tw-prose-pre-bg': '#1f2937',
+          '--tw-prose-th-borders': '#d1d5db',
+          '--tw-prose-td-borders': '#e5e7eb',
+        } as React.CSSProperties}
+        dangerouslySetInnerHTML={{ __html: htmlWithStyles }}
       />
     );
   }
@@ -115,7 +159,8 @@ function WixBlogRenderer({ content }: { content: string | BlogNode }) {
             key={node.id || index}
             style={{ 
               textAlign: alignment as "left" | "center" | "right" | "justify", 
-              marginBottom: "1em",
+              marginBottom: "1.5rem",
+              marginTop: "0.5rem",
               paddingLeft: indentation > 0 ? `${indentation * 2}em` : undefined
             }}
             className="leading-relaxed"
@@ -384,7 +429,27 @@ function WixBlogRenderer({ content }: { content: string | BlogNode }) {
   }
 
   return (
-    <article className="prose prose-lg max-w-none">
+    <article 
+      className="prose prose-lg max-w-none"
+      style={{
+        '--tw-prose-body': '#374151',
+        '--tw-prose-headings': '#111827',
+        '--tw-prose-lead': '#4b5563',
+        '--tw-prose-links': '#2563eb',
+        '--tw-prose-bold': '#111827',
+        '--tw-prose-counters': '#6b7280',
+        '--tw-prose-bullets': '#d1d5db',
+        '--tw-prose-hr': '#e5e7eb',
+        '--tw-prose-quotes': '#111827',
+        '--tw-prose-quote-borders': '#e5e7eb',
+        '--tw-prose-captions': '#6b7280',
+        '--tw-prose-code': '#111827',
+        '--tw-prose-pre-code': '#e5e7eb',
+        '--tw-prose-pre-bg': '#1f2937',
+        '--tw-prose-th-borders': '#d1d5db',
+        '--tw-prose-td-borders': '#e5e7eb',
+      } as React.CSSProperties}
+    >
       {data.nodes.map((node: BlogNode, index: number) => 
         renderNode(node, index)
       )}
