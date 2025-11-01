@@ -167,7 +167,7 @@ function WixBlogRenderer({ content }: { content: string | BlogNode }) {
           >
             {node.nodes?.map((childNode, childIndex) => 
               renderNode(childNode, childIndex)
-            )}
+            )} 
           </p>
         );
       }
