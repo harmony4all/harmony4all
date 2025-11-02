@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -19,6 +19,8 @@ import {
   Wrench,
   Mic,
   ArrowRight,
+  Volume2,
+  VolumeX,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -32,8 +34,24 @@ import api from "../api/api"
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const [isVideoMuted, setIsVideoMuted] = useState(true)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !videoRef.current.muted
+      setIsVideoMuted(videoRef.current.muted)
+    }
+  }
 
   const slides = [
+    {
+      title: "",
+      subtitle:
+        "",
+      isVideo: true,
+      videoUrl: "https://res.cloudinary.com/dcvqytwuq/video/upload/v1762069377/harmony4all/media/ipqiuxjml9fi3pkyczw2.mp4",
+    },
     {
       title: "Building a World of Harmony Through Music",
       subtitle:
@@ -82,6 +100,17 @@ const HeroCarousel = () => {
     }
   }, [isPaused])
 
+  // Pause video when leaving the first slide
+  useEffect(() => {
+    if (videoRef.current) {
+      if (currentSlide === 0) {
+        videoRef.current.play().catch(err => console.log('Auto-play prevented:', err))
+      } else {
+        videoRef.current.pause()
+      }
+    }
+  }, [currentSlide])
+
   return (
     <section
       className="relative min-h-[500px] sm:min-h-screen flex flex-col sm:flex-row items-center justify-center overflow-hidden"
@@ -98,59 +127,99 @@ const HeroCarousel = () => {
             }`}
           aria-hidden={index !== currentSlide}
         >
-          {/* Mobile: Fixed height image container */}
-          <div className="sm:hidden w-full h-[180px] relative mt-10">
-           <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="w-full h-full object-cover"
-            />
-          </div>
+          {/* Video Background */}
+          {slide.isVideo ? (
+            <>
+              {/* Mobile: Full height video container */}
+              <div className="sm:hidden w-full h-full relative">
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source src={slide.videoUrl} type="video/mp4" />
+                </video>
+              </div>
 
-          {/* Desktop: Full background image */}
-          <div className="hidden sm:block absolute inset-0 bg-cover bg-center">
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="w-full h-full object-cover"
-            />
-          </div>
+              {/* Desktop: Full background video */}
+              <div className="hidden sm:block absolute inset-0">
+                <video
+                  ref={videoRef}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover object-bottom"
+                >
+                  <source src={slide.videoUrl} type="video/mp4" />
+                </video>
+              </div>
 
-          {/* Mobile: Content below image */}
-          <div className="sm:hidden relative z-10 container mx-auto px-4 text-center py-8">
-            <div className="max-w-4xl mx-auto text-gray-900">
-              <h1
-                className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight transition-all duration-1000 delay-300 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-              >
-                {slide.title}
-              </h1>
-              {slide.title === "THE IMPACT" ? (
-                <div
-                  className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                    }`}
-                  dangerouslySetInnerHTML={{ __html: slide.subtitle }}
-                />
-              ) : (
-                <p
-                  className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 leading-relaxed transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            </>
+          ) : (
+            slide.image && (
+              <>
+                {/* Mobile: Fixed height image container */}
+                <div className="sm:hidden w-full h-[180px] relative mt-10">
+                 <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Desktop: Full background image */}
+                <div className="hidden sm:block absolute inset-0 bg-cover bg-center">
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </>
+            )
+          )}
+
+          {/* Mobile: Content below image/video */}
+          {!slide.isVideo && (
+            <div className="sm:hidden relative z-10 container mx-auto px-4 text-center py-8">
+              <div className="max-w-4xl mx-auto text-gray-900">
+                <h1
+                  className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 leading-tight transition-all duration-1000 delay-300 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                     }`}
                 >
-                  {slide.subtitle}
-                </p>
-              )}
-              <div
-                className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                  }`}
-              >
+                  {slide.title}
+                </h1>
+                {slide.title === "THE IMPACT" ? (
+                  <div
+                    className={`text-center max-w-4xl mx-auto transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                      }`}
+                    dangerouslySetInnerHTML={{ __html: slide.subtitle }}
+                  />
+                ) : (
+                  <p
+                    className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl mb-4 sm:mb-6 md:mb-8 leading-relaxed transition-all duration-1000 delay-500 px-2 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                      }`}
+                  >
+                    {slide.subtitle}
+                  </p>
+                )}
+                <div
+                  className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-700 ${index === currentSlide ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                    }`}
+                >
 
+                </div>
               </div>
             </div>
-          </div>
+          )}
 
-          {/* Desktop: Content overlaid on image */}
+          {/* Desktop: Content overlaid on image/video */}
           <div className="hidden sm:flex relative z-10 container mx-auto px-4 text-center h-full items-center">
             <div className="max-w-4xl mx-auto text-white">
               <h1
@@ -184,11 +253,30 @@ const HeroCarousel = () => {
         </div>
       ))}
 
+      {/* Volume Toggle Button - Only show on video slide */}
+      {slides[currentSlide]?.isVideo && (
+        <div className="absolute top-50 left-50 z-50">
+          <Button
+            onClick={toggleMute}
+            variant="outline"
+            size="icon"
+            className="bg-black/70 text-white border-white/30 backdrop-blur-sm rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg hover:scale-110 transition-transform cursor-pointer"
+            aria-label={isVideoMuted ? "Unmute video" : "Mute video"}
+          >
+            {isVideoMuted ? (
+              <VolumeX className="h-5 w-5 sm:h-6 sm:w-6" />
+            ) : (
+              <Volume2 className="h-5 w-5 sm:h-6 sm:w-6" />
+            )}
+          </Button>
+        </div>
+      )}
+
       {/* Navigation Arrows */}
       <Button
         variant="outline"
         size="icon"
-        className="absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 text-black focus:outline-none focus:ring-0"
+        className={`absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 focus:outline-none focus:ring-0 ${slides[currentSlide]?.isVideo ? 'text-white' : 'text-black'}`}
         onClick={prevSlide}
         aria-label="Previous slide"
       >
@@ -198,7 +286,7 @@ const HeroCarousel = () => {
       <Button
         variant="outline"
         size="icon"
-        className="absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 text-black focus:outline-none focus:ring-0"
+        className={`absolute right-1 sm:right-4 top-1/2 transform -translate-y-1/2 bg-transparent border-0 focus:outline-none focus:ring-0 ${slides[currentSlide]?.isVideo ? 'text-white' : 'text-black'}`}
         onClick={nextSlide}
         aria-label="Next slide"
       >
