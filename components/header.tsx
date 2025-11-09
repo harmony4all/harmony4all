@@ -125,8 +125,8 @@ export const Header = () => {
           <Image
             src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
             alt="Candid Platinum Transparency 2025"
-            width={isScrolled ? 60 : 120}
-            height={isScrolled ? 60 : 120}
+            width={60}
+            height={60}
             className={`object-contain transition-all duration-300`}
             priority
           />
@@ -138,7 +138,7 @@ export const Header = () => {
           className="transition-transform duration-300 hover:scale-105 underline"
           aria-label="View our Candid Platinum Transparency profile"
         >
-            View Candid profile
+          <p className="text-sm text-gray-500">View Candid profile</p>
         </Link>
 
       </div>
@@ -213,7 +213,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Layout */}
-          <div className="flex md:hidden items-center justify-between w-full">
+          <div className="flex md:hidden items-center justify-between w-full px-3">
             {/* Mobile Menu Button - Left */}
             <button
               ref={menuButtonRef}

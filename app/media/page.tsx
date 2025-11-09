@@ -64,9 +64,10 @@ export default function MediaPage() {
   return (
     <div className="min-h-screen bg-white">
       <section
-        className="relative py-16 md:py-24 lg:py-32 bg-cover bg-top bg-no-repeat md:hidden h-screen"
+        className="relative mt-3 py-16 md:py-24 lg:py-32 bg-cover bg-top bg-no-repeat md:hidden h-[50vh]"
         style={{
           backgroundImage: "url('https://static.wixstatic.com/media/d717d4_05b13ab329714f6bb79c12184de08986~mv2.png')",
+          objectFit: "cover",
         }}
       >
       </section>
@@ -135,6 +136,17 @@ export default function MediaPage() {
         </section>
 
         <MediaMarquee items={mediaItems} />
+
+      <div className="py-8 md:py-10 bg-black text-white text-center">
+        <Link href="/media/all" aria-label="View all media items">
+          <Button
+            variant="outline"
+            className="mx-auto bg-black rounded-full border-white text-white hover:bg-white hover:text-black px-8 py-3 text-base md:text-lg"
+          >
+            View All Media
+          </Button>
+        </Link>
+      </div>
         
       {/* Call to Action */}
       <section className="py-12 md:py-16 lg:py-20 bg-black text-white">

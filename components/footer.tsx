@@ -217,7 +217,7 @@ export const Footer = () => {
             <div className="flex items-center space-x-2 text-white/60 text-sm">
               <span>With</span>
               <Heart className="h-4 w-4 text-red-500" aria-label="love" />
-              <span>and innovation — from <Link href="https://rtnglobal.site" target="_blank" rel="noopener noreferrer" className="text-white/80 underline hover:text-white transition-colors">RTNGLOBAL</Link></span>
+              <span>and innovation — from <Link href="https://rtnglobal.site" target="_blank" rel="noopener noreferrer" className="text-white/80 underline hover:text-white transition-colors">RTN GLOBAL</Link></span>
             </div>
            
           </div>
