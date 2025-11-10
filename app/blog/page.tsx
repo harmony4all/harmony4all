@@ -123,28 +123,12 @@ export default function BlogPage() {
       <div className="bg-white shadow-lg border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-16">
           <div className="text-center">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4 md:mb-6">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 md:mb-6">
               Our Blog
             </h1>
             <p className="text-sm md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Discover insights, tutorials, and stories from our team. Stay updated with the latest trends and knowledge.
             </p>
-            <div className="mt-6 md:mt-8 flex justify-center">
-              <div className="flex items-center space-x-3 md:space-x-4 text-xs md:text-sm text-gray-500">
-                <span className="flex items-center">
-                  <svg className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                  </svg>
-                  {blogs.length} Articles
-                </span>
-                <span className="flex items-center">
-                  <svg className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Updated Daily
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
