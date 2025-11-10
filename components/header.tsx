@@ -10,11 +10,9 @@ import { usePathname } from "next/navigation"
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [isSealModalOpen, setIsSealModalOpen] = useState(false)
   const pathname = usePathname()
   const mobileMenuRef = useRef<HTMLDivElement>(null)
   const menuButtonRef = useRef<HTMLButtonElement>(null)
-  const sealButtonRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,31 +46,15 @@ export const Header = () => {
   // Handle keyboard navigation
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        if (isMobileMenuOpen) {
-          setIsMobileMenuOpen(false)
-          menuButtonRef.current?.focus()
-        }
-        if (isSealModalOpen) {
-          setIsSealModalOpen(false)
-          sealButtonRef.current?.focus()
-        }
+      if (event.key === "Escape" && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false)
+        menuButtonRef.current?.focus()
       }
     }
 
     document.addEventListener("keydown", handleEscape)
     return () => document.removeEventListener("keydown", handleEscape)
-  }, [isMobileMenuOpen, isSealModalOpen])
-
-  useEffect(() => {
-    if (isSealModalOpen) {
-      const originalOverflow = document.body.style.overflow
-      document.body.style.overflow = "hidden"
-      return () => {
-        document.body.style.overflow = originalOverflow
-      }
-    }
-  }, [isSealModalOpen])
+  }, [isMobileMenuOpen])
 
 
 
@@ -114,33 +96,22 @@ export const Header = () => {
 
       {/* Sticky Navigation Header */}
       <header className="sticky top-0 z-50 bg-white shadow-sm transition-all duration-300">
-      <div className="flex items-center justify-between py-4 px-4 block md:hidden border-b border-gray-200">
-      <button
-          ref={sealButtonRef}
-          type="button"
-          className="relative rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black transition-transform duration-300 hover:scale-105"
-          onClick={() => setIsSealModalOpen(true)}
-          aria-label="Enlarge Candid Platinum Transparency seal"
-        >
-          <Image
-            src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
-            alt="Candid Platinum Transparency 2025"
-            width={60}
-            height={60}
-            className={`object-contain transition-all duration-300`}
-            priority
-          />
-        </button>
+      <div className="flex items-center justify-center py-2 md:hidden border-b border-gray-200 text-center">
         <Link
           href="https://www.guidestar.org/profile/shared/612fc49e-8913-45bf-b8f8-cc6d46762abb"
           target="_blank"
           rel="noopener noreferrer"
-          className="transition-transform duration-300 hover:scale-105 underline"
           aria-label="View our Candid Platinum Transparency profile"
         >
-          <p className="text-sm text-gray-500">View Candid profile</p>
+          <Image
+            src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
+            alt="Candid Platinum Transparency 2025"
+            width={80}
+            height={80}
+            className="object-contain transition-all duration-300"
+            priority
+          />
         </Link>
-
       </div>
         <div className="flex items-center justify-between w-full">
           {/* Desktop Layout */}
@@ -213,7 +184,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Layout */}
-          <div className="flex md:hidden items-center justify-between w-full px-3">
+          <div className="flex md:hidden items-center justify-between w-full px-2">
             {/* Mobile Menu Button - Left */}
             <button
               ref={menuButtonRef}
@@ -230,7 +201,7 @@ export const Header = () => {
               )}
             </button>
 
-            <Link href="/">
+            <Link href="/" className="ml-5">
               <Image
                 src="/logo.png"
                 alt="Harmony 4 All Logo"
@@ -244,7 +215,7 @@ export const Header = () => {
             {/* Mobile Donate Button - Right */}
             <Link href="/donate">
               <Button
-                className="relative overflow-hidden bg-black text-white rounded-full px-4 py-2 transition-all duration-300 focus:outline-none shadow-lg hover:shadow-xl font-bold text-sm group transform hover:scale-105"
+                className="overflow-hidden bg-black text-white rounded-full"
                 aria-label="Donate to Harmony 4 All"
               >
                 <span>Donate</span>
@@ -291,46 +262,6 @@ export const Header = () => {
                   <div className="absolute inset-0 bg-white/20 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 </Button>
               </Link>
-            </div>
-          </div>
-        )}
-
-        {isSealModalOpen && (
-          <div
-            className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 md:hidden px-6"
-            role="dialog"
-            aria-modal="true"
-            aria-label="Candid Platinum Transparency seal enlarged view"
-            onClick={() => {
-              setIsSealModalOpen(false)
-              sealButtonRef.current?.focus()
-            }}
-          >
-            <div
-              className="relative max-w-xs w-full"
-              onClick={(event) => event.stopPropagation()}
-            >
-              <button
-                type="button"
-                className="absolute -top-2 -right-2 rounded-full bg-white p-1 text-gray-900 shadow focus:outline-none focus:ring-2 focus:ring-black"
-                onClick={() => {
-                  setIsSealModalOpen(false)
-                  sealButtonRef.current?.focus()
-                }}
-                aria-label="Close enlarged seal"
-              >
-                <X className="h-4 w-4" />
-              </button>
-              <div className="overflow-hidden rounded-3xl bg-white p-4 shadow-lg">
-                <Image
-                  src="https://static.wixstatic.com/media/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png/v1/fill/w_151,h_151,al_c,lg_1,q_85,enc_avif,quality_auto/ef9da7_441d25464f0d457fa3e7dec5ab394004~mv2.png"
-                  alt="Candid Platinum Transparency 2025 seal enlarged"
-                  width={320}
-                  height={320}
-                  className="object-contain"
-                  priority
-                />
-              </div>
             </div>
           </div>
         )}
