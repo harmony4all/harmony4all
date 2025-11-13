@@ -58,9 +58,6 @@ export default function DonationSuccessPage() {
           <div className="max-w-2xl mx-auto text-center">
             <Card className="shadow-2xl border-0 rounded-2xl overflow-hidden">
               <CardHeader className="bg-black text-white text-center py-8 md:py-12">
-                <div className="mx-auto w-16 h-16 md:w-20 md:h-20 bg-white/20 rounded-full flex items-center justify-center mb-4 md:mb-6">
-                  <CheckCircle className="h-8 w-8 md:h-10 md:w-10 text-white" />
-                </div>
                 <CardTitle className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4">Thank You!</CardTitle>
                 <CardDescription className="text-white text-base md:text-lg lg:text-xl">
                   Your donation has been successfully processed
@@ -74,36 +71,6 @@ export default function DonationSuccessPage() {
                       Your generous contribution will help us continue providing music education 
                       and building stronger communities through the power of music.
                     </p>
-                    <p className="text-gray-500 text-sm md:text-base">
-                      You will receive a confirmation email shortly with your donation receipt.
-                    </p>
-                  </div>
-
-                  <div className="bg-gray-50 p-4 md:p-6 rounded-xl">
-                    <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3 md:mb-4">What happens next?</h3>
-                    <div className="space-y-2 md:space-y-3 text-left">
-                      <div className="flex items-start space-x-2 md:space-x-3">
-                        <Mail className="h-4 w-4 md:h-5 md:w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-gray-900 text-sm md:text-base">Email Confirmation</p>
-                          <p className="text-xs md:text-sm text-gray-600">Check your email for a receipt and tax information</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-2 md:space-x-3">
-                        <Heart className="h-4 w-4 md:h-5 md:w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-gray-900 text-sm md:text-base">Impact Updates</p>
-                          <p className="text-xs md:text-sm text-gray-600">We'll keep you informed about how your donation is making a difference</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start space-x-2 md:space-x-3">
-                        <Calendar className="h-4 w-4 md:h-5 md:w-5 text-gray-600 mt-0.5 flex-shrink-0" />
-                        <div>
-                          <p className="font-medium text-gray-900 text-sm md:text-base">Future Events</p>
-                          <p className="text-xs md:text-sm text-gray-600">Get invited to our community events and concerts</p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
