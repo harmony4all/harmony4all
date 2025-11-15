@@ -37,7 +37,7 @@ export default function SponsorsPage() {
         },
         {
             name: "New York State Senator Joseph P. Addabbo, Jr.",
-            logo: "https://www.nysenate.gov/sites/default/files/2022/11/09/fpo-about-seal.jpg",
+            logo: "/senate-joseph.avif",
             website: "https://www.nysenate.gov/senators/joseph-p-addabbo-jr",
             tier: "Gold",
             category: "Government Partner",
@@ -73,7 +73,7 @@ export default function SponsorsPage() {
         },
         {
             name: "New York City Department of Cultural Affairs",
-            logo: "https://www.nyc.gov/assets/dcla/images/content/header/logo.svg",
+            logo: "/sponsor6.png",
             website: "https://www.nyc.gov/site/dcla/index.page",
             tier: "Gold",
             category: "City Government",
@@ -89,6 +89,25 @@ export default function SponsorsPage() {
             impact: "Artist Support & Resources",
             description: "Providing resources and support for artists and arts education programs."
         },
+        {
+            name: "Citizens Committee for New York City",
+            logo: "/sponsor8.png",
+            website: "https://www.citizensnyc.org/",
+            tier: "Silver",
+            category: "Non-Profit Organization",
+            impact: "Community Support & Resources",
+            description: "CitizensNYC is a partner for New Yorkers who have bold ideas to improve their neighborhoods."
+        },
+        {
+            name: "Villa Russo",
+            logo: "/sponsor9.png",
+            website: "https://www.villarussocatering.com",
+            tier: "Silver",
+            category: "Catering Service",
+            impact: "Make Memories In Our Castle", 
+            description: "From unforgettable Weddings to royal Sweet Sixteens and Quinceañeras, perfectly choreographed corporate events to unique private occasions, Villa Russo is your dream castle in Queens."
+        },
+
     ]
 
     const sponsorshipOpportunities = [
